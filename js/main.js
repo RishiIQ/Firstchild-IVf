@@ -1073,12 +1073,12 @@ const router = {
         }
     },
 
-    async handleRoute() {
+   async handleRoute() {
         const container = document.getElementById('app-view-container');
         if (!container) return;
 
         let path = window.location.hash.slice(1) || 'home';
-       const valid = ['home', 'treatments', 'doctors', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
+        const valid = ['home', 'treatments', 'doctors', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
         if (!valid.includes(path)) path = '404';
 
         if (path === 'dashboard' && !auth.isAuthenticated()) {
@@ -1100,27 +1100,47 @@ const router = {
 
         this.updateActiveNav(path);
 
-        // Out transition
+        // --- HARDWARE-ACCELERATED FADE OUT ---
         if (typeof anime !== 'undefined') {
             try {
-                await anime({ targets: container, opacity: [1, 0], translateY: [0, -30], scale: [1, 0.96], duration: 300 }).finished;
-            } catch { container.style.opacity = '0'; await new Promise(r => setTimeout(r, 300)); }
+                container.style.willChange = 'opacity';
+                await anime({
+                    targets: container,
+                    opacity: [1, 0],
+                    duration: 150,
+                    easing: 'linear'
+                }).finished;
+            } catch {
+                container.style.opacity = '0';
+                await new Promise(r => setTimeout(r, 150));
+            }
         } else {
-            container.classList.add('view-exit');
-            await new Promise(r => setTimeout(r, 300));
+            container.style.opacity = '0';
+            await new Promise(r => setTimeout(r, 150));
         }
 
+        // Render new view content
         await this.renderView(path);
 
-        // In transition
+        // --- HARDWARE-ACCELERATED FADE IN ---
         if (typeof anime !== 'undefined') {
             try {
-                anime({ targets: container, opacity: [0, 1], translateY: [40, 0], scale: [0.96, 1], easing: 'spring(1, 80, 12, 0)', duration: 650 });
-            } catch { container.style.opacity = '1'; container.style.transform = 'none'; }
+                anime({
+                    targets: container,
+                    opacity: [0, 1],
+                    duration: 300,
+                    easing: 'easeOutQuad',
+                    complete: () => {
+                        container.style.willChange = 'auto';
+                    }
+                });
+            } catch {
+                container.style.opacity = '1';
+                container.style.willChange = 'auto';
+            }
         } else {
-            container.classList.remove('view-exit');
-            container.classList.add('view-enter');
-            requestAnimationFrame(() => setTimeout(() => container.classList.remove('view-enter'), 450));
+            container.style.opacity = '1';
+            container.style.willChange = 'auto';
         }
 
         window.scrollTo(0, 0);
