@@ -7,25 +7,27 @@
     
     <!-- ===== SIDEBAR NAVIGATION & PROFILE ===== -->
     <aside class="lg:col-span-3 space-y-6">
-        <!-- Patient Profile Card -->
-        <div class="adaptive-card p-8 rounded-5xl text-center shadow-xl relative overflow-hidden group">
-            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#0251B0] to-[#D1FF42]"></div>
-            
-            <!-- Real Profile Picture with High-End Ring Accent -->
-            <div class="relative w-24 h-24 mx-auto mb-6">
-                <img src="https://images.unsplash.com/photo-1644860704769-c61c84be7836?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                     alt="Sarah McAllister Profile Picture" 
-                     class="w-full h-full object-cover rounded-full shadow-lg border-2 border-[#0251B0] dark:border-[#D1FF42]" />
-                <div class="absolute bottom-0 right-0 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white dark:border-[#111318]" title="Online"></div>
-            </div>
+       <!-- Patient Profile Card - Update with dynamic data -->
+<div class="adaptive-card p-8 rounded-5xl text-center shadow-xl relative overflow-hidden group">
+    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#0251B0] to-[#D1FF42]"></div>
+    
+    <div class="relative w-24 h-24 mx-auto mb-6">
+        <img 
+            id="profile-avatar"
+            src="https://images.unsplash.com/photo-1644860704769-c61c84be7836?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            alt="Profile Picture" 
+            class="w-full h-full object-cover rounded-full shadow-lg border-2 border-[#0251B0] dark:border-[#D1FF42]" 
+        />
+        <div class="absolute bottom-0 right-0 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white dark:border-[#111318]" title="Online"></div>
+    </div>
 
-            <h4 class="text-xl font-bold mb-1 text-neutral-900 dark:text-white" id="profile-name">Sarah McAllister</h4>
-            <p class="text-[10px] font-mono text-neutral-500 dark:text-[#C7D1DD] uppercase tracking-widest" id="profile-id">NC-7721</p>
-            <div class="mt-6 flex flex-wrap justify-center gap-2">
-                <span class="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[9px] font-black uppercase tracking-wider border border-emerald-500/20">Active Cycle</span>
-                <span class="px-3 py-1 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[9px] font-black uppercase tracking-wider border border-[#0251B0]/20">Verified</span>
-            </div>
-        </div>
+    <h4 class="text-xl font-bold mb-1 text-neutral-900 dark:text-white" id="profile-name">Sarah McAllister</h4>
+    <p class="text-[10px] font-mono text-neutral-500 dark:text-[#C7D1DD] uppercase tracking-widest" id="profile-id">NC-7721</p>
+    <div class="mt-6 flex flex-wrap justify-center gap-2">
+        <span id="profile-cycle-badge" class="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[9px] font-black uppercase tracking-wider border border-emerald-500/20">Active Cycle</span>
+        <span id="profile-verified-badge" class="px-3 py-1 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[9px] font-black uppercase tracking-wider border border-[#0251B0]/20">Verified</span>
+    </div>
+</div>
 
 <nav class="adaptive-card p-3 sm:p-4 rounded-[40px] space-y-1.5 shadow-lg" id="dash-nav">
     <a href="#dashboard" data-view="main" class="dash-nav-item active flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-3xl font-bold text-sm transition-all">
