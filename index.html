@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>FirstChild Fertility | Elite Reproductive Excellence</title>
+    <link rel="shortcut icon" href="./assets/images/fav.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Anime.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#3D52A0',
+                            primaryLight: '#7091E6',
+                            primaryDark: '#2A3B73',
+                            rose: '#0C557D',
+                            teal: '#0F766E',
+                            violet: '#4338CA',
+                            amber: '#D97706'
+                        },
+                        surface: {
+                            light: '#EDE8F5',
+                            dark: '#09090B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '3rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* ===== ACTIVE NAV INDICATOR STYLES ===== */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2.5px;
+            background-color: #D4A853;
+            border-radius: 2px;
+            transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: #D4A853;
+        }
+
+        /* Mobile nav active state */
+        .mobile-nav-link.active {
+            color: #D4A853;
+        }
+
+        /* Footer nav active state */
+        .footer-nav-link.active {
+            color: #D4A853;
+        }
+
+        /* Dashboard nav active state */
+        .dash-nav-item.active {
+            background-color: #D4A853 !important;
+            color: white !important;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(212, 168, 83, 0.3);
+        }
+        .dash-nav-item.active i {
+            color: white !important;
+        }
+
+        /* ===== VIEW TRANSITIONS ===== */
+        #app-view-container {
+            transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ===== GLASSMORPHISM ===== */
+        .glass {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .glass:hover {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border-color: rgba(212, 168, 83, 0.2);
+        }
+        .dark .glass {
+            background: rgba(26, 26, 26, 0.85);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== CUSTOM SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f5f5f5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4A853;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B8923E;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #B8923E;
+        }
+
+        /* ===== RTL SUPPORT ===== */
+        [dir="rtl"] .flip-rtl {
+            transform: scaleX(-1);
+        }
+
+        /* ===== ANIME.JS STUNNING KINETIC INTRO OVERLAY ===== */
+        #intro-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background-color: #09090B;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .intro-letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(50px) rotate(10deg);
+        }
+        .intro-box, .intro-ring, .intro-ring-inner, .intro-sub, .intro-bar-container {
+            opacity: 0;
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        :focus-visible {
+            outline: 3px solid #D4A853;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body class="bg-surface-light dark:bg-surface-dark text-neutral-800 dark:text-neutral-200 transition-colors duration-500 overflow-x-hidden">
+
+    <!-- ===== HIGH-IMPACT KINETIC ANIME.JS INTRO OVERLAY ===== -->
+    <div id="intro-overlay">
+        <!-- Ambient Dynamic Glows -->
+        <div class="absolute w-[700px] h-[700px] bg-gradient-to-tr from-[#0251B0]/30 to-violet-600/20 rounded-full blur-[160px] pointer-events-none intro-glow scale-50 opacity-0"></div>
+        
+        <!-- Precision Geometric Rings -->
+        <div class="absolute w-64 h-64 rounded-full border-2 border-[#0251B0]/50 intro-ring scale-50"></div>
+        <div class="absolute w-48 h-48 rounded-full border border-dashed border-[#D1FF42]/60 intro-ring-inner scale-50"></div>
+
+        <!-- Central Content Container -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+            
+            <div class="w-10 h-10 bg-[#0251B0] rounded-2xl flex items-center justify-center text-[#D1FF42] shadow-md shadow-[#0251B0]/30 transition-transform duration-300 group-hover:scale-105">
+                    <img src="assets/images/brandlogo.png" alt="FirstChild Logo" class="w-5 h-5 object-contain brightness-0 invert">
+                </div>
+
+            <!-- Staggered Kinetic Title Text -->
+            <h1 class="text-3xl md:text-5xl font-serif font-bold tracking-tight text-white mb-3 flex flex-wrap justify-center gap-x-2 overflow-hidden py-2">
+                <span class="inline-flex overflow-hidden"><span class="intro-letter">F</span><span class="intro-letter">i</span><span class="intro-letter">r</span><span class="intro-letter">s</span><span class="intro-letter">t</span></span>
+                <span class="inline-flex overflow-hidden"><span class="intro-letter">C</span><span class="intro-letter">h</span><span class="intro-letter">i</span><span class="intro-letter">l</span><span class="intro-letter">d</span></span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="intro-sub text-[10px] font-mono tracking-[0.45em] uppercase text-neutral-300 mb-6">
+                Elite Reproductive Excellence
+            </p>
+
+            <!-- Loading Progress Bar -->
+            <div class="w-48 h-1.5 bg-white/10 rounded-full overflow-hidden intro-bar-container shadow-inner">
+                <div class="h-full bg-gradient-to-r from-[#0251B0] via-violet-500 to-[#D1FF42] rounded-full w-0 intro-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // High-Impact Kinetic Anime.js 5-Second Master Sequence
+        window.addEventListener('DOMContentLoaded', () => {
+            // Uncomment line below to force-test animation on every hard reload:
+            // sessionStorage.removeItem('FirstChild_kinetic_intro');
+
+            const hasSeenIntro = sessionStorage.getItem('FirstChild_kinetic_intro');
+
+            if (!hasSeenIntro) {
+                const tl = anime.timeline({
+                    easing: 'cubicBezier(0.25, 1, 0.5, 1)'
+                });
+
+                // Phase 1: Background & Rings Expansion
+                tl.add({
+                    targets: '.intro-glow',
+                    scale: [0.5, 1.3],
+                    opacity: [0, 1],
+                    duration: 1000
+                })
+                .add({
+                    targets: '.intro-ring',
+                    scale: [0.3, 1],
+                    opacity: [0, 0.7],
+                    rotate: '360deg',
+                    duration: 1400
+                }, '-=800')
+                .add({
+                    targets: '.intro-ring-inner',
+                    scale: [1.8, 1],
+                    opacity: [0, 0.9],
+                    rotate: '-360deg',
+                    duration: 1400
+                }, '-=1200')
+
+                // Phase 2: Monogram Box Explosion & Bounce
+                .add({
+                    targets: '.intro-box',
+                    scale: [0, 1.15, 1],
+                    opacity: [0, 1],
+                    rotate: ['-45deg', '0deg'],
+                    duration: 900,
+                    easing: 'spring(1, 80, 10, 0)'
+                }, '-=900')
+
+                // Phase 3: Staggered Kinetic Letters Reveal
+                .add({
+                    targets: '.intro-letter',
+                    translateY: [60, 0],
+                    rotate: [15, 0],
+                    opacity: [0, 1],
+                    delay: anime.stagger(45),
+                    duration: 900
+                }, '-=600')
+
+                // Phase 4: Subtitle & Loading Bar Fade In
+                .add({
+                    targets: ['.intro-sub', '.intro-bar-container'],
+                    translateY: [20, 0],
+                    opacity: [0, 1],
+                    duration: 800
+                }, '-=500')
+
+                // Phase 5: Precision Loading Bar Fill (Synchronized to exactly 5 seconds total)
+                .add({
+                    targets: '.intro-progress',
+                    width: '100%',
+                    easing: 'easeInOutQuint',
+                    duration: 1300
+                }, '-=400')
+
+                // Phase 6: Cinematic Curtain Lift / Fade Out
+                .add({
+                    targets: '#intro-overlay',
+                    opacity: 0,
+                    scale: 1.05,
+                    duration: 700,
+                    complete: () => {
+                        const overlay = document.getElementById('intro-overlay');
+                        if (overlay) overlay.remove();
+                        sessionStorage.setItem('FirstChild_kinetic_intro', 'true');
+                    }
+                }, '+=100');
+
+            } else {
+                const overlay = document.getElementById('intro-overlay');
+                if (overlay) overlay.remove();
+            }
+        });
+    </script>
+
+<!-- ===== LUXURY EDITORIAL GLOBAL HEADER ===== -->
+<header id="global-header" class="fixed top-0 w-full z-[100] px-4 py-4 md:px-8 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto bg-white/80 dark:bg-[#111318]/80 backdrop-blur-2xl border border-neutral-200/80 dark:border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-[0_8px_32px_rgba(2,81,176,0.06)] dark:shadow-none transition-all duration-300">
+        
+        <!-- Brand Identity (Always Visible) -->
+        <div class="flex items-center gap-3.5 cursor-pointer group" onclick="router.navigate('home')">
+            <div class="w-10 h-10 bg-[#0251B0] rounded-2xl flex items-center justify-center text-[#D1FF42] shadow-md shadow-[#0251B0]/30 transition-transform duration-300 group-hover:scale-105">
+                <img src="assets/images/brandlogo.png" alt="FirstChild Logo" class="w-5 h-5 object-contain brightness-0 invert">
+            </div>
+            <span class="text-xl font-black tracking-tight uppercase text-neutral-900 dark:text-white">First<span class="text-[#0251B0] dark:text-[#D1FF42]">Child</span></span>
+        </div>
+
+        <!-- Desktop Nav (Switched from lg:flex to md:flex so it appears at 768px instead of 1024px) -->
+        <div class="hidden md:flex items-center gap-6 xl:gap-8 font-bold text-[11px] xl:text-[12px] uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300">
+            <a href="#home" class="nav-link hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors" data-route="home" onclick="router.navigate('home')">Home</a>
+            <a href="#treatments" class="nav-link hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors" data-route="treatments" onclick="router.navigate('treatments')">Treatments</a>
+            <a href="#doctors" class="nav-link hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors" data-route="doctors" onclick="router.navigate('doctors')">Specialists</a>
+            <a href="#stories" class="nav-link hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors" data-route="stories" onclick="router.navigate('stories')">Stories</a>
+        </div>
+
+        <!-- Utility Controls (Visible on Tablet/Desktop) -->
+        <div class="hidden md:flex items-center gap-2">
+            <!-- Theme Toggle -->
+            <button onclick="app.toggleTheme()" class="p-2.5 rounded-full bg-neutral-100 dark:bg-white/5 hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-700 dark:text-white transition-all active:scale-95" title="Toggle Theme">
+                <i data-lucide="sun" id="sun-icon" class="w-4 h-4 hidden dark:block text-[#D1FF42]"></i>
+                <i data-lucide="moon" id="moon-icon" class="w-4 h-4 block dark:hidden text-[#0251B0]"></i>
+            </button>
+            
+            <!-- RTL / LTR Toggle -->
+            <button onclick="app.toggleDir()" class="px-3 py-1.5 text-[9px] xl:text-[10px] font-black uppercase tracking-wider border border-neutral-200 dark:border-white/10 rounded-full hover:bg-neutral-100 dark:hover:bg-white/5 text-neutral-700 dark:text-neutral-300 transition-all">
+                RTL/LTR
+            </button>
+            
+            <!-- Dynamic Authentication Zone -->
+            <div id="auth-nav-zone" class="ml-1"></div>
+        </div>
+
+        <!-- Mobile Menu Trigger (Visible only on small screens below 768px) -->
+        <div class="flex items-center gap-2 md:hidden">
+            <button onclick="app.toggleTheme()" class="p-2.5 rounded-full bg-neutral-100 dark:bg-white/5 text-neutral-700 dark:text-white">
+                <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-[#D1FF42]"></i>
+                <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-[#0251B0]"></i>
+            </button>
+            <button class="p-2.5 rounded-2xl bg-neutral-100 dark:bg-white/5 text-neutral-800 dark:text-white hover:bg-neutral-200 dark:hover:bg-white/10 transition-colors" onclick="app.toggleMobileMenu()">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- ===== MOBILE DRAWER (Only active below 768px) ===== -->
+<div id="mobile-menu" class="fixed inset-0 z-[110] bg-neutral-950/95 backdrop-blur-2xl translate-x-full transition-transform duration-500 md:hidden flex flex-col justify-between p-8 overflow-y-auto">
+    
+    <div class="flex items-center justify-between w-full pb-6 border-b border-white/10">
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-[#0251B0] rounded-xl flex items-center justify-center text-[#D1FF42]">
+                <img src="assets/images/brandlogo.png" alt="Logo" class="w-4 h-4 object-contain brightness-0 invert">
+            </div>
+            <span class="text-lg font-black tracking-tight uppercase text-white">First<span class="text-[#D1FF42]">Child</span></span>
+        </div>
+        <button onclick="app.toggleMobileMenu()" class="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+    </div>
+
+    <div class="flex flex-col items-center justify-center gap-6 my-auto py-8">
+        <a href="#home" class="mobile-nav-link text-2xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="home" onclick="app.toggleMobileMenu(); router.navigate('home')">Home</a>
+        <a href="#treatments" class="mobile-nav-link text-2xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="treatments" onclick="app.toggleMobileMenu(); router.navigate('treatments')">Treatments</a>
+        <a href="#doctors" class="mobile-nav-link text-2xl font-serif text-white hover:text-D1FF42] transition-colors" data-route="doctors" onclick="app.toggleMobileMenu(); router.navigate('doctors')">Specialists</a>
+        <a href="#stories" class="mobile-nav-link text-2xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="stories" onclick="app.toggleMobileMenu(); router.navigate('stories')">Stories</a>
+    </div>
+
+    <div class="w-full space-y-6 pt-6 border-t border-white/10">
+        <div id="mobile-auth-zone" class="w-full flex justify-center"></div>
+        <div class="flex justify-center items-center gap-4">
+            <button onclick="app.toggleDir()" class="px-4 py-2 text-[10px] font-black uppercase tracking-wider border border-white/10 rounded-full text-neutral-300 hover:bg-white/5 transition-all">
+                Switch RTL / LTR
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===== DYNAMIC VIEW CONTAINER ===== -->
+    <main id="app-view-container" class="pt-28 min-h-screen"></main>
+
+    <!-- ===== BOOKING MODAL ===== -->
+    <div id="consultation-modal" class="fixed inset-0 z-[150] bg-neutral-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="glass max-w-lg w-full p-8 rounded-5xl shadow-2xl relative animate-in">
+            <button onclick="app.closeModal('consultation-modal')" class="absolute top-6 right-6 p-2 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-brand-primary/10 text-brand-primary flex items-center justify-center">
+                    <i data-lucide="calendar-check" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold font-serif">Book Consultation</h3>
+                    <p class="text-xs text-neutral-500 font-medium">Secure your initial diagnostic review with our specialists.</p>
+                </div>
+            </div>
+            <form onsubmit="app.handleBookingSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Full Name</label>
+                    <input type="text" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-brand-primary outline-none">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Email Address</label>
+                    <input type="email" required placeholder="jane@example.com" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-brand-primary outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Preferred Date</label>
+                        <input type="date" required class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-brand-primary outline-none text-xs">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Specialist</label>
+                        <select class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-brand-primary outline-none text-xs">
+                            <option>Dr. Julianna Thorne</option>
+                            <option>Dr. Marcus Sterling</option>
+                            <option>Dr. Sophia Chen</option>
+                            <option>Dr. Robert Aris</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Primary Inquiry</label>
+                    <textarea rows="3" placeholder="Briefly describe your goals or previous treatments..." class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-brand-primary outline-none text-xs"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 bg-brand-primary text-white rounded-full font-black text-xs uppercase tracking-widest shadow-xl shadow-brand-primary/20 hover:scale-[1.01] transition-all">
+                    Confirm Appointment Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== LUXURY EDITORIAL FOOTER ===== -->
+    <footer class="w-full bg-white dark:bg-[#111318] border-t border-neutral-200 dark:border-white/10 pt-20 pb-12 px-6 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-neutral-200/70 dark:border-white/10">
+            
+            <!-- Division 1: Brand & Identity (Span 5) -->
+            <div class="md:col-span-5 space-y-6">
+                <div class="flex items-center gap-3.5 cursor-pointer group" onclick="router.navigate('home')">
+                    <div class="w-11 h-11 bg-[#0251B0] rounded-2xl flex items-center justify-center text-[#D1FF42] shadow-lg shadow-[#0251B0]/20 font-bold transition-transform duration-300 group-hover:scale-105">
+                        <img src="assets/images/brandlogo.png" alt="FirstChild Logo" class="w-6 h-6 object-contain brightness-0 invert">
+                    </div>
+                    <span class="text-2xl font-black tracking-tight uppercase text-neutral-900 dark:text-white">First<span class="text-[#0251B0] dark:text-[#D1FF42]">Child</span></span>
+                </div>
+                
+                <p class="text-neutral-600 dark:text-[#C7D1DD] text-sm leading-relaxed max-w-sm font-light">
+                    Advanced reproductive science and personalized clinical care. Your journey to parenthood, beautifully supported by industry-leading success protocols.
+                </p>
+
+                <div class="pt-2 flex items-center gap-4 text-xs font-mono text-neutral-500 dark:text-neutral-400">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> ISO-5 Cleanroom
+                    </span>
+                    <span>Est. 2011</span>
+                </div>
+            </div>
+
+            <!-- Division 2: Core Directory Routes (Span 3) -->
+            <div class="md:col-span-3 space-y-5">
+                <h4 class="text-xs font-black uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-400">Core Directory</h4>
+                <div class="flex flex-col space-y-2.5">
+                    <button onclick="router.navigate('home')" class="py-2.5 px-4 text-left bg-neutral-50 hover:bg-[#0251B0]/10 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-neutral-800 dark:text-white font-semibold text-xs rounded-2xl transition-all duration-200 flex items-center justify-between group">
+                        <span>Home</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#0251B0] dark:text-[#D1FF42]"></i>
+                    </button>
+                    <button onclick="router.navigate('doctors')" class="py-2.5 px-4 text-left bg-neutral-50 hover:bg-[#0251B0]/10 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-neutral-800 dark:text-white font-semibold text-xs rounded-2xl transition-all duration-200 flex items-center justify-between group">
+                        <span>Specialists</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#0251B0] dark:text-[#D1FF42]"></i>
+                    </button>
+                    <button onclick="router.navigate('stories')" class="py-2.5 px-4 text-left bg-neutral-50 hover:bg-[#0251B0]/10 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-neutral-800 dark:text-white font-semibold text-xs rounded-2xl transition-all duration-200 flex items-center justify-between group">
+                        <span>Stories</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#0251B0] dark:text-[#D1FF42]"></i>
+                    </button>
+                    <button onclick="router.navigate('login')" class="py-2.5 px-4 text-left bg-neutral-50 hover:bg-[#0251B0]/10 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-neutral-800 dark:text-white font-semibold text-xs rounded-2xl transition-all duration-200 flex items-center justify-between group">
+                        <span>Patient Portal</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#0251B0] dark:text-[#D1FF42]"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Division 3: Treatment Jump-Links (Span 4) -->
+            <div class="md:col-span-4 space-y-5">
+                <h4 class="text-xs font-black uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-400">Treatment Shortcuts</h4>
+                <div class="grid grid-cols-2 gap-2.5">
+                    <button onclick="app.jumpToTreatment('ivf')" class="py-2.5 px-3.5 text-left bg-[#0251B0]/5 hover:bg-[#0251B0]/15 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-[#0251B0] dark:text-[#D1FF42] font-semibold text-xs rounded-2xl transition-all duration-200">IVF Hub</button>
+                    <button onclick="app.jumpToTreatment('iui')" class="py-2.5 px-3.5 text-left bg-teal-500/10 hover:bg-teal-500/20 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-teal-600 dark:text-teal-400 font-semibold text-xs rounded-2xl transition-all duration-200">IUI Protocol</button>
+                    <button onclick="app.jumpToTreatment('icsi')" class="py-2.5 px-3.5 text-left bg-violet-500/10 hover:bg-violet-500/20 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-violet-600 dark:text-violet-400 font-semibold text-xs rounded-2xl transition-all duration-200">ICSI Injection</button>
+                    <button onclick="app.jumpToTreatment('egg-freezing')" class="py-2.5 px-3.5 text-left bg-amber-500/10 hover:bg-amber-500/20 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-amber-600 dark:text-amber-400 font-semibold text-xs rounded-2xl transition-all duration-200">Egg Freezing</button>
+                    <button onclick="app.jumpToTreatment('pgt')" class="py-2.5 px-3.5 text-left bg-rose-500/10 hover:bg-rose-500/20 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-rose-600 dark:text-rose-400 font-semibold text-xs rounded-2xl transition-all duration-200">PGT Screening</button>
+                    <button onclick="app.jumpToTreatment('donor')" class="py-2.5 px-3.5 text-left bg-blue-500/10 hover:bg-blue-500/20 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-blue-600 dark:text-blue-400 font-semibold text-xs rounded-2xl transition-all duration-200">Donor Programs</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Sub-Bar -->
+        <div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-neutral-500 dark:text-[#C7D1DD] font-medium">
+            <p class="flex items-center gap-2">
+                <i data-lucide="clock" class="w-3.5 h-3.5 text-[#0251B0] dark:text-[#D1FF42]"></i> Mon-Fri 8AM - 8PM EST • +1 (888) 555-FirstChild
+            </p>
+            <div class="flex gap-6">
+                <a href="#home" onclick="router.navigate('home')" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#home" onclick="router.navigate('home')" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Terms of Service</a>
+                <span class="text-neutral-300 dark:text-neutral-700">|</span>
+                <p>© 2026 FirstChild</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== TOAST CONTAINER ===== -->
+    <div id="toast-container" class="fixed bottom-8 right-8 z-[200] flex flex-col gap-4"></div>
+
+    <!-- ===== MAIN JAVASCRIPT ===== -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

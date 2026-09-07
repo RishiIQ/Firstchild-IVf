@@ -1,0 +1,108 @@
+<!-- ============================================================
+     SIGNUP PAGE - FirstChild Fertility
+     ============================================================ -->
+
+<section class="max-w-md mx-auto px-6 py-12 md:py-20 reveal active">
+    <div class="glass p-8 md:p-12 rounded-5xl shadow-3xl border-2 border-brand-rose/20 relative">
+        
+        <!-- Top-Right Utility Toggles (Theme & RTL/LTR) -->
+        <div class="absolute top-6 right-6 flex items-center gap-2">
+            <button onclick="app.toggleTheme()" class="p-2 rounded-full hover:bg-slate-200/60 dark:hover:bg-slate-700/60 transition-all" title="Toggle Theme">
+                <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+            </button>
+            <button onclick="app.toggleDir()" class="px-2.5 py-1 text-[9px] font-black border border-slate-200 dark:border-slate-700 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                RTL/LTR
+            </button>
+        </div>
+
+        <!-- Logo / Icon -->
+        <div class="flex justify-center mb-6">
+            <div class="w-20 h-20 bg-brand-rose/10 rounded-3xl flex items-center justify-center text-brand-rose shadow-lg shadow-brand-rose/10">
+                <i data-lucide="user-plus" class="w-10 h-10"></i>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-2">Create Account</h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                Begin your journey with FirstChild Fertility today.
+            </p>
+        </div>
+
+        <!-- Signup Form -->
+        <form onsubmit="event.preventDefault(); app.toast('Account created successfully! Please log in.'); router.navigate('login');" class="space-y-4">
+            <div>
+                <label class="block text-[10px] font-black uppercase tracking-widest mb-1 ml-1 text-slate-400">
+                    Full Name
+                </label>
+                <input 
+                    type="text" 
+                    required 
+                    placeholder="Sarah McAllister" 
+                    class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-slate-800 border-none ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-brand-rose transition-all outline-none text-sm"
+                />
+            </div>
+            <div>
+                <label class="block text-[10px] font-black uppercase tracking-widest mb-1 ml-1 text-slate-400">
+                    Email Address
+                </label>
+                <input 
+                    type="email" 
+                    required 
+                    placeholder="sarah@example.com" 
+                    class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-slate-800 border-none ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-brand-rose transition-all outline-none text-sm"
+                />
+            </div>
+            <div>
+                <label class="block text-[10px] font-black uppercase tracking-widest mb-1 ml-1 text-slate-400">
+                    Security PIN / Password
+                </label>
+                <input 
+                    type="password" 
+                    required 
+                    placeholder="Create a secure PIN" 
+                    class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-slate-800 border-none ring-1 ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-brand-rose transition-all outline-none text-sm"
+                />
+            </div>
+            <button 
+                type="submit" 
+                class="w-full py-4 bg-brand-rose text-white rounded-full font-black text-[13px] uppercase tracking-widest shadow-2xl shadow-rose-500/30 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 mt-2"
+            >
+                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                Register Patient Account
+            </button>
+        </form>
+
+        <!-- Divider -->
+        <div class="relative my-6">
+            <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-slate-200 dark:border-slate-700"></div>
+            </div>
+            <div class="relative flex justify-center text-xs">
+                <span class="px-4 bg-white dark:bg-slate-800 text-slate-400 font-medium">Already have an account?</span>
+            </div>
+        </div>
+
+        <!-- Back to Login Button -->
+        <button 
+            type="button"
+            onclick="router.navigate('login')" 
+            class="w-full py-3 glass rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-slate-100 dark:hover:bg-slate-700 transition-all text-center mb-4"
+        >
+            Back to Patient Login
+        </button>
+
+        <!-- Admin Login Button (Routes to 404 error page as requested) -->
+        <button 
+            type="button"
+            onclick="router.navigate('404')" 
+            class="w-full py-3 bg-slate-900 dark:bg-slate-950 text-slate-300 rounded-2xl font-bold text-[11px] uppercase tracking-widest hover:bg-rose-950 hover:text-white transition-all text-center border border-slate-800"
+        >
+            <i data-lucide="shield-alert" class="inline w-3.5 h-3.5 mr-1 text-brand-rose"></i>
+            Admin Login Portal
+        </button>
+
+    </div>
+</section>

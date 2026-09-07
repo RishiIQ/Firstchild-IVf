@@ -1,0 +1,781 @@
+<!-- ============================================================
+     DASHBOARD PAGE - FirstChild Fertility
+     Awwwards-Caliber High-Contrast Redesign & Enhanced Architecture
+     ============================================================ -->
+
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 pb-20 reveal active">
+    
+    <!-- ===== SIDEBAR NAVIGATION & PROFILE ===== -->
+    <aside class="lg:col-span-3 space-y-6">
+        <!-- Patient Profile Card -->
+        <div class="adaptive-card p-8 rounded-5xl text-center shadow-xl relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#0251B0] to-[#D1FF42]"></div>
+            
+            <!-- Real Profile Picture with High-End Ring Accent -->
+            <div class="relative w-24 h-24 mx-auto mb-6">
+                <img src="https://images.unsplash.com/photo-1644860704769-c61c84be7836?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="Sarah McAllister Profile Picture" 
+                     class="w-full h-full object-cover rounded-full shadow-lg border-2 border-[#0251B0] dark:border-[#D1FF42]" />
+                <div class="absolute bottom-0 right-0 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white dark:border-[#111318]" title="Online"></div>
+            </div>
+
+            <h4 class="text-xl font-bold mb-1 text-neutral-900 dark:text-white" id="profile-name">Sarah McAllister</h4>
+            <p class="text-[10px] font-mono text-neutral-500 dark:text-[#C7D1DD] uppercase tracking-widest" id="profile-id">NC-7721</p>
+            <div class="mt-6 flex flex-wrap justify-center gap-2">
+                <span class="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[9px] font-black uppercase tracking-wider border border-emerald-500/20">Active Cycle</span>
+                <span class="px-3 py-1 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[9px] font-black uppercase tracking-wider border border-[#0251B0]/20">Verified</span>
+            </div>
+        </div>
+
+<nav class="adaptive-card p-3 sm:p-4 rounded-[40px] space-y-1.5 shadow-lg" id="dash-nav">
+    <a href="#dashboard" data-view="main" class="dash-nav-item active flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-3xl font-bold text-sm transition-all">
+        <i data-lucide="layout-grid" class="w-5 h-5 shrink-0"></i>
+        <span class="truncate">Dashboard</span>
+    </a>
+    <a href="#dashboard" data-view="labs" class="dash-nav-item flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-3xl font-bold text-sm transition-all">
+        <i data-lucide="microscope" class="w-5 h-5 shrink-0"></i>
+        <span class="truncate">Lab Results</span>
+    </a>
+    <a href="#dashboard" data-view="appointments" class="dash-nav-item flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-3xl font-bold text-sm transition-all">
+        <i data-lucide="calendar" class="w-5 h-5 shrink-0"></i>
+        <span class="truncate">Appointments</span>
+    </a>
+    <a href="#dashboard" data-view="medications" class="dash-nav-item flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-3xl font-bold text-sm transition-all">
+        <i data-lucide="pill" class="w-5 h-5 shrink-0"></i>
+        <span class="truncate">Medications</span>
+    </a>
+    <a href="#dashboard" data-view="billing" class="dash-nav-item flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-3xl font-bold text-sm transition-all">
+        <i data-lucide="credit-card" class="w-5 h-5 shrink-0"></i>
+        <span class="truncate">Billing & Finance</span>
+    </a>
+    <a href="#dashboard" data-view="messages" class="dash-nav-item flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-3xl font-bold text-sm transition-all">
+        <i data-lucide="message-square" class="w-5 h-5 shrink-0"></i>
+        <span class="truncate">Messages</span>
+        <span class="ml-auto px-2.5 py-0.5 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] text-[9px] font-black rounded-full shrink-0">2</span>
+    </a>
+</nav>
+
+        <!-- Concierge Widget -->
+        <div class="rounded-[40px] p-8 bg-[#111318] text-white border border-white/10 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-[#0251B0]/20 rounded-full blur-2xl pointer-events-none"></div>
+            <p class="text-[10px] font-black uppercase tracking-widest text-[#D1FF42] mb-2">Concierge</p>
+            <p class="text-sm font-bold mb-4 text-white">Your nurse advocate, Jane D., is online and ready.</p>
+            <button onclick="app.startLiveChat()" class="w-full py-3 bg-[#D1FF42] text-[#111318] rounded-full font-black text-[11px] uppercase tracking-widest shadow-[0_0_20px_rgba(209,255,66,0.3)] hover:bg-white transition-all">
+                <i data-lucide="message-circle" class="inline w-4 h-4 mr-2"></i>
+                Start Live Chat
+            </button>
+            <div class="mt-4 flex items-center gap-2 text-xs text-neutral-300 font-mono">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Available 24/7
+            </div>
+        </div>
+
+     
+    </aside>
+
+    <!-- ===== MAIN CONTENT AREA ===== -->
+    <div class="lg:col-span-9 space-y-8" id="dash-content">
+        <!-- Dashboard Main View -->
+        <div id="dash-main" class="space-y-6">
+            
+            <!-- Cycle Progress Tracker Banner -->
+            <div class="adaptive-card p-8 md:p-10 rounded-5xl border-2 border-[#0251B0]/25 dark:border-white/10 shadow-xl">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                    <div>
+                        <div class="flex items-center gap-3 mb-1">
+                            <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Cycle Status</h3>
+                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[9px] font-black uppercase border border-emerald-500/20">Active</span>
+                        </div>
+                        <p class="text-[#0251B0] dark:text-[#D1FF42] font-serif text-xl italic font-bold">Ovarian Stimulation & Monitoring</p>
+                        <p class="text-xs text-neutral-700 dark:text-[#C7D1DD] font-semibold mt-1">Lead Specialist: Dr. Julianna Thorne</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="px-4 py-1.5 bg-[#0251B0]/10 dark:bg-white/5 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-xs font-black uppercase tracking-widest border border-[#0251B0]/20 dark:border-white/10">Day 09 of 14</span>
+                        <p class="text-[10px] text-neutral-600 dark:text-neutral-400 mt-1 font-mono">Estimated retrieval: Oct 19, 2026</p>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="relative h-6 bg-neutral-200 dark:bg-white/[0.04] rounded-full overflow-hidden mb-6 shadow-inner border border-neutral-300 dark:border-white/10">
+                    <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-[#0251B0] to-[#D1FF42] rounded-full transition-all duration-1000" style="width: 65%"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-[11px] font-black text-neutral-900 dark:text-[#111318] tracking-widest drop-shadow-sm">
+                        65% Complete
+                    </div>
+                </div>
+
+                <!-- Cycle Phases -->
+                <div class="grid grid-cols-5 text-[10px] font-black uppercase tracking-widest text-center">
+                    <div class="text-[#0251B0] dark:text-[#D1FF42]">Suppression</div>
+                    <div class="text-[#0251B0] dark:text-[#D1FF42]">Stimulation</div>
+                    <div class="text-neutral-400">Retrieval</div>
+                    <div class="text-neutral-400">Fertilization</div>
+                    <div class="text-neutral-400">Transfer</div>
+                </div>
+
+                <!-- Phase Indicators -->
+                <div class="grid grid-cols-5 gap-1.5 mt-3">
+                    <div class="h-1.5 rounded-full bg-[#0251B0] dark:bg-[#D1FF42]"></div>
+                    <div class="h-1.5 rounded-full bg-[#0251B0] dark:bg-[#D1FF42]"></div>
+                    <div class="h-1.5 rounded-full bg-neutral-300 dark:bg-white/10"></div>
+                    <div class="h-1.5 rounded-full bg-neutral-300 dark:bg-white/10"></div>
+                    <div class="h-1.5 rounded-full bg-neutral-300 dark:bg-white/10"></div>
+                </div>
+            </div>
+
+            <!-- Upcoming Appointment High-Contrast Card -->
+            <div class="adaptive-card p-6 rounded-4xl bg-gradient-to-r from-[#0251B0]/10 via-transparent to-transparent flex flex-col md:flex-row items-center justify-between gap-4 border border-[#0251B0]/30 shadow-lg">
+                <div class="flex items-center gap-4 w-full md:w-auto">
+                    <div class="w-12 h-12 rounded-2xl bg-[#0251B0] text-[#D1FF42] flex items-center justify-center shrink-0 shadow-md">
+                        <i data-lucide="calendar" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm text-neutral-900 dark:text-white">Next: Ultrasound & Bloodwork</h4>
+                        <p class="text-xs text-neutral-700 dark:text-[#C7D1DD] font-medium">Oct 14, 2026 • 10:30 AM at FirstChild Main Clinic, Suite 400</p>
+                    </div>
+                </div>
+                <button onclick="app.toast('Appointment details sent to your email.')" class="px-6 py-2.5 bg-[#111318] dark:bg-white text-white dark:text-[#111318] rounded-full text-xs font-bold shrink-0 hover:opacity-90 transition-all shadow-md">
+                    View Details
+                </button>
+            </div>
+
+            <!-- Two Column Split: Labs + Medications -->
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <!-- Lab Diagnostics Widget -->
+                <div class="adaptive-card p-6 md:p-8 rounded-5xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-6 pb-4 border-b border-neutral-200 dark:border-white/10">
+                            <h4 class="font-bold uppercase tracking-widest text-xs text-neutral-900 dark:text-white">Latest Lab Diagnostics</h4>
+                            <button onclick="app.toast('Lab data refreshed successfully')" class="p-2 rounded-full bg-neutral-100 dark:bg-white/5 hover:bg-neutral-200 dark:hover:bg-white/10 transition-colors">
+                                <i data-lucide="refresh-cw" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i>
+                            </button>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-2.5 border-b border-neutral-200 dark:border-white/10">
+                                <span class="text-sm font-bold text-neutral-800 dark:text-[#C7D1DD]">Estradiol (E2)</span>
+                                <div class="text-right">
+                                    <p class="font-black text-sm text-neutral-900 dark:text-white">1,240 pg/mL</p>
+                                    <p class="text-[9px] font-black uppercase text-emerald-600 dark:text-emerald-400">Rising Nicely</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-2.5 border-b border-neutral-200 dark:border-white/10">
+                                <span class="text-sm font-bold text-neutral-800 dark:text-[#C7D1DD]">LH Level</span>
+                                <div class="text-right">
+                                    <p class="font-black text-sm text-neutral-900 dark:text-white">4.8 mIU/mL</p>
+                                    <p class="text-[9px] font-black uppercase text-[#0251B0] dark:text-[#D1FF42]">Stable</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-2.5 border-b border-neutral-200 dark:border-white/10">
+                                <span class="text-sm font-bold text-neutral-800 dark:text-[#C7D1DD]">Progesterone</span>
+                                <div class="text-right">
+                                    <p class="font-black text-sm text-neutral-900 dark:text-white">0.8 ng/mL</p>
+                                    <p class="text-[9px] font-black uppercase text-emerald-600 dark:text-emerald-400">Optimal</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-2.5">
+                                <span class="text-sm font-bold text-neutral-800 dark:text-[#C7D1DD]">FSH</span>
+                                <div class="text-right">
+                                    <p class="font-black text-sm text-neutral-900 dark:text-white">6.2 mIU/mL</p>
+                                    <p class="text-[9px] font-black uppercase text-emerald-600 dark:text-emerald-400">Normal Range</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="router.navigate('dashboard')" class="w-full mt-6 py-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] text-center text-xs font-bold text-[#0251B0] dark:text-[#D1FF42] hover:opacity-80 transition-all border border-neutral-200 dark:border-white/10" data-view="labs">
+                        View All Lab Results →
+                    </button>
+                </div>
+
+                <!-- Medication Schedule Widget -->
+                <div class="adaptive-card p-6 md:p-8 rounded-5xl shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-6 pb-4 border-b border-neutral-200 dark:border-white/10">
+                            <h4 class="font-bold uppercase tracking-widest text-xs text-neutral-900 dark:text-white">Medication Schedule</h4>
+                            <span class="px-3 py-1 bg-[#D1FF42]/20 text-neutral-900 dark:text-[#D1FF42] text-[9px] font-black uppercase rounded-full">Today's Doses</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-4 p-4 rounded-3xl bg-emerald-500/10 border border-emerald-500/20">
+                                <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-black line-through text-emerald-700 dark:text-emerald-300">Gonal-F Redi-ject</p>
+                                    <p class="text-[10px] font-bold text-neutral-600 dark:text-neutral-300 font-mono">300 IU • 8:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                                <div class="w-6 h-6 rounded-full border-2 border-neutral-500 flex items-center justify-center shrink-0"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-black text-neutral-900 dark:text-white">Menopur Injection</p>
+                                    <p class="text-[10px] font-bold text-neutral-600 dark:text-neutral-300 font-mono">75 IU • 8:15 PM</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                                <div class="w-6 h-6 rounded-full border-2 border-neutral-500 flex items-center justify-center shrink-0"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-black text-neutral-900 dark:text-white">Cetrotide 0.25mg</p>
+                                    <p class="text-[10px] font-bold text-neutral-600 dark:text-neutral-300 font-mono">1 Vial • 8:30 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="app.toast('Full medication schedule loaded.')" class="w-full mt-6 py-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] text-center text-xs font-bold text-[#0251B0] dark:text-[#D1FF42] hover:opacity-80 transition-all border border-neutral-200 dark:border-white/10">
+                        View Full Schedule →
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Financial & Insurance Overview Matrix -->
+            <div class="adaptive-card p-6 md:p-8 rounded-5xl shadow-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 pb-4 border-b border-neutral-200 dark:border-white/10">
+                    <h4 class="font-bold uppercase tracking-widest text-xs text-neutral-900 dark:text-white">Financial & Insurance Overview</h4>
+                    <div class="flex gap-3">
+                        <button onclick="app.toast('Downloaded statement summary PDF')" class="px-4 py-2 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] text-[10px] font-black uppercase rounded-full hover:opacity-90 transition-all shadow-md">
+                            <i data-lucide="download" class="inline w-3 h-3 mr-1"></i>
+                            Download PDF
+                        </button>
+                        <button onclick="app.toast('Insurance claims overview loaded.')" class="px-4 py-2 adaptive-card text-[10px] font-black uppercase rounded-full hover:opacity-80 transition-all text-neutral-900 dark:text-white">
+                            View Claims
+                        </button>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="border-b border-neutral-200 dark:border-white/10">
+                            <tr class="text-[10px] font-black uppercase text-neutral-500 dark:text-neutral-400">
+                                <th class="pb-3">Invoice ID</th>
+                                <th class="pb-3">Treatment Component</th>
+                                <th class="pb-3">Insurance Status</th>
+                                <th class="pb-3 text-right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs font-bold divide-y divide-neutral-200 dark:divide-white/10 text-neutral-900 dark:text-white">
+                            <tr>
+                                <td class="py-3.5 font-mono">#NC-9921</td>
+                                <td class="py-3.5">Stimulation Medication Bundle</td>
+                                <td class="py-3.5"><span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[10px]">Approved</span></td>
+                                <td class="py-3.5 text-right font-mono">$3,420.00</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3.5 font-mono">#NC-9922</td>
+                                <td class="py-3.5">Laboratory Monitoring (Phase 1)</td>
+                                <td class="py-3.5"><span class="px-2.5 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-[10px]">Pending Review</span></td>
+                                <td class="py-3.5 text-right font-mono">$850.00</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3.5 font-mono">#NC-9923</td>
+                                <td class="py-3.5">Egg Retrieval (Estimate)</td>
+                                <td class="py-3.5"><span class="px-2.5 py-1 bg-neutral-300 dark:bg-white/10 text-neutral-700 dark:text-neutral-300 rounded-full text-[10px]">Not Filed</span></td>
+                                <td class="py-3.5 text-right font-mono">$5,200.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-6 p-4 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2">
+                    <p class="text-xs sm:text-sm text-neutral-800 dark:text-[#C7D1DD] font-semibold"><span class="font-black text-neutral-900 dark:text-white">Insurance Coverage:</span> 70% covered after deductible</p>
+                    <p class="text-xs sm:text-sm font-black text-[#0251B0] dark:text-[#D1FF42]">Est. OOP: $2,850.00</p>
+                </div>
+            </div>
+
+           <!-- Dashboard Quick Actions Footer Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
+    <!-- Book Appointment: Opens Modal -->
+    <button onclick="app.openModal('consultation-modal')" class="adaptive-card p-4 rounded-3xl text-center hover:border-[#0251B0] dark:hover:border-[#D1FF42] transition-all group shadow-md">
+        <i data-lucide="calendar-check" class="w-6 h-6 mx-auto mb-2 text-[#0251B0] dark:text-[#D1FF42] group-hover:scale-110 transition-transform"></i>
+        <span class="text-[10px] font-black uppercase tracking-widest text-neutral-900 dark:text-white">Book Appointment</span>
+    </button>
+    
+    <!-- Message Team: Opens Messages View Tab via Router/Dashboard Nav Logic -->
+    <button onclick="document.querySelector('#dash-nav [data-view=\'messages\']').click()" class="adaptive-card p-4 rounded-3xl text-center hover:border-[#0251B0] dark:hover:border-[#D1FF42] transition-all group shadow-md">
+        <i data-lucide="message-circle" class="w-6 h-6 mx-auto mb-2 text-[#0251B0] dark:text-[#D1FF42] group-hover:scale-110 transition-transform"></i>
+        <span class="text-[10px] font-black uppercase tracking-widest text-neutral-900 dark:text-white">Message Team</span>
+    </button>
+    
+    <!-- View Results: Switches to Lab Results View Tab -->
+    <button onclick="document.querySelector('#dash-nav [data-view=\'labs\']').click()" class="adaptive-card p-4 rounded-3xl text-center hover:border-[#0251B0] dark:hover:border-[#D1FF42] transition-all group shadow-md">
+        <i data-lucide="file-text" class="w-6 h-6 mx-auto mb-2 text-[#0251B0] dark:text-[#D1FF42] group-hover:scale-110 transition-transform"></i>
+        <span class="text-[10px] font-black uppercase tracking-widest text-neutral-900 dark:text-white">View Results</span>
+    </button>
+    
+    <!-- Resources: Opens Coming Soon / Resource Hub Route -->
+    <button onclick="router.navigate('coming-soon')" class="adaptive-card p-4 rounded-3xl text-center hover:border-[#0251B0] dark:hover:border-[#D1FF42] transition-all group shadow-md">
+        <i data-lucide="book-open" class="w-6 h-6 mx-auto mb-2 text-[#0251B0] dark:text-[#D1FF42] group-hover:scale-110 transition-transform"></i>
+        <span class="text-[10px] font-black uppercase tracking-widest text-neutral-900 dark:text-white">Resources</span>
+    </button>
+</div>
+        </div>
+
+        <!-- Dashboard Sub-Views (hidden by default, shown via JS) -->
+        <div id="dash-labs" style="display: none;"></div>
+        <div id="dash-appointments" style="display: none;"></div>
+        <div id="dash-medications" style="display: none;"></div>
+        <div id="dash-billing" style="display: none;"></div>
+        <div id="dash-messages" style="display: none;"></div>
+    </div>
+</div>
+
+<!-- ============================================================
+     DASHBOARD SUB-VIEW TEMPLATES (Awwwards Enhanced & High Contrast)
+     ============================================================ -->
+
+<script type="text/html" id="template-labs">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+        <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
+            <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center shrink-0">
+                <i data-lucide="microscope" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Comprehensive Lab Results</h3>
+                <p class="text-neutral-600 dark:text-[#C7D1DD] text-xs">Detailed hormone panel and genetic screening results.</p>
+            </div>
+        </div>
+
+        <!-- Hormone Panel -->
+        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10 space-y-4">
+            <h4 class="font-bold mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-neutral-900 dark:text-white">
+                <i data-lucide="activity" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i>
+                Hormone Panel (Day 9)
+            </h4>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5">
+                    <span class="text-neutral-500 dark:text-neutral-400 text-xs">Estradiol (E2)</span>
+                    <p class="font-black text-base mt-1 text-neutral-900 dark:text-white">1,240 pg/mL</p>
+                    <span class="text-[9px] text-emerald-600 dark:text-emerald-400 font-black uppercase">↑ Rising</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5">
+                    <span class="text-neutral-500 dark:text-neutral-400 text-xs">LH Level</span>
+                    <p class="font-black text-base mt-1 text-neutral-900 dark:text-white">4.8 mIU/mL</p>
+                    <span class="text-[9px] text-[#0251B0] dark:text-[#D1FF42] font-black uppercase">→ Stable</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5">
+                    <span class="text-neutral-500 dark:text-neutral-400 text-xs">Progesterone</span>
+                    <p class="font-black text-base mt-1 text-neutral-900 dark:text-white">0.8 ng/mL</p>
+                    <span class="text-[9px] text-emerald-600 dark:text-emerald-400 font-black uppercase">✓ Optimal</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5">
+                    <span class="text-neutral-500 dark:text-neutral-400 text-xs">FSH Level</span>
+                    <p class="font-black text-base mt-1 text-neutral-900 dark:text-white">6.2 mIU/mL</p>
+                    <span class="text-[9px] text-emerald-600 dark:text-emerald-400 font-black uppercase">✓ Normal</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Genetic Screening -->
+        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+            <h4 class="font-bold mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-neutral-900 dark:text-white">
+                <i data-lucide="dna" class="w-4 h-4 text-violet-500"></i>
+                Genetic Screening (PGT-A)
+            </h4>
+            <div class="flex items-center gap-4 p-4 bg-white dark:bg-white/[0.02] rounded-2xl border border-neutral-200 dark:border-white/5">
+                <div class="w-12 h-12 rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+                    <i data-lucide="clock" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-sm text-neutral-900 dark:text-white">Results Pending</p>
+                    <p class="text-xs text-neutral-600 dark:text-[#C7D1DD]">Expected in 5-7 days. Your embryos are currently in culture.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AMH Reserve -->
+        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+            <h4 class="font-bold mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-neutral-900 dark:text-white">
+                <i data-lucide="heart-pulse" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i>
+                AMH (Anti-Müllerian Hormone)
+            </h4>
+            <p class="text-sm text-neutral-800 dark:text-neutral-200"><span class="font-black text-[#0251B0] dark:text-[#D1FF42]">3.2 ng/mL</span> — Good ovarian reserve for your age group (32).</p>
+            <div class="mt-4 w-full h-2.5 bg-neutral-200 dark:bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-emerald-400 to-[#0251B0] rounded-full" style="width: 75%"></div>
+            </div>
+            <div class="flex justify-between text-[10px] font-mono text-neutral-500 dark:text-neutral-400 mt-1.5">
+                <span>Low</span>
+                <span>Normal</span>
+                <span>High</span>
+            </div>
+        </div>
+
+        <div class="p-4 bg-[#0251B0]/10 dark:bg-white/5 rounded-3xl border border-[#0251B0]/20 dark:border-white/10">
+            <p class="text-xs text-neutral-800 dark:text-[#C7D1DD] leading-relaxed font-medium">
+                <span class="font-bold text-[#0251B0] dark:text-[#D1FF42]">📋 Note:</span> All lab results are reviewed by your specialist within 24 hours. You will receive a notification when new results are available.
+            </p>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="template-appointments">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+        <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
+            <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center shrink-0">
+                <i data-lucide="calendar" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Upcoming Appointments</h3>
+                <p class="text-neutral-600 dark:text-[#C7D1DD] text-xs">Your scheduled consultations and key cycle milestones.</p>
+            </div>
+        </div>
+
+        <!-- Upcoming List -->
+        <div class="space-y-4">
+            <div class="flex items-center justify-between p-5 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border-l-4 border-l-emerald-500 border border-neutral-200 dark:border-white/5">
+                <div class="space-y-1">
+                    <p class="font-bold text-base text-neutral-900 dark:text-white">Ultrasound & Bloodwork</p>
+                    <p class="text-xs text-neutral-700 dark:text-[#C7D1DD]">Oct 14, 2026 • 10:30 AM</p>
+                    <p class="text-[11px] text-neutral-500 dark:text-neutral-400 font-mono">Dr. Julianna Thorne • Main Clinic, Suite 400</p>
+                </div>
+                <span class="px-3.5 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[10px] font-black uppercase">Confirmed</span>
+            </div>
+
+            <div class="flex items-center justify-between p-5 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border-l-4 border-l-amber-500 border border-neutral-200 dark:border-white/5">
+                <div class="space-y-1">
+                    <p class="font-bold text-base text-neutral-900 dark:text-white">Follicle Monitoring Scan</p>
+                    <p class="text-xs text-neutral-700 dark:text-[#C7D1DD]">Oct 16, 2026 • 8:15 AM</p>
+                    <p class="text-[11px] text-neutral-500 dark:text-neutral-400 font-mono">Dr. Sophia Chen • Imaging Center, Floor 2</p>
+                </div>
+                <span class="px-3.5 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-[10px] font-black uppercase">Pending</span>
+            </div>
+
+            <div class="flex items-center justify-between p-5 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border-l-4 border-l-neutral-400 border border-neutral-200 dark:border-white/5">
+                <div class="space-y-1">
+                    <p class="font-bold text-base text-neutral-900 dark:text-white">Egg Retrieval (Tentative)</p>
+                    <p class="text-xs text-neutral-700 dark:text-[#C7D1DD]">Oct 19, 2026 • 7:30 AM</p>
+                    <p class="text-[11px] text-neutral-500 dark:text-neutral-400 font-mono">Surgical Suite • Fasting Required</p>
+                </div>
+                <span class="px-3.5 py-1 bg-neutral-200 dark:bg-white/10 text-neutral-600 dark:text-neutral-400 rounded-full text-[10px] font-black uppercase">TBD</span>
+            </div>
+        </div>
+
+        <!-- Past Appointments -->
+        <div class="space-y-3 pt-4">
+            <h4 class="font-bold text-sm uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Past Appointments</h4>
+            <div class="space-y-2.5">
+                <div class="flex items-center justify-between p-4 bg-white dark:bg-white/[0.02] rounded-2xl border border-neutral-200 dark:border-white/5">
+                    <div>
+                        <p class="font-bold text-sm text-neutral-900 dark:text-white">Initial Consultation</p>
+                        <p class="text-xs text-neutral-500 dark:text-neutral-400">Oct 1, 2026 • Dr. Julianna Thorne</p>
+                    </div>
+                    <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-black uppercase">Completed</span>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-white dark:bg-white/[0.02] rounded-2xl border border-neutral-200 dark:border-white/5">
+                    <div>
+                        <p class="font-bold text-sm text-neutral-900 dark:text-white">Baseline Ultrasound</p>
+                        <p class="text-xs text-neutral-500 dark:text-neutral-400">Oct 5, 2026 • Imaging Center</p>
+                    </div>
+                    <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-black uppercase">Completed</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 bg-[#0251B0]/10 dark:bg-white/5 rounded-3xl border border-[#0251B0]/20 dark:border-white/10">
+            <p class="text-xs text-neutral-800 dark:text-[#C7D1DD] font-medium">
+                <span class="font-bold text-[#0251B0] dark:text-[#D1FF42]">⏰ Reminder:</span> Please arrive 15 minutes early for all appointments. Bring your insurance card and photo ID.
+            </p>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="template-medications">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+        <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
+            <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center shrink-0">
+                <i data-lucide="pill" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Medication Management</h3>
+                <p class="text-neutral-600 dark:text-[#C7D1DD] text-xs">Your complete medication schedule and daily dosage timings.</p>
+            </div>
+        </div>
+
+        <!-- Today's Schedule -->
+        <div class="space-y-4">
+            <h4 class="font-bold text-sm uppercase tracking-wider flex items-center gap-2 text-neutral-900 dark:text-white">
+                <span class="w-2 h-2 rounded-full bg-[#0251B0] dark:bg-[#D1FF42] animate-pulse"></span>
+                Today's Schedule <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400 font-mono">(Oct 13, 2026)</span>
+            </h4>
+
+            <div class="space-y-3">
+                <div class="flex items-center gap-4 p-4 bg-emerald-500/10 rounded-3xl border border-emerald-500/20">
+                    <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-bold text-sm line-through text-emerald-700 dark:text-emerald-300">Gonal-F Redi-ject</p>
+                        <p class="text-xs text-neutral-700 dark:text-neutral-300">300 IU • Subcutaneous injection</p>
+                        <p class="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono">Taken at 8:00 PM</p>
+                    </div>
+                    <span class="px-3 py-1 bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-full text-[10px] font-black uppercase">Taken</span>
+                </div>
+
+                <div class="flex items-center gap-4 p-4 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+                    <div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+                        <i data-lucide="clock" class="w-5 h-5"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-bold text-sm text-neutral-900 dark:text-white">Menopur Injection</p>
+                        <p class="text-xs text-neutral-700 dark:text-neutral-300">75 IU • Subcutaneous injection</p>
+                        <p class="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono">Scheduled: 8:15 PM</p>
+                    </div>
+                    <span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-[10px] font-black uppercase">Upcoming</span>
+                </div>
+
+                <div class="flex items-center gap-4 p-4 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+                    <div class="w-10 h-10 rounded-full bg-violet-500/10 text-violet-500 flex items-center justify-center shrink-0">
+                        <i data-lucide="clock" class="w-5 h-5"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-bold text-sm text-neutral-900 dark:text-white">Cetrotide 0.25mg</p>
+                        <p class="text-xs text-neutral-700 dark:text-neutral-300">1 Vial • Subcutaneous injection</p>
+                        <p class="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono">Scheduled: 8:30 PM</p>
+                    </div>
+                    <span class="px-3 py-1 bg-neutral-200 dark:bg-white/10 text-neutral-700 dark:text-neutral-300 rounded-full text-[10px] font-black uppercase">Upcoming</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weekly Overview -->
+        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+            <h4 class="font-bold text-sm mb-4 uppercase tracking-wider text-neutral-900 dark:text-white">Weekly Overview</h4>
+            <div class="grid grid-cols-7 gap-2 text-center">
+                <div class="p-3 rounded-2xl bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318]">
+                    <span class="text-[9px] font-black uppercase">Mon</span>
+                    <p class="text-xs font-bold mt-1">✓</p>
+                </div>
+                <div class="p-3 rounded-2xl bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318]">
+                    <span class="text-[9px] font-black uppercase">Tue</span>
+                    <p class="text-xs font-bold mt-1">✓</p>
+                </div>
+                <div class="p-3 rounded-2xl bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318]">
+                    <span class="text-[9px] font-black uppercase">Wed</span>
+                    <p class="text-xs font-bold mt-1">✓</p>
+                </div>
+                <div class="p-3 rounded-2xl bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318]">
+                    <span class="text-[9px] font-black uppercase">Thu</span>
+                    <p class="text-xs font-bold mt-1">✓</p>
+                </div>
+                <div class="p-3 rounded-2xl bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318]">
+                    <span class="text-[9px] font-black uppercase">Fri</span>
+                    <p class="text-xs font-bold mt-1">✓</p>
+                </div>
+                <div class="p-3 rounded-2xl bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/30">
+                    <span class="text-[9px] font-black uppercase">Sat</span>
+                    <p class="text-xs font-bold mt-1">⚡</p>
+                </div>
+                <div class="p-3 rounded-2xl bg-neutral-200 dark:bg-white/10 text-neutral-500">
+                    <span class="text-[9px] font-black uppercase">Sun</span>
+                    <p class="text-xs font-bold mt-1">-</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 bg-amber-500/10 rounded-3xl border border-amber-500/20">
+            <p class="text-xs text-neutral-800 dark:text-[#C7D1DD] font-medium">
+                <span class="font-bold text-amber-500">⚠️ Important:</span> Continue all medications as prescribed. Do not skip doses without consulting your care team.
+            </p>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="template-billing">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+        <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
+            <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center shrink-0">
+                <i data-lucide="credit-card" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Billing & Finance</h3>
+                <p class="text-neutral-600 dark:text-[#C7D1DD] text-xs">Review treatment costs, insurance claims, and active invoices.</p>
+            </div>
+        </div>
+
+        <!-- Summary Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="p-5 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 text-center">
+                <p class="text-[10px] text-neutral-500 dark:text-neutral-400 font-black uppercase tracking-wider">Total Billed</p>
+                <p class="text-xl font-serif font-bold text-[#0251B0] dark:text-[#D1FF42] mt-1">$9,470.00</p>
+            </div>
+            <div class="p-5 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 text-center">
+                <p class="text-[10px] text-neutral-500 dark:text-neutral-400 font-black uppercase tracking-wider">Insurance Paid</p>
+                <p class="text-xl font-serif font-bold text-emerald-600 dark:text-emerald-400 mt-1">$6,629.00</p>
+            </div>
+            <div class="p-5 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 text-center">
+                <p class="text-[10px] text-neutral-500 dark:text-neutral-400 font-black uppercase tracking-wider">OOP Balance</p>
+                <p class="text-xl font-serif font-bold text-amber-600 dark:text-amber-400 mt-1">$2,841.00</p>
+            </div>
+            <div class="p-5 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 text-center">
+                <p class="text-[10px] text-neutral-500 dark:text-neutral-400 font-black uppercase tracking-wider">Deductible Met</p>
+                <p class="text-xl font-serif font-bold text-emerald-600 dark:text-emerald-400 mt-1">85%</p>
+            </div>
+        </div>
+
+        <!-- Invoices Table -->
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead class="border-b border-neutral-200 dark:border-white/10">
+                    <tr class="text-[10px] font-black uppercase text-neutral-500 dark:text-neutral-400">
+                        <th class="pb-3">Invoice</th>
+                        <th class="pb-3">Description</th>
+                        <th class="pb-3">Date</th>
+                        <th class="pb-3">Status</th>
+                        <th class="pb-3 text-right">Amount</th>
+                    </tr>
+                </thead>
+                <tbody class="text-sm font-bold divide-y divide-neutral-100 dark:divide-white/5 text-neutral-900 dark:text-white">
+                    <tr>
+                        <td class="py-3.5 font-mono">#NC-9921</td>
+                        <td class="py-3.5">Stimulation Medication Bundle</td>
+                        <td class="py-3.5 text-neutral-500 dark:text-neutral-400 font-normal">Oct 5, 2026</td>
+                        <td class="py-3.5"><span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[10px]">Paid</span></td>
+                        <td class="py-3.5 text-right font-mono">$3,420.00</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3.5 font-mono">#NC-9922</td>
+                        <td class="py-3.5">Laboratory Monitoring (Phase 1)</td>
+                        <td class="py-3.5 text-neutral-500 dark:text-neutral-400 font-normal">Oct 10, 2026</td>
+                        <td class="py-3.5"><span class="px-2.5 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-[10px]">Pending</span></td>
+                        <td class="py-3.5 text-right font-mono">$850.00</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3.5 font-mono">#NC-9923</td>
+                        <td class="py-3.5">Egg Retrieval Procedure</td>
+                        <td class="py-3.5 text-neutral-500 dark:text-neutral-400 font-normal">Est. Oct 19</td>
+                        <td class="py-3.5"><span class="px-2.5 py-1 bg-neutral-200 dark:bg-white/10 text-neutral-600 dark:text-neutral-400 rounded-full text-[10px]">Estimate</span></td>
+                        <td class="py-3.5 text-right font-mono">$5,200.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Insurance info grid -->
+        <div class="grid md:grid-cols-2 gap-4 pt-2">
+            <div class="p-6 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 space-y-2">
+                <h5 class="font-bold text-sm uppercase tracking-wider text-neutral-900 dark:text-white">Insurance Coverage</h5>
+                <ul class="space-y-1 text-xs text-neutral-700 dark:text-[#C7D1DD]">
+                    <li><span class="font-bold text-neutral-900 dark:text-white">Provider:</span> Aetna PPO</li>
+                    <li><span class="font-bold text-neutral-900 dark:text-white">Member ID:</span> 8823-4567-21</li>
+                    <li><span class="font-bold text-neutral-900 dark:text-white">Coverage:</span> 70% after deductible</li>
+                    <li><span class="font-bold text-neutral-900 dark:text-white">Deductible:</span> $2,000 (85% met)</li>
+                </ul>
+            </div>
+            <div class="p-6 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 space-y-2">
+                <h5 class="font-bold text-sm uppercase tracking-wider text-neutral-900 dark:text-white">Payment Options</h5>
+                <ul class="space-y-1 text-xs text-neutral-700 dark:text-[#C7D1DD]">
+                    <li>✅ Credit / Debit Card</li>
+                    <li>✅ HSA / FSA Accepted</li>
+                    <li>✅ CareCredit Financing</li>
+                    <li>✅ Flexible Payment Plans Available</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="template-messages">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+        <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
+            <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center shrink-0">
+                <i data-lucide="message-square" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Secure Messages</h3>
+                <p class="text-neutral-600 dark:text-[#C7D1DD] text-xs">Direct encrypted communication with your care team.</p>
+            </div>
+            <span class="ml-auto px-3 py-1 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] text-[10px] font-black uppercase rounded-full shadow-md">2 New</span>
+        </div>
+
+        <!-- Thread List -->
+        <div class="space-y-4">
+            <div class="flex items-start gap-4 p-5 bg-[#0251B0]/5 dark:bg-white/[0.04] rounded-3xl border-l-4 border-l-[#0251B0] border border-neutral-200 dark:border-white/10">
+                <div class="w-10 h-10 rounded-full bg-[#0251B0] text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-md">JD</div>
+                <div class="flex-1 space-y-1">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm text-neutral-900 dark:text-white">Jane Doe <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400">• Nurse Advocate</span></p>
+                            <p class="text-[10px] text-[#0251B0] dark:text-[#D1FF42] font-black uppercase">New Message</p>
+                        </div>
+                        <span class="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono">10:30 AM</span>
+                    </div>
+                    <p class="text-xs md:text-sm text-neutral-700 dark:text-[#C7D1DD] pt-1">Your ultrasound results are in! Everything looks great. Let's schedule a time to review them together.</p>
+                    <button onclick="app.toast('Replying to Jane...')" class="text-xs font-bold text-[#0251B0] dark:text-[#D1FF42] hover:underline pt-1 inline-block">Reply →</button>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-5 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border-l-4 border-l-amber-500 border border-neutral-200 dark:border-white/10">
+                <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-600 flex items-center justify-center text-sm font-bold shrink-0">SC</div>
+                <div class="flex-1 space-y-1">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-bold text-sm text-neutral-900 dark:text-white">Dr. Sophia Chen <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400">• Fertility Specialist</span></p>
+                            <p class="text-[10px] text-amber-600 dark:text-amber-400 font-black uppercase">Follow-up</p>
+                        </div>
+                        <span class="text-[10px] text-neutral-500 dark:text-neutral-400 font-mono">Yesterday</span>
+                    </div>
+                    <p class="text-xs md:text-sm text-neutral-700 dark:text-[#C7D1DD] pt-1">Just checking in on your medication schedule. Let me know if you have any side effects to report.</p>
+                    <button onclick="app.toast('Replying to Dr. Chen...')" class="text-xs font-bold text-[#0251B0] dark:text-[#D1FF42] hover:underline pt-1 inline-block">Reply →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compose Box -->
+        <div class="pt-6 border-t border-neutral-200 dark:border-white/10 space-y-4">
+            <h4 class="font-bold text-sm uppercase tracking-wider text-neutral-900 dark:text-white">Send a Secure Message</h4>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <select class="px-4 py-3 rounded-2xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 outline-none text-xs font-bold flex-1 text-neutral-900 dark:text-white">
+                    <option class="bg-white dark:bg-neutral-900">Nurse Advocate (Jane Doe)</option>
+                    <option class="bg-white dark:bg-neutral-900">Dr. Julianna Thorne</option>
+                    <option class="bg-white dark:bg-neutral-900">Dr. Marcus Sterling</option>
+                    <option class="bg-white dark:bg-neutral-900">Dr. Sophia Chen</option>
+                    <option class="bg-white dark:bg-neutral-900">Dr. Robert Aris</option>
+                    <option class="bg-white dark:bg-neutral-900">Finance Team</option>
+                </select>
+                <input type="text" placeholder="Type your secure message..." class="flex-[2] px-4 py-3 rounded-2xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 outline-none text-xs text-neutral-900 dark:text-white placeholder:text-neutral-400">
+                <button onclick="app.toast('Message sent successfully!')" class="px-6 py-3 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] rounded-full font-black text-xs uppercase tracking-widest shadow-lg hover:opacity-90 transition-all shrink-0">
+                    <i data-lucide="send" class="w-4 h-4 inline mr-1"></i> Send
+                </button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<style>
+    /* Default state for all sidebar nav items (Inactive) */
+    .dash-nav-item {
+        background-color: transparent !important;
+        color: #111318 !important; /* Dark text for light mode */
+    }
+    .dark .dash-nav-item {
+        color: #FFFFFF !important; /* White text for dark mode */
+    }
+    
+    .dash-nav-item i {
+        color: #0251B0 !important;
+        stroke: #0251B0 !important;
+    }
+    .dark .dash-nav-item i {
+        color: #D1FF42 !important;
+        stroke: #D1FF42 !important;
+    }
+
+    /* Subtle hover effect for inactive items */
+    .dash-nav-item:not(.active):hover {
+        background-color: rgba(2, 81, 176, 0.05) !important;
+    }
+    .dark .dash-nav-item:not(.active):hover {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    /* Active State Styling overrides */
+    .dash-nav-item.active {
+        background-color: #D1FF42 !important;
+        color: #111318 !important;
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 25px -5px rgba(209, 255, 66, 0.25);
+    }
+    
+    .dash-nav-item.active span,
+    .dash-nav-item.active i {
+        color: #111318 !important;
+        stroke: #111318 !important;
+    }
+</style>

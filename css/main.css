@@ -1,0 +1,232 @@
+/* ============================================================
+   FirstChild FERTILITY - HIGH-CONTRAST ELITE REDESIGN
+   Complete cohesive CSS with dynamic theme variables
+   ============================================================ */
+
+:root {
+    --color-primary: #0251B0;
+    --color-primary-light: #3B82F6;
+    --color-primary-dark: #013576;
+    --color-volt: #D1FF42;
+    
+    --color-dark-bg: #111318;
+    --color-light-bg: #F8FAFC;
+    --color-muted-text: #C7D1DD;
+    
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    
+    --transition-base: 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    background-color: var(--color-light-bg);
+    color: #111318;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dark body {
+    background-color: var(--color-dark-bg);
+    color: #FFFFFF;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* Adaptive High-Contrast Cards */
+.adaptive-card {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(2, 81, 176, 0.15);
+    box-shadow: 0 10px 30px rgba(2, 81, 176, 0.05);
+    transition: all var(--transition-base);
+}
+
+.dark .adaptive-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+}
+
+.adaptive-card:hover {
+    border-color: rgba(2, 81, 176, 0.3);
+}
+
+.dark .adaptive-card:hover {
+    border-color: rgba(209, 255, 66, 0.3);
+}
+
+/* Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    display: inline-flex;
+    animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0251B0;
+    border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #111318;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #D1FF42;
+}
+
+/* ============================================================
+   FIRSTCHILD FERTILITY - CUSTOM RESPONSIVE MEDIA QUERY ARCHITECTURE
+   Synchronized with Tailwind Breakpoints (sm: 640px, md: 768px, lg: 1024px, xl: 1280px)
+   ============================================================ */
+
+/* --- 1. MOBILE DEVICES & SMALL VIEWPORTS (Max-width: 767px) --- */
+@media screen and (max-width: 899px) {
+    html {
+        font-size: 13px; /* Slightly compact root sizing for mobile readability */
+    }
+
+    /* Global Header & Nav adjustments */
+    #global-header nav {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Dashboard Sidebar & Content Stacking */
+    .max-w-7xl.mx-auto.grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    /* Hero Typography scaling for mobile screens */
+    h1 {
+        font-size: 2.75rem !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Padding adjustments for adaptive cards on mobile */
+    .adaptive-card {
+        padding: 1.25rem !important;
+        border-radius: 2rem !important;
+    }
+}
+
+/* --- 2. TABLETS & MEDIUM SCREENS (Min-width: 768px and Max-width: 1023px) --- */
+@media screen and (min-width: 900px) and (max-width: 1023px) {
+    html {
+        font-size: 13.5px;
+    }
+
+    /* Tablet grid adaptations for dashboard and sections */
+    .grid.lg\:grid-cols-12 {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    /* Stack sidebar on smaller tablets if needed, or allot compact span */
+    aside.lg\:col-span-3 {
+        grid-column: span 12 / span 12;
+    }
+
+    #dash-content.lg\:col-span-9 {
+        grid-column: span 12 / span 12;
+    }
+}
+
+/* --- 3. DESKTOP & LARGE SCREENS (Min-width: 1024px) --- */
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+
+    /* Enforce full desktop sidebar grid split in dashboard */
+    .max-w-7xl.mx-auto.grid {
+        grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    }
+
+    aside.lg\:col-span-3 {
+        grid-column: span 3 / span 3 !important;
+    }
+
+    #dash-content.lg\:col-span-9,
+    .lg\:col-span-9 {
+        grid-column: span 9 / span 9 !important;
+    }
+
+    /* Ensure desktop navigation items are cleanly spaced */
+    #global-header .hidden.lg\:flex {
+        display: flex !important;
+    }
+}
+
+/* --- 4. WIDE DESKOP & HIGH-RESOLUTION SCREENS (Min-width: 1280px and above) --- */
+@media screen and (min-width: 1280px) {
+    .max-w-7xl {
+        max-width: 80rem; /* Generous layout boundary for ultra-wide monitors */
+    }
+}
+
+/* --- 5. REDUCED MOTION & ACCESSIBILITY OVERRIDES --- */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .animate-marquee,
+    #app-view-container,
+    .adaptive-card {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
