@@ -1,0 +1,335 @@
+<!-- ============================================================
+     FIRSTCHILD FERTILITY - SaaS HOME 2 (Expanded Enterprise Suite)
+     ============================================================ -->
+
+<div class="space-y-24 pb-24 reveal active">
+    
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 pt-16 lg:pt-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] text-xs font-black uppercase tracking-widest">
+                <span class="w-2 h-2 rounded-full bg-[#0251B0] dark:bg-[#D1FF42] animate-ping"></span>
+                SaaS Cloud Suite v4.2 Enterprise
+            </div>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.1]">
+                Scale Your <span class="text-[#0251B0] dark:text-[#D1FF42] italic">Analytics</span> With Zero Latency.
+            </h1>
+            <p class="text-base sm:text-lg text-neutral-600 dark:text-[#C7D1DD] font-light max-w-2xl leading-relaxed">
+                Automate your clinical pipeline tracking, real-time patient analytics, and secure multi-region synchronization through our enterprise-grade SaaS infrastructure.
+            </p>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <button onclick="app.openModal('consultation-modal')" class="px-8 py-4 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] rounded-full font-black text-xs uppercase tracking-widest shadow-2xl hover:scale-105 transition-all text-center">
+                    Start 14-Day Free Trial
+                </button>
+                <button onclick="router.navigate('treatments')" class="px-8 py-4 glass border border-neutral-200 dark:border-white/10 rounded-full font-black text-xs uppercase tracking-widest hover:bg-neutral-100 dark:hover:bg-white/5 transition-all text-center">
+                    Explore Architecture
+                </button>
+            </div>
+            <div class="flex items-center gap-6 pt-4 text-xs font-mono text-neutral-500 dark:text-neutral-400">
+                <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i><span>No credit card required</span></div>
+                <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i><span>99.99% SLA Uptime</span></div>
+            </div>
+        </div>
+
+        <!-- SaaS Dashboard Preview Card -->
+        <div class="lg:col-span-5">
+            <div class="adaptive-card p-6 sm:p-8 rounded-5xl space-y-6 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-12 -top-12 w-48 h-48 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="flex justify-between items-center border-b border-neutral-200 dark:border-white/10 pb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                    </div>
+                    <span class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">Live Cluster US-East</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-wider font-bold">Processed Workflows</p>
+                            <h3 class="text-3xl font-serif font-bold text-neutral-900 dark:text-white mt-1">1,482,904</h3>
+                        </div>
+                        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold rounded-full">+28.4% this week</span>
+                    </div>
+                    <!-- Visual Mock Graph Bars -->
+                    <div class="h-32 flex items-end gap-2 pt-4 border-t border-neutral-100 dark:border-white/5">
+                        <div class="w-full bg-[#0251B0]/20 dark:bg-white/10 hover:bg-[#0251B0] dark:hover:bg-[#D1FF42] rounded-t-lg h-[40%] transition-all"></div>
+                        <div class="w-full bg-[#0251B0]/30 dark:bg-white/15 hover:bg-[#0251B0] dark:hover:bg-[#D1FF42] rounded-t-lg h-[65%] transition-all"></div>
+                        <div class="w-full bg-[#0251B0]/40 dark:bg-white/20 hover:bg-[#0251B0] dark:hover:bg-[#D1FF42] rounded-t-lg h-[50%] transition-all"></div>
+                        <div class="w-full bg-[#0251B0]/60 dark:bg-white/30 hover:bg-[#0251B0] dark:hover:bg-[#D1FF42] rounded-t-lg h-[85%] transition-all"></div>
+                        <div class="w-full bg-[#0251B0] dark:bg-[#D1FF42] rounded-t-lg h-[100%] transition-all shadow-lg"></div>
+                    </div>
+                </div>
+                <div class="p-4 rounded-2xl bg-neutral-50 dark:bg-white/5 flex items-center justify-between text-xs">
+                    <span class="font-medium">Active Encryption Protocol</span>
+                    <span class="font-mono text-[#0251B0] dark:text-[#D1FF42] font-bold">AES-256 TLS 1.3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Strip -->
+    <section class="max-w-7xl mx-auto px-6">
+        <div class="adaptive-card p-8 rounded-5xl grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-neutral-200 dark:divide-white/10">
+            <div class="space-y-1 pt-4 md:pt-0">
+                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#D1FF42]">99.99%</h4>
+                <p class="text-xs uppercase tracking-widest text-neutral-500 font-bold">Guaranteed Uptime</p>
+            </div>
+            <div class="space-y-1 pt-4 md:pt-0">
+                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#D1FF42]">12ms</h4>
+                <p class="text-xs uppercase tracking-widest text-neutral-500 font-bold">Global API Latency</p>
+            </div>
+            <div class="space-y-1 pt-4 md:pt-0">
+                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#D1FF42]">250k+</h4>
+                <p class="text-xs uppercase tracking-widest text-neutral-500 font-bold">Active Daily Users</p>
+            </div>
+            <div class="space-y-1 pt-4 md:pt-0">
+                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#D1FF42]">ISO-5</h4>
+                <p class="text-xs uppercase tracking-widest text-neutral-500 font-bold">Compliance Standard</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section class="max-w-7xl mx-auto px-6 space-y-12">
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+            <span class="px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                Enterprise Modules
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900 dark:text-white">
+                Engineered for High-Velocity Scaling
+            </h2>
+            <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD]">
+                Everything your engineering and operations teams need to manage end-to-end customer lifecycles securely.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="adaptive-card p-8 rounded-5xl space-y-4 group hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center font-bold">
+                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Automated Pipelines</h3>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
+                    Trigger custom webhook sequences and sync diagnostic datasets instantly without manual intervention.
+                </p>
+            </div>
+
+            <div class="adaptive-card p-8 rounded-5xl space-y-4 group hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center font-bold">
+                    <i data-lucide="lock" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Role-Based Access Control</h3>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
+                    Granular permission trees ensure practitioners and administrators only view authorized records.
+                </p>
+            </div>
+
+            <div class="adaptive-card p-8 rounded-5xl space-y-4 group hover:-translate-y-1">
+                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center font-bold">
+                    <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Real-Time Telemetry</h3>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
+                    Monitor cluster resource allocation, API response times, and database query yields in a unified canvas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Tiers Matrix -->
+    <section class="max-w-7xl mx-auto px-6 space-y-12">
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+            <span class="px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                Transparent Pricing
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900 dark:text-white">
+                Plans Built for Teams of All Sizes
+            </h2>
+            <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD]">
+                Scale seamlessly from independent specialized clinics to multi-hospital health conglomerates.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            <!-- Tier 1: Starter -->
+            <div class="adaptive-card p-8 rounded-5xl flex flex-col justify-between space-y-8">
+                <div class="space-y-4">
+                    <span class="text-xs font-mono text-[#0251B0] dark:text-[#D1FF42] font-bold uppercase tracking-widest">Starter Tier</span>
+                    <h3 class="text-2xl font-serif font-bold">Practice Core</h3>
+                    <p class="text-xs text-neutral-500">Ideal for small clinics launching their first digital patient workflows.</p>
+                    <div class="pt-4 flex items-baseline gap-1">
+                        <span class="text-4xl font-serif font-bold">$149</span>
+                        <span class="text-xs text-neutral-400 font-mono">/ month</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 text-xs text-neutral-600 dark:text-[#C7D1DD]">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Up to 500 Active Patient Profiles</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Standard HIPAA Data Encryption</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> 5 Staff Operator Seats</li>
+                    <li class="flex items-center gap-2 text-neutral-400"><i data-lucide="x" class="w-4 h-4 text-neutral-400"></i> Custom API Webhook Access</li>
+                </ul>
+                <button onclick="document.getElementById('saas-contact-section').scrollIntoView({ behavior: 'smooth' })" class="w-full py-3.5 rounded-full border border-neutral-300 dark:border-white/20 text-xs font-bold uppercase tracking-widest hover:bg-neutral-100 dark:hover:bg-white/5 transition-all">
+                    Initialize Team Workspace
+                </button>
+            </div>
+
+            <!-- Tier 2: Professional (Highlighted) -->
+            <div class="adaptive-card p-8 rounded-5xl flex flex-col justify-between space-y-8 border-2 border-[#0251B0] dark:border-[#D1FF42] relative shadow-2xl bg-gradient-to-b from-[#0251B0]/5 to-transparent">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
+                    Most Popular
+                </div>
+                <div class="space-y-4">
+                    <span class="text-xs font-mono text-[#0251B0] dark:text-[#D1FF42] font-bold uppercase tracking-widest">Growth Tier</span>
+                    <h3 class="text-2xl font-serif font-bold">Enterprise Suite</h3>
+                    <p class="text-xs text-neutral-500">Advanced tools for scaling clinics requiring automated multi-region sync.</p>
+                    <div class="pt-4 flex items-baseline gap-1">
+                        <span class="text-4xl font-serif font-bold">$399</span>
+                        <span class="text-xs text-neutral-400 font-mono">/ month</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 text-xs text-neutral-600 dark:text-[#C7D1DD]">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Unlimited Active Patient Profiles</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Advanced AES-256 + TLS 1.3 Security</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> 25 Staff Operator Seats</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Full REST & Webhook API Access</li>
+                </ul>
+                <button onclick="document.getElementById('saas-contact-section').scrollIntoView({ behavior: 'smooth' })" class="w-full py-3.5 rounded-full bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] text-xs font-black uppercase tracking-widest shadow-xl transition-all">
+                    Connect With SaaS Team
+                </button>
+            </div>
+
+            <!-- Tier 3: Custom Conglomerate -->
+            <div class="adaptive-card p-8 rounded-5xl flex flex-col justify-between space-y-8">
+                <div class="space-y-4">
+                    <span class="text-xs font-mono text-[#0251B0] dark:text-[#D1FF42] font-bold uppercase tracking-widest">Conglomerate Tier</span>
+                    <h3 class="text-2xl font-serif font-bold">Custom Network</h3>
+                    <p class="text-xs text-neutral-500">Tailored multi-hospital cloud infrastructure with bespoke SLAs.</p>
+                    <div class="pt-4 flex items-baseline gap-1">
+                        <span class="text-4xl font-serif font-bold">Custom</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 text-xs text-neutral-600 dark:text-[#C7D1DD]">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Dedicated ISO-5 Cleanroom DB Clusters</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> 24/7 Dedicated Infrastructure Engineer</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Custom HIPAA Business Associate Agreement</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> On-Premise Hybrid Deployment Options</li>
+                </ul>
+                <button onclick="document.getElementById('saas-contact-section').scrollIntoView({ behavior: 'smooth' })" class="w-full py-3.5 rounded-full border border-neutral-300 dark:border-white/20 text-xs font-bold uppercase tracking-widest hover:bg-neutral-100 dark:hover:bg-white/5 transition-all">
+                    Request Enterprise Briefing
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SaaS Team Communication & Submission Form Section -->
+    <section id="saas-contact-section" class="max-w-3xl mx-auto px-6">
+        <div class="adaptive-card p-8 sm:p-12 rounded-5xl shadow-2xl relative">
+            <div class="text-center space-y-3 mb-8">
+                <span class="px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                    Direct Collaboration
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-serif font-bold text-neutral-900 dark:text-white">
+                    Connect With Our SaaS Solutions Team
+                </h2>
+                <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD]">
+                    Fill out the form below to configure your custom team workspace or request an engineering consultation.
+                </p>
+            </div>
+
+            <!-- Success Message Box (Hidden by default) -->
+            <div id="saas-success-msg" class="hidden mb-6 p-6 rounded-3xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-center space-y-2">
+                <div class="w-10 h-10 mx-auto rounded-full bg-emerald-500/20 flex items-center justify-center">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-bold text-sm">Request Transmitted Successfully!</h4>
+                <p class="text-xs">Our enterprise solutions engineer will reach out to your team via email within 2 hours.</p>
+            </div>
+
+            <form onsubmit="app.handleSaasFormSubmit(event)" class="space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest mb-1.5 text-neutral-400">Team Lead Name</label>
+                        <input type="text" id="saas-name" required placeholder="Alex Mercer" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs" />
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest mb-1.5 text-neutral-400">Corporate Email</label>
+                        <input type="email" id="saas-email" required placeholder="alex@clinicnet.com" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs" />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest mb-1.5 text-neutral-400">Selected Plan Tier</label>
+                        <select id="saas-tier" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs">
+                            <option>Practice Core ($149/mo)</option>
+                            <option selected>Enterprise Growth Suite ($399/mo)</option>
+                            <option>Custom Conglomerate Network</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-widest mb-1.5 text-neutral-400">Estimated Operator Seats</label>
+                        <input type="number" id="saas-seats" min="1" value="10" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs" />
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] font-black uppercase tracking-widest mb-1.5 text-neutral-400">Project Scope & Custom Requirements</label>
+                    <textarea id="saas-notes" rows="3" placeholder="Briefly specify your data migration timeline or custom webhook requirements..." class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs"></textarea>
+                </div>
+
+                <button type="submit" id="saas-submit-btn" class="w-full py-4 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] rounded-full font-black text-xs uppercase tracking-widest shadow-xl hover:scale-[1.01] transition-all">
+                    Initialize Collaboration Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section with Interactive Open/Close Accordion Feature -->
+    <section class="max-w-4xl mx-auto px-6 space-y-8">
+        <div class="text-center space-y-4">
+            <span class="px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                Got Questions?
+            </span>
+            <h2 class="text-3xl font-serif font-bold text-neutral-900 dark:text-white">
+                Frequently Asked Questions
+            </h2>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="adaptive-card p-6 rounded-3xl cursor-pointer transition-all faq-item" onclick="app.toggleFaq(this)">
+                <div class="flex items-center justify-between font-bold text-sm text-neutral-900 dark:text-white">
+                    <span>How long does cloud migration take for existing medical records?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 transition-transform duration-300 faq-icon"></i>
+                </div>
+                <div class="faq-content hidden pt-3 text-xs text-neutral-600 dark:text-[#C7D1DD] leading-relaxed border-t border-neutral-200/60 dark:border-white/10 mt-3">
+                    Our compliance engineering team handles full database imports with zero downtime, typically finalizing secure transfers within 48 to 72 hours.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="adaptive-card p-6 rounded-3xl cursor-pointer transition-all faq-item" onclick="app.toggleFaq(this)">
+                <div class="flex items-center justify-between font-bold text-sm text-neutral-900 dark:text-white">
+                    <span>Are all client communication channels fully HIPAA compliant?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 transition-transform duration-300 faq-icon"></i>
+                </div>
+                <div class="faq-content hidden pt-3 text-xs text-neutral-600 dark:text-[#C7D1DD] leading-relaxed border-t border-neutral-200/60 dark:border-white/10 mt-3">
+                    Yes. Every portal message, telehealth stream, and lab report push is end-to-end encrypted with zero exposure to unverified third-party trackers.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="adaptive-card p-6 rounded-3xl cursor-pointer transition-all faq-item" onclick="app.toggleFaq(this)">
+                <div class="flex items-center justify-between font-bold text-sm text-neutral-900 dark:text-white">
+                    <span>Can we test the platform before committing to an annual billing tier?</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 transition-transform duration-300 faq-icon"></i>
+                </div>
+                <div class="faq-content hidden pt-3 text-xs text-neutral-600 dark:text-[#C7D1DD] leading-relaxed border-t border-neutral-200/60 dark:border-white/10 mt-3">
+                    Every new workspace starts with a fully unlocked 14-day trial with no credit card required upfront.
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

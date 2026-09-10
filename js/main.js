@@ -780,6 +780,31 @@ const app = {
             console.warn('Open modal error:', err);
         }
     },
+    // Add inside your app object in js/main.js:
+toggleFaq(element) {
+    const content = element.querySelector('.faq-content');
+    const icon = element.querySelector('.faq-icon');
+    
+    content.classList.toggle('hidden');
+    
+    if (content.classList.contains('hidden')) {
+        icon.style.transform = 'rotate(0deg)';
+    } else {
+        icon.style.transform = 'rotate(180deg)';
+    }
+},
+
+handleSaasFormSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const successMsg = document.getElementById('saas-success-msg');
+    
+    successMsg.classList.remove('hidden');
+    form.reset();
+    
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+},
 
     closeModal(id) {
         try {
@@ -1028,7 +1053,7 @@ const router = {
         if (!container) return;
 
         try {
-            const pages = ['home', 'treatments', 'doctors', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
+            const pages = ['home', 'home-2', 'treatments', 'doctors', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
 
             if (pages.includes(name)) {
                 if (name === 'dashboard') {
@@ -1078,7 +1103,7 @@ const router = {
         if (!container) return;
 
         let path = window.location.hash.slice(1) || 'home';
-        const valid = ['home', 'treatments', 'doctors', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
+        const valid = ['home', 'home-2', 'treatments', 'doctors', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
         if (!valid.includes(path)) path = '404';
 
         if (path === 'dashboard' && !auth.isAuthenticated()) {

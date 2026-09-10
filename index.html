@@ -484,7 +484,8 @@
 
             <!-- Desktop Links: Hidden below 900px -->
             <div class="nav-desktop items-center gap-4 xl:gap-6 font-bold text-[10px] xl:text-[11px] uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300">
-                <a href="#home" class="nav-link" data-route="home" onclick="router.navigate('home')">Home</a>
+                <a href="#home" class="nav-link" data-route="home" onclick="router.navigate('home')">Home 1</a>
+                <a href="#home-2" class="nav-link" data-route="home-2" onclick="router.navigate('home-2')">Home 2</a>
                 <a href="#treatments" class="nav-link" data-route="treatments" onclick="router.navigate('treatments')">Treatments</a>
                 <a href="#doctors" class="nav-link" data-route="doctors" onclick="router.navigate('doctors')">Specialists</a>
                 <a href="#stories" class="nav-link" data-route="stories" onclick="router.navigate('stories')">Stories</a>
@@ -531,7 +532,8 @@
 
         <!-- Navigation Links inside Sandwich Menu -->
         <div class="flex flex-col items-center justify-center gap-4 sm:gap-6 my-auto py-8">
-            <a href="#home" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="home" onclick="app.toggleMobileMenu(); router.navigate('home')">Home</a>
+            <a href="#home" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="home" onclick="app.toggleMobileMenu(); router.navigate('home')">Home 1</a>
+            <a href="#home-2" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="home-2" onclick="app.toggleMobileMenu(); router.navigate('home-2')">Home 2</a>
             <a href="#treatments" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="treatments" onclick="app.toggleMobileMenu(); router.navigate('treatments')">Treatments</a>
             <a href="#doctors" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="doctors" onclick="app.toggleMobileMenu(); router.navigate('doctors')">Specialists</a>
             <a href="#stories" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="stories" onclick="app.toggleMobileMenu(); router.navigate('stories')">Stories</a>
@@ -635,7 +637,11 @@
                 <h4 class="text-xs font-black uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-400">Core Directory</h4>
                 <div class="flex flex-col space-y-2.5">
                     <button onclick="router.navigate('home')" class="py-2.5 px-4 text-left bg-neutral-50 hover:bg-[#0251B0]/10 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-neutral-800 dark:text-white font-semibold text-xs rounded-2xl transition-all duration-200 flex items-center justify-between group">
-                        <span>Home</span>
+                        <span>Home 1</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#0251B0] dark:text-[#D1FF42]"></i>
+                    </button>
+                    <button onclick="router.navigate('home-2')" class="py-2.5 px-4 text-left bg-neutral-50 hover:bg-[#0251B0]/10 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-neutral-800 dark:text-white font-semibold text-xs rounded-2xl transition-all duration-200 flex items-center justify-between group">
+                        <span>Home 2</span>
                         <i data-lucide="arrow-right" class="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-[#0251B0] dark:text-[#D1FF42]"></i>
                     </button>
                     <button onclick="router.navigate('doctors')" class="py-2.5 px-4 text-left bg-neutral-50 hover:bg-[#0251B0]/10 dark:bg-white/[0.03] dark:hover:bg-white/[0.08] text-neutral-800 dark:text-white font-semibold text-xs rounded-2xl transition-all duration-200 flex items-center justify-between group">
