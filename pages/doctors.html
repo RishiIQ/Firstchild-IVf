@@ -60,39 +60,43 @@
         <p class="text-neutral-500 dark:text-[#C7D1DD] text-sm">Each physician brings unique expertise to our collaborative care model.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid md:grid-cols-2 gap-8 items-stretch">
         <!-- ===== DR. JULIANNA THORNE ===== -->
-        <div class="adaptive-card p-8 rounded-5xl reveal group hover:shadow-2xl transition-all duration-500 flex flex-col justify-between">
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="md:w-1/3 shrink-0">
-                    <div class="relative overflow-hidden rounded-3xl aspect-square shadow-xl group-hover:scale-105 transition-transform duration-500 border border-neutral-200 dark:border-white/10">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400"
-                             class="w-full h-full object-cover"
-                             alt="Dr. Julianna Thorne" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-3 left-3 right-3">
-                            <span class="inline-block px-2.5 py-1 bg-[#0251B0] text-white text-[9px] font-black uppercase tracking-widest rounded-md">Medical Director</span>
+        <div class="adaptive-card p-8 rounded-5xl reveal group hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full">
+            <div class="flex flex-col justify-between flex-grow space-y-6">
+                <div class="space-y-6">
+                    <div class="flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="w-full sm:w-1/3 shrink-0">
+                            <div class="relative overflow-hidden rounded-3xl aspect-square shadow-xl group-hover:scale-105 transition-transform duration-500 border border-neutral-200 dark:border-white/10">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400"
+                                     class="w-full h-full object-cover"
+                                     alt="Dr. Julianna Thorne" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <span class="inline-block px-2.5 py-1 bg-[#0251B0] text-white text-[9px] font-black uppercase tracking-widest rounded-md">Medical Director</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="md:w-2/3 space-y-3">
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <h3 class="text-2xl font-bold">Dr. Julianna Thorne</h3>
-                            <p class="text-sm text-[#0251B0] dark:text-[#D1FF42] font-bold">MD, FACOG, REI</p>
-                        </div>
-                        <span class="flex gap-1 text-amber-500">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </span>
-                    </div>
+                        <div class="flex-1 space-y-3 w-full">
+                            <div class="flex items-start justify-between gap-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold">Dr. Julianna Thorne</h3>
+                                    <p class="text-sm text-[#0251B0] dark:text-[#D1FF42] font-bold">MD, FACOG, REI</p>
+                                </div>
+                                <span class="flex gap-1 text-amber-500 shrink-0">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </span>
+                            </div>
 
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[9px] font-black uppercase">Reproductive Endocrinology</span>
-                        <span class="px-3 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-full text-[9px] font-black uppercase">PGT Specialist</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[9px] font-black uppercase">Reproductive Endocrinology</span>
+                                <span class="px-3 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-full text-[9px] font-black uppercase">PGT Specialist</span>
+                            </div>
+                        </div>
                     </div>
 
                     <p class="text-xs md:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
@@ -100,24 +104,24 @@
                         Dr. Thorne is a recognized leader in reproductive medicine, having pioneered several innovative protocols 
                         that have significantly improved success rates for patients with diminished ovarian reserve.
                     </p>
+                </div>
 
-                    <div class="grid grid-cols-2 gap-3 text-xs pt-2">
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Specialty</span>
-                            <span class="font-bold">Ovarian Reserve & IVF</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Research Focus</span>
-                            <span class="font-bold">Autoimmune Infertility</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Languages</span>
-                            <span class="font-bold">English, Spanish</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Success Rate</span>
-                            <span class="font-bold text-[#0251B0] dark:text-[#D1FF42]">68% Live Birth</span>
-                        </div>
+                <div class="grid grid-cols-2 gap-3 text-xs pt-2">
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Specialty</span>
+                        <span class="font-bold">Ovarian Reserve & IVF</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Research Focus</span>
+                        <span class="font-bold">Autoimmune Infertility</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Languages</span>
+                        <span class="font-bold">English, Spanish</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Success Rate</span>
+                        <span class="font-bold text-[#0251B0] dark:text-[#D1FF42]">68% Live Birth</span>
                     </div>
                 </div>
             </div>
@@ -131,37 +135,41 @@
         </div>
 
         <!-- ===== DR. MARCUS STERLING ===== -->
-        <div class="adaptive-card p-8 rounded-5xl reveal group hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" style="transition-delay: 150ms">
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="md:w-1/3 shrink-0">
-                    <div class="relative overflow-hidden rounded-3xl aspect-square shadow-xl group-hover:scale-105 transition-transform duration-500 border border-neutral-200 dark:border-white/10">
-                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400"
-                             class="w-full h-full object-cover"
-                             alt="Dr. Marcus Sterling" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-3 left-3 right-3">
-                            <span class="inline-block px-2.5 py-1 bg-[#0251B0] text-white text-[9px] font-black uppercase tracking-widest rounded-md">Head of Embryology</span>
+        <div class="adaptive-card p-8 rounded-5xl reveal group hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full" style="transition-delay: 150ms">
+            <div class="flex flex-col justify-between flex-grow space-y-6">
+                <div class="space-y-6">
+                    <div class="flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="w-full sm:w-1/3 shrink-0">
+                            <div class="relative overflow-hidden rounded-3xl aspect-square shadow-xl group-hover:scale-105 transition-transform duration-500 border border-neutral-200 dark:border-white/10">
+                                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400"
+                                     class="w-full h-full object-cover"
+                                     alt="Dr. Marcus Sterling" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <span class="inline-block px-2.5 py-1 bg-[#0251B0] text-white text-[9px] font-black uppercase tracking-widest rounded-md">Head of Embryology</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="md:w-2/3 space-y-3">
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <h3 class="text-2xl font-bold">Dr. Marcus Sterling</h3>
-                            <p class="text-sm text-[#0251B0] dark:text-[#D1FF42] font-bold">PhD, HCLD, ELD</p>
-                        </div>
-                        <span class="flex gap-1 text-amber-500">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </span>
-                    </div>
+                        <div class="flex-1 space-y-3 w-full">
+                            <div class="flex items-start justify-between gap-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold">Dr. Marcus Sterling</h3>
+                                    <p class="text-sm text-[#0251B0] dark:text-[#D1FF42] font-bold">PhD, HCLD, ELD</p>
+                                </div>
+                                <span class="flex gap-1 text-amber-500 shrink-0">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </span>
+                            </div>
 
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-full text-[9px] font-black uppercase">Genetic Screening</span>
-                        <span class="px-3 py-1 bg-teal-500/10 text-teal-600 dark:text-teal-400 rounded-full text-[9px] font-black uppercase">Embryology</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-full text-[9px] font-black uppercase">Genetic Screening</span>
+                                <span class="px-3 py-1 bg-teal-500/10 text-teal-600 dark:text-teal-400 rounded-full text-[9px] font-black uppercase">Embryology</span>
+                            </div>
+                        </div>
                     </div>
 
                     <p class="text-xs md:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
@@ -169,24 +177,24 @@
                         Dr. Sterling has trained over 100 embryologists worldwide and holds multiple patents in 
                         embryo culture media and cryopreservation techniques.
                     </p>
+                </div>
 
-                    <div class="grid grid-cols-2 gap-3 text-xs pt-2">
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Specialty</span>
-                            <span class="font-bold">Genetic Screening</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Research Focus</span>
-                            <span class="font-bold">Time-Lapse Imaging</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Languages</span>
-                            <span class="font-bold">English, German</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">PGT Accuracy</span>
-                            <span class="font-bold text-violet-600 dark:text-violet-400">99.8%</span>
-                        </div>
+                <div class="grid grid-cols-2 gap-3 text-xs pt-2">
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Specialty</span>
+                        <span class="font-bold">Genetic Screening</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Research Focus</span>
+                        <span class="font-bold">Time-Lapse Imaging</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Languages</span>
+                        <span class="font-bold">English, German</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">PGT Accuracy</span>
+                        <span class="font-bold text-violet-600 dark:text-violet-400">99.8%</span>
                     </div>
                 </div>
             </div>
@@ -200,37 +208,41 @@
         </div>
 
         <!-- ===== DR. SOPHIA CHEN ===== -->
-        <div class="adaptive-card p-8 rounded-5xl reveal group hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" style="transition-delay: 300ms">
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="md:w-1/3 shrink-0">
-                    <div class="relative overflow-hidden rounded-3xl aspect-square shadow-xl group-hover:scale-105 transition-transform duration-500 border border-neutral-200 dark:border-white/10">
-                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400"
-                             class="w-full h-full object-cover"
-                             alt="Dr. Sophia Chen" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-3 left-3 right-3">
-                            <span class="inline-block px-2.5 py-1 bg-[#0251B0] text-white text-[9px] font-black uppercase tracking-widest rounded-md">Sr. Fertility Specialist</span>
+        <div class="adaptive-card p-8 rounded-5xl reveal group hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full" style="transition-delay: 300ms">
+            <div class="flex flex-col justify-between flex-grow space-y-6">
+                <div class="space-y-6">
+                    <div class="flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="w-full sm:w-1/3 shrink-0">
+                            <div class="relative overflow-hidden rounded-3xl aspect-square shadow-xl group-hover:scale-105 transition-transform duration-500 border border-neutral-200 dark:border-white/10">
+                                <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400"
+                                     class="w-full h-full object-cover"
+                                     alt="Dr. Sophia Chen" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <span class="inline-block px-2.5 py-1 bg-[#0251B0] text-white text-[9px] font-black uppercase tracking-widest rounded-md">Sr. Fertility Specialist</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="md:w-2/3 space-y-3">
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <h3 class="text-2xl font-bold">Dr. Sophia Chen</h3>
-                            <p class="text-sm text-[#0251B0] dark:text-[#D1FF42] font-bold">MD, MPH, FACOG</p>
-                        </div>
-                        <span class="flex gap-1 text-amber-500">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </span>
-                    </div>
+                        <div class="flex-1 space-y-3 w-full">
+                            <div class="flex items-start justify-between gap-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold">Dr. Sophia Chen</h3>
+                                    <p class="text-sm text-[#0251B0] dark:text-[#D1FF42] font-bold">MD, MPH, FACOG</p>
+                                </div>
+                                <span class="flex gap-1 text-amber-500 shrink-0">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </span>
+                            </div>
 
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-[9px] font-black uppercase">PCOS Specialist</span>
-                        <span class="px-3 py-1 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[9px] font-black uppercase">Hormonal Modulation</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-[9px] font-black uppercase">PCOS Specialist</span>
+                                <span class="px-3 py-1 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[9px] font-black uppercase">Hormonal Modulation</span>
+                            </div>
+                        </div>
                     </div>
 
                     <p class="text-xs md:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
@@ -238,24 +250,24 @@
                         Dr. Chen has developed groundbreaking protocols for PCOS management and metabolic optimization, 
                         helping thousands of patients achieve successful pregnancies through lifestyle and medical interventions.
                     </p>
+                </div>
 
-                    <div class="grid grid-cols-2 gap-3 text-xs pt-2">
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Specialty</span>
-                            <span class="font-bold">PCOS & Metabolism</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Research Focus</span>
-                            <span class="font-bold">Insulin Resistance</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Languages</span>
-                            <span class="font-bold">English, Mandarin</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">PCOS Success</span>
-                            <span class="font-bold text-amber-600 dark:text-amber-400">82% Ovulation</span>
-                        </div>
+                <div class="grid grid-cols-2 gap-3 text-xs pt-2">
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Specialty</span>
+                        <span class="font-bold">PCOS & Metabolism</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Research Focus</span>
+                        <span class="font-bold">Insulin Resistance</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Languages</span>
+                        <span class="font-bold">English, Mandarin</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">PCOS Success</span>
+                        <span class="font-bold text-amber-600 dark:text-amber-400">82% Ovulation</span>
                     </div>
                 </div>
             </div>
@@ -269,37 +281,41 @@
         </div>
 
         <!-- ===== DR. ROBERT ARIS ===== -->
-        <div class="adaptive-card p-8 rounded-5xl reveal group hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" style="transition-delay: 450ms">
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="md:w-1/3 shrink-0">
-                    <div class="relative overflow-hidden rounded-3xl aspect-square shadow-xl group-hover:scale-105 transition-transform duration-500 border border-neutral-200 dark:border-white/10">
-                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400"
-                             class="w-full h-full object-cover"
-                             alt="Dr. Robert Aris" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-3 left-3 right-3">
-                            <span class="inline-block px-2.5 py-1 bg-[#0251B0] text-white text-[9px] font-black uppercase tracking-widest rounded-md">Male Fertility Expert</span>
+        <div class="adaptive-card p-8 rounded-5xl reveal group hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full" style="transition-delay: 450ms">
+            <div class="flex flex-col justify-between flex-grow space-y-6">
+                <div class="space-y-6">
+                    <div class="flex flex-col sm:flex-row gap-6 items-start">
+                        <div class="w-full sm:w-1/3 shrink-0">
+                            <div class="relative overflow-hidden rounded-3xl aspect-square shadow-xl group-hover:scale-105 transition-transform duration-500 border border-neutral-200 dark:border-white/10">
+                                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400"
+                                     class="w-full h-full object-cover"
+                                     alt="Dr. Robert Aris" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3">
+                                    <span class="inline-block px-2.5 py-1 bg-[#0251B0] text-white text-[9px] font-black uppercase tracking-widest rounded-md">Male Fertility Expert</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="md:w-2/3 space-y-3">
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <h3 class="text-2xl font-bold">Dr. Robert Aris</h3>
-                            <p class="text-sm text-[#0251B0] dark:text-[#D1FF42] font-bold">MD, FACS, FECSM</p>
-                        </div>
-                        <span class="flex gap-1 text-amber-500">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        </span>
-                    </div>
+                        <div class="flex-1 space-y-3 w-full">
+                            <div class="flex items-start justify-between gap-2">
+                                <div>
+                                    <h3 class="text-2xl font-bold">Dr. Robert Aris</h3>
+                                    <p class="text-sm text-[#0251B0] dark:text-[#D1FF42] font-bold">MD, FACS, FECSM</p>
+                                </div>
+                                <span class="flex gap-1 text-amber-500 shrink-0">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </span>
+                            </div>
 
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full text-[9px] font-black uppercase">Urology</span>
-                        <span class="px-3 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-full text-[9px] font-black uppercase">Micro-Surgery</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full text-[9px] font-black uppercase">Urology</span>
+                                <span class="px-3 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-full text-[9px] font-black uppercase">Micro-Surgery</span>
+                            </div>
+                        </div>
                     </div>
 
                     <p class="text-xs md:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
@@ -307,24 +323,24 @@
                         Dr. Aris is one of the few surgeons in North America trained in microscopic varicocelectomy and 
                         vasectomy reversal, offering comprehensive male fertility solutions.
                     </p>
+                </div>
 
-                    <div class="grid grid-cols-2 gap-3 text-xs pt-2">
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Specialty</span>
-                            <span class="font-bold">Male Infertility</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Research Focus</span>
-                            <span class="font-bold">Sperm Retrieval</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Languages</span>
-                            <span class="font-bold">English, French</span>
-                        </div>
-                        <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
-                            <span class="block text-neutral-400 text-[10px]">Retrieval Success</span>
-                            <span class="font-bold text-blue-600 dark:text-blue-400">92%</span>
-                        </div>
+                <div class="grid grid-cols-2 gap-3 text-xs pt-2">
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Specialty</span>
+                        <span class="font-bold">Male Infertility</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Research Focus</span>
+                        <span class="font-bold">Sperm Retrieval</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Languages</span>
+                        <span class="font-bold">English, French</span>
+                    </div>
+                    <div class="p-3 rounded-2xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10">
+                        <span class="block text-neutral-400 text-[10px]">Retrieval Success</span>
+                        <span class="font-bold text-blue-600 dark:text-blue-400">92%</span>
                     </div>
                 </div>
             </div>

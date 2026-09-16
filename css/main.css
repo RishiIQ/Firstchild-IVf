@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== 7. TABLET TO DESKTOP TRANSITION (900px - 999px) ===== */
 @media screen and (min-width: 900px) and (max-width: 999px) {
     html { font-size: 14px; }
-    #global-header nav { padding-left: 1.5rem; padding-right: 1.5rem; }
+    #global-header nav { padding-left: 0rem; padding-right: 0rem; }
     
     /* Show desktop nav with smaller gap */
     .nav-desktop { display: flex !important; gap: 0.75rem; font-size: 9px; }
@@ -201,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== 8. SMALL DESKTOP (1000px - 1099px) ===== */
 @media screen and (min-width: 1000px) and (max-width: 1099px) {
     html { font-size: 14px; }
-    .nav-desktop { gap: 1rem; font-size: 10px; }
+    .nav-desktop { gap: 0rem; font-size: 10px; }
     .nav-desktop a { padding: 0.25rem 0.5rem; }
     .nav-toggle { display: none !important; }
 }
@@ -501,3 +501,35 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* ============================================================
+   NAVBAR BREAKPOINT ENFORCEMENT & RESPONSIVE CSS
+   ============================================================ */
+
+/* Hide hamburger by default on desktop, show below 1150px */
+.nav-toggle {
+    display: flex !important;
+}
+
+.nav-desktop {
+    display: none !important;
+}
+
+/* Enable desktop navbar at 1150px+ wide screens */
+@media screen and (min-width: 1150px) {
+    .nav-toggle {
+        display: none !important;
+    }
+    .nav-desktop {
+        display: flex !important;
+    }
+}
+
+/* Tablet & Mobile Breakpoints (Below 1150px) */
+@media screen and (max-width: 1149px) {
+    .nav-toggle {
+        display: flex !important;
+    }
+    .nav-desktop {
+        display: none !important;
+    }
+}

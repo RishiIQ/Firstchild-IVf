@@ -1,6 +1,6 @@
 /* ============================================================
    FirstChild FERTILITY - MAIN APPLICATION
-   Complete with Login, Signup, User Database, Dashboard
+   Complete with Login, Signup, User Database, Dashboard, and Story Submissions
    ============================================================ */
 
 // ============================================================
@@ -690,17 +690,15 @@ const app = {
             });
 
             this.checkAuth();
-            console.log('✅ App initialized');
+            
         } catch (err) {
             console.error('Init error:', err);
         }
     },
+    
     // ----- Video Coming Soon - Redirect to Maintenance -----
     videoComingSoon() {
-        // Show info toast
         this.toast('🎬 Video testimonials are coming soon! We\'re producing high-quality stories for you.', 'info');
-        
-        // Redirect to maintenance page after a short delay
         setTimeout(() => {
             router.navigate('maintenance');
         }, 1800);
@@ -749,7 +747,19 @@ const app = {
 
     applyDir() {
         try {
-            document.documentElement.setAttribute('dir', Store.state.dir);
+            const dir = Store.state.dir || 'ltr';
+            document.documentElement.setAttribute('dir', dir);
+            
+            // Update Google Material Symbol text content & label dynamically
+            const iconEl = document.getElementById('dir-icon');
+            const labelEl = document.getElementById('dir-label');
+            
+            if (iconEl) {
+                iconEl.textContent = dir === 'rtl' ? 'format_textdirection_r_to_l' : 'format_textdirection_l_to_r';
+            }
+            if (labelEl) {
+                labelEl.textContent = dir === 'rtl' ? 'RTL' : 'LTR';
+            }
         } catch (err) {
             console.warn('Apply dir error:', err);
         }
@@ -780,31 +790,6 @@ const app = {
             console.warn('Open modal error:', err);
         }
     },
-    // Add inside your app object in js/main.js:
-toggleFaq(element) {
-    const content = element.querySelector('.faq-content');
-    const icon = element.querySelector('.faq-icon');
-    
-    content.classList.toggle('hidden');
-    
-    if (content.classList.contains('hidden')) {
-        icon.style.transform = 'rotate(0deg)';
-    } else {
-        icon.style.transform = 'rotate(180deg)';
-    }
-},
-
-handleSaasFormSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const successMsg = document.getElementById('saas-success-msg');
-    
-    successMsg.classList.remove('hidden');
-    form.reset();
-    
-    if (typeof lucide !== 'undefined') lucide.createIcons();
-    successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-},
 
     closeModal(id) {
         try {
@@ -819,10 +804,45 @@ handleSaasFormSubmit(e) {
         }
     },
 
+    toggleFaq(element) {
+        const content = element.querySelector('.faq-content');
+        const icon = element.querySelector('.faq-icon');
+        if (!content || !icon) return;
+        
+        content.classList.toggle('hidden');
+        
+        if (content.classList.contains('hidden')) {
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            icon.style.transform = 'rotate(180deg)';
+        }
+    },
+
+    handleSaasFormSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const successMsg = document.getElementById('saas-success-msg');
+        
+        if (successMsg) successMsg.classList.remove('hidden');
+        form.reset();
+        
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        if (successMsg) successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    },
+
     handleBookingSubmit(e) {
         e.preventDefault();
         this.closeModal('consultation-modal');
         this.toast('✅ Consultation request received! Our team will contact you within 2 hours.');
+        e.target.reset();
+    },
+
+
+    // ----- STORY SUBMISSION HANDLER -----
+    handleStorySubmit(e) {
+        e.preventDefault();
+        this.closeModal('story-modal');
+        this.toast('✨ Thank you! Your story has been submitted for review.');
         e.target.reset();
     },
 
@@ -1028,8 +1048,10 @@ const router = {
         treatments: Views.treatments,
         doctors: Views.doctors,
         stories: Views.stories,
+        pricing: Views.pricing,
         login: Views.login,
         signup: Views.signup,
+        contact: Views.contact,
         dashboard: Views.dashboard,
         '404': Views.page404,
         'coming-soon': Views.comingSoon,
@@ -1053,7 +1075,7 @@ const router = {
         if (!container) return;
 
         try {
-            const pages = ['home', 'home-2', 'treatments', 'doctors', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
+            const pages = ['home', 'home-2', 'treatments', 'pricing' ,'doctors', 'contact', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
 
             if (pages.includes(name)) {
                 if (name === 'dashboard') {
@@ -1103,7 +1125,7 @@ const router = {
         if (!container) return;
 
         let path = window.location.hash.slice(1) || 'home';
-        const valid = ['home', 'home-2', 'treatments', 'doctors', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
+        const valid = ['home', 'home-2', 'treatments', 'doctors','pricing' , 'contact', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
         if (!valid.includes(path)) path = '404';
 
         if (path === 'dashboard' && !auth.isAuthenticated()) {
@@ -1195,7 +1217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             router.handleRoute();
         }
-        console.log('✅ FirstChild app ready!');
+        
     } catch (err) {
         console.error('Init failed:', err);
         const container = document.getElementById('app-view-container');
