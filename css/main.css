@@ -7,7 +7,7 @@
     --color-primary: #0251B0;
     --color-primary-light: #3B82F6;
     --color-primary-dark: #013576;
-    --color-volt: #D1FF42;
+    --color-volt: #426bff;
     
     --color-dark-bg: #111318;
     --color-light-bg: #F8FAFC;
@@ -17,12 +17,20 @@
     --font-serif: 'Playfair Display', Georgia, serif;
     
     --transition-base: 300ms cubic-bezier(0.22, 1, 0.36, 1);
+
+    --gradient-start: rgba(234, 224, 224, 0.541);
+    --gradient-end: rgba(255, 255, 255, 0.5);
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.dark {
+    --gradient-start: rgba(0, 0, 0, 0.9);
+    --gradient-end: rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -53,18 +61,20 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.02em;
 }
 
-/* Adaptive High-Contrast Cards */
+/* ============================================================
+   Adaptive High-Contrast Cards
+   ============================================================ */
 .adaptive-card {
     background-color: #FFFFFF;
     border: 1px solid rgba(2, 81, 176, 0.15);
     box-shadow: 0 10px 30px rgba(2, 81, 176, 0.05);
-    transition: all var(--transition-base);
+    transition: all var(--transition-base, 300ms cubic-bezier(0.22, 1, 0.36, 1));
 }
 
 .dark .adaptive-card {
     background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: none;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .adaptive-card:hover {
@@ -72,8 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dark .adaptive-card:hover {
-    border-color: rgba(209, 255, 66, 0.3);
+    border-color: rgba(59, 130, 246, 0.8);
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.15);
 }
+
+
 
 /* Scroll Reveal */
 .reveal {
@@ -124,8 +137,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-    background: #D1FF42;
+    background: #3B82F6;
 }
+
 /* ============================================================
    FIRSTCHILD FERTILITY - COMPLETE MEDIA QUERY ARCHITECTURE
    Granular breakpoints at every 100px from 320px to 1400px
@@ -134,9 +148,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== 1. EXTRA SMALL DEVICES (320px - 399px) ===== */
 @media screen and (max-width: 399px) {
     html { font-size: 12px; }
-    
-    /* Brand text hidden on very small screens */
-    .xs\:inline { display: none !important; }
     
     /* Smaller padding */
     #global-header nav { padding-left: 0.75rem; padding-right: 0.75rem; }
@@ -150,7 +161,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== 2. SMALL DEVICES (400px - 499px) ===== */
 @media screen and (min-width: 400px) and (max-width: 499px) {
     html { font-size: 12.5px; }
-    
     .xs\:inline { display: inline !important; }
     #global-header nav { padding-left: 0.75rem; padding-right: 0.75rem; }
 }
@@ -177,11 +187,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 800px) and (max-width: 899px) {
     html { font-size: 14px; }
     #global-header nav { padding-left: 1.5rem; padding-right: 1.5rem; }
-    
-    /* Hide desktop nav on tablet */
     .nav-desktop { display: none !important; }
-    
-    /* Show hamburger on tablet */
     .nav-toggle { display: flex !important; }
 }
 
@@ -189,12 +195,8 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 900px) and (max-width: 999px) {
     html { font-size: 14px; }
     #global-header nav { padding-left: 0rem; padding-right: 0rem; }
-    
-    /* Show desktop nav with smaller gap */
     .nav-desktop { display: flex !important; gap: 0.75rem; font-size: 9px; }
     .nav-desktop a { padding: 0.25rem 0.5rem; }
-    
-    /* Hide hamburger */
     .nav-toggle { display: none !important; }
 }
 
@@ -206,17 +208,12 @@ h1, h2, h3, h4, h5, h6 {
     .nav-toggle { display: none !important; }
 }
 
-/* ===== 9. DESKTOP (1100px - 1199px) ===== */
-@media screen and (min-width: 1100px) and (max-width: 1199px) {
-    html { font-size: 14px; }
-    .nav-desktop { gap: 1.25rem; font-size: 10px; }
-    .nav-toggle { display: none !important; }
-}
 
-/* ===== 10. LARGE DESKTOP (1200px - 1299px) ===== */
-@media screen and (min-width: 1200px) and (max-width: 1299px) {
-    html { font-size: 14px; }
-    .nav-desktop { gap: 1.5rem; font-size: 11px; }
+
+/* ===== 10. LARGE DESKTOP (1100px - 1299px) ===== */
+@media screen and (min-width: 1100px) and (max-width: 1299px) {
+    html { font-size: 11px; }
+    .nav-desktop { gap: 1.5rem; font-size: 10px; }
     .nav-toggle { display: none !important; }
 }
 
@@ -229,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== 12. ULTRA WIDE (1400px+) ===== */
 @media screen and (min-width: 1400px) {
-    html { font-size: 15px; }
+    html { font-size: 11px; }
     .nav-desktop { gap: 2rem; font-size: 12px; }
     .nav-toggle { display: none !important; }
     .max-w-7xl { max-width: 80rem; }
@@ -238,298 +235,41 @@ h1, h2, h3, h4, h5, h6 {
 /* ============================================================
    DASHBOARD SPECIFIC RESPONSIVE BREAKPOINTS
    ============================================================ */
-
-/* Dashboard - Tablet (Below 900px) */
 @media screen and (max-width: 899px) {
-    /* Stack dashboard sidebar on top */
     .max-w-7xl.mx-auto.grid {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
     }
-    
     aside.lg\:col-span-3 {
         grid-column: span 1 / span 1 !important;
         order: -1;
     }
-    
     #dash-content.lg\:col-span-9 {
         grid-column: span 1 / span 1 !important;
     }
-    
-    /* Make dashboard cards full width */
-    .grid.md\:grid-cols-2 {
-        grid-template-columns: 1fr !important;
-    }
-    
-    /* Adjust dashboard nav spacing */
-    #dash-nav .dash-nav-item {
-        padding: 0.75rem 1rem !important;
-        font-size: 0.8rem !important;
-    }
-    
-    /* Mobile profile card */
-    .adaptive-card.p-8 {
-        padding: 1.5rem !important;
-    }
-}
-
-/* Dashboard - Small Desktop (900px - 1099px) */
-@media screen and (min-width: 900px) and (max-width: 1099px) {
-    aside.lg\:col-span-3 {
-        grid-column: span 4 / span 4 !important;
-    }
-    #dash-content.lg\:col-span-9 {
-        grid-column: span 8 / span 8 !important;
-    }
-}
-
-/* ============================================================
-   HERO & LAYOUT RESPONSIVE BREAKPOINTS
-   ============================================================ */
-
-/* Hero text adjustments */
-@media screen and (max-width: 599px) {
-    h1.text-5xl { font-size: 2.5rem !important; }
-    h1.text-6xl { font-size: 3rem !important; }
-    h1.text-7xl { font-size: 3.5rem !important; }
-    h1.text-8xl { font-size: 4rem !important; }
-    
-    /* Trust strip on mobile */
-    .grid.grid-cols-3 { grid-template-columns: 1fr !important; gap: 0.5rem !important; }
-}
-
-@media screen and (min-width: 600px) and (max-width: 899px) {
-    h1.text-5xl { font-size: 3rem !important; }
-    h1.text-6xl { font-size: 3.5rem !important; }
-    h1.text-7xl { font-size: 4rem !important; }
-    h1.text-8xl { font-size: 4.5rem !important; }
 }
 
 /* ============================================================
    TREATMENT PAGE RESPONSIVE
    ============================================================ */
-
 @media screen and (max-width: 899px) {
-    /* Treatment cards stack */
     .grid.lg\:grid-cols-3 { grid-template-columns: 1fr !important; }
-    
-    /* Treatment comparison table scroll */
     .overflow-x-auto { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
-    
-    /* Treatment section images */
     .relative.h-64 { height: 200px !important; }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1099px) {
-    .grid.lg\:grid-cols-3 { grid-template-columns: 1fr 1fr !important; }
-}
-
 /* ============================================================
-   DOCTORS PAGE RESPONSIVE
+   NAVBAR BREAKPOINT ENFORCEMENT
    ============================================================ */
+.nav-toggle { display: flex !important; }
+.nav-desktop { display: none !important; }
 
-@media screen and (max-width: 899px) {
-    .grid.md\:grid-cols-2 { grid-template-columns: 1fr !important; }
-    .grid.md\:grid-cols-3 { grid-template-columns: 1fr !important; }
-    .grid.md\:grid-cols-4 { grid-template-columns: 1fr 1fr !important; }
-    
-    /* Doctor cards */
-    .adaptive-card.p-8 { padding: 1.25rem !important; }
-    .flex.flex-col.md\:flex-row { flex-direction: column !important; }
-    .md\:w-1\/3 { width: 100% !important; }
-    .md\:w-2\/3 { width: 100% !important; }
-    .aspect-square { aspect-ratio: 4/3 !important; }
-}
-
-@media screen and (min-width: 900px) and (max-width: 1099px) {
-    .grid.md\:grid-cols-3 { grid-template-columns: 1fr 1fr !important; }
-}
-
-/* ============================================================
-   STORIES PAGE RESPONSIVE
-   ============================================================ */
-
-@media screen and (max-width: 899px) {
-    .grid.md\:grid-cols-3 { grid-template-columns: 1fr !important; }
-    .grid.md\:grid-cols-4 { grid-template-columns: 1fr !important; }
-    .grid.lg\:grid-cols-3 { grid-template-columns: 1fr !important; }
-    
-    /* Featured story */
-    .grid.lg\:grid-cols-3.gap-8 { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
-    .lg\:col-span-2 { grid-column: span 1 !important; }
-    
-    /* Story cards */
-    .adaptive-card.p-8 { padding: 1.25rem !important; }
-}
-
-/* ============================================================
-   LOGIN/SIGNUP PAGES RESPONSIVE
-   ============================================================ */
-
-@media screen and (max-width: 599px) {
-    .max-w-md { padding-left: 1rem !important; padding-right: 1rem !important; }
-    .adaptive-card.p-8 { padding: 1.25rem !important; }
-    .grid.grid-cols-2 { grid-template-columns: 1fr !important; gap: 0.5rem !important; }
-}
-
-@media screen and (min-width: 600px) and (max-width: 899px) {
-    .adaptive-card.p-8 { padding: 1.5rem !important; }
-}
-
-/* ============================================================
-   CARD & COMPONENT RESPONSIVE
-   ============================================================ */
-
-@media screen and (max-width: 599px) {
-    .rounded-5xl { border-radius: 1.5rem !important; }
-    .rounded-4xl { border-radius: 1.25rem !important; }
-    .p-8 { padding: 1rem !important; }
-    .p-12 { padding: 1.5rem !important; }
-    .gap-12 { gap: 1.5rem !important; }
-    .gap-8 { gap: 1rem !important; }
-}
-
-@media screen and (min-width: 600px) and (max-width: 899px) {
-    .rounded-5xl { border-radius: 2rem !important; }
-    .rounded-4xl { border-radius: 1.5rem !important; }
-    .p-8 { padding: 1.5rem !important; }
-    .p-12 { padding: 2rem !important; }
-    .gap-12 { gap: 2rem !important; }
-}
-
-/* ============================================================
-   HAMBURGER MENU TOGGLE
-   ============================================================ */
-
-/* Hide hamburger by default on desktop, show on tablet/mobile */
-.nav-toggle {
-    display: flex !important;
-}
-
-/* Hide desktop nav on tablet/mobile */
-.nav-desktop {
-    display: none !important;
-}
-
-/* Show desktop nav on 900px+ */
-@media screen and (min-width: 900px) {
-    .nav-desktop {
-        display: flex !important;
-    }
-    .nav-toggle {
-        display: none !important;
-    }
-}
-
-/* Show hamburger on tablet (800-899px) and below */
-@media screen and (max-width: 899px) {
-    .nav-toggle {
-        display: flex !important;
-    }
-    .nav-desktop {
-        display: none !important;
-    }
-}
-
-/* ============================================================
-   UTILITY CLASSES FOR RESPONSIVE
-   ============================================================ */
-
-/* Extra small screens (below 400px) */
-.xs\:inline { display: none; }
-@media screen and (min-width: 400px) {
-    .xs\:inline { display: inline; }
-}
-
-/* Small screens (400-599px) */
-.sm\:inline { display: none; }
-@media screen and (min-width: 400px) {
-    .sm\:inline { display: inline; }
-}
-
-/* ============================================================
-   ANIMATION RESPONSIVE
-   ============================================================ */
-
-@media screen and (max-width: 599px) {
-    .animate-marquee {
-        animation-duration: 45s !important;
-        font-size: 1.25rem !important;
-    }
-    .animate-spin {
-        animation-duration: 30s !important;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 899px) {
-    .animate-marquee {
-        animation-duration: 40s !important;
-    }
-}
-
-/* ============================================================
-   ACCESSIBILITY - REDUCED MOTION
-   ============================================================ */
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-    
-    .reveal {
-        opacity: 1 !important;
-        transform: none !important;
-    }
-    
-    .animate-marquee {
-        animation: none !important;
-    }
-    
-    .animate-spin {
-        animation: none !important;
-    }
-    
-    .animate-pulse {
-        animation: none !important;
-    }
-    
-    .animate-bounce {
-        animation: none !important;
-    }
-}
-
-/* ============================================================
-   NAVBAR BREAKPOINT ENFORCEMENT & RESPONSIVE CSS
-   ============================================================ */
-
-/* Hide hamburger by default on desktop, show below 1150px */
-.nav-toggle {
-    display: flex !important;
-}
-
-.nav-desktop {
-    display: none !important;
-}
-
-/* Enable desktop navbar at 1150px+ wide screens */
 @media screen and (min-width: 1150px) {
-    .nav-toggle {
-        display: none !important;
-    }
-    .nav-desktop {
-        display: flex !important;
-    }
+    .nav-toggle { display: none !important; }
+    .nav-desktop { display: flex !important; }
 }
 
-/* Tablet & Mobile Breakpoints (Below 1150px) */
 @media screen and (max-width: 1149px) {
-    .nav-toggle {
-        display: flex !important;
-    }
-    .nav-desktop {
-        display: none !important;
-    }
+    .nav-toggle { display: flex !important; }
+    .nav-desktop { display: none !important; }
 }

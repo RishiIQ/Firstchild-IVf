@@ -27,37 +27,37 @@
 
     <!-- Tailwind Custom Config -->
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            primary: '#0251B0',
-                            primaryLight: '#3B82F6',
-                            primaryDark: '#013576',
-                            rose: '#0C557D',
-                            teal: '#0F766E',
-                            violet: '#4338CA',
-                            amber: '#D97706'
-                        },
-                        surface: {
-                            light: '#EDE8F5',
-                            dark: '#09090B'
-                        }
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    brand: {
+                        primary: '#0251B0',
+                        primaryLight: '#3B82F6',
+                        primaryDark: '#013576',
+                        rose: '#0C557D',
+                        teal: '#0F766E',
+                        violet: '#4338CA',
+                        amber: '#D97706'
                     },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    borderRadius: {
-                        '4xl': '2rem',
-                        '5xl': '3rem',
+                    surface: {
+                        light: '#eaeaea',
+                        dark: '#09090B'
                     }
+                },
+                fontFamily: {
+                    sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    serif: ['Playfair Display', 'serif'],
+                },
+                borderRadius: {
+                    '4xl': '2rem',
+                    '5xl': '3rem',
                 }
             }
         }
-    </script>
+    }
+</script>
 
     <style>
         /* ===== ACTIVE NAV INDICATOR STYLES ===== */
@@ -85,23 +85,27 @@
             color: #0251B0;
         }
         .dark .nav-link.active {
-            color: #D1FF42;
+            color: #3B82F6;
         }
 
         /* Mobile nav active state */
         .mobile-nav-link.active {
-            color: #D1FF42;
+            color: #3B82F6;
         }
 
         /* Dashboard nav active state */
         .dash-nav-item.active {
-            background-color: #D1FF42 !important;
-            color: #111318 !important;
+            background-color: #0251B0 !important;
+            color: #FFFFFF !important;
             border-radius: 1.5rem;
-            box-shadow: 0 10px 25px -5px rgba(209, 255, 66, 0.25);
+            box-shadow: 0 10px 25px -5px rgba(2, 81, 176, 0.25);
+        }
+        .dark .dash-nav-item.active {
+            background-color: #0251B0 !important;
+            color: #FFFFFF !important;
         }
         .dash-nav-item.active i {
-            color: #111318 !important;
+            color: #FFFFFF !important;
         }
 
         /* ===== NAV TOGGLE & DESKTOP BREAKPOINT ENFORCEMENT ===== */
@@ -175,7 +179,7 @@
             background: #1a1a1a;
         }
         .dark ::-webkit-scrollbar-thumb {
-            background: #D1FF42;
+            background: #3B82F6;
         }
 
         /* ===== CLEAN RTL UTILITIES ===== */
@@ -272,7 +276,7 @@
             color: white;
         }
         .dark .brand-name .highlight {
-            color: #D1FF42;
+            color: #3B82F6;
         }
 
         @media (min-width: 640px) {
@@ -289,11 +293,7 @@
                 font-size: 1.25rem;
             }
         }
-        @media (max-width: 399px) {
-            .brand-name {
-                display: none;
-            }
-        }
+        
         @media (min-width: 400px) {
             .brand-name {
                 display: inline;
@@ -314,7 +314,7 @@
             outline-offset: 2px;
         }
         .dark :focus-visible {
-            outline-color: #D1FF42;
+            outline-color: #3B82F6;
         }
 
         /* Spinner */
@@ -327,13 +327,13 @@
     </style>
 </head>
 
-<body class="bg-surface-light dark:bg-surface-dark text-neutral-800 dark:text-neutral-200 transition-colors duration-500 overflow-x-hidden">
+<body class="bg-surface-white dark:bg-surface-dark text-neutral-800 dark:text-neutral-200 transition-colors duration-500 overflow-x-hidden">
 
     <!-- ===== INTRO OVERLAY (With Safety Timeout) ===== -->
     <div id="intro-overlay">
         <div class="absolute w-[700px] h-[700px] bg-gradient-to-tr from-[#0251B0]/30 to-violet-600/20 rounded-full blur-[160px] pointer-events-none intro-glow scale-50 opacity-0"></div>
         <div class="absolute w-64 h-64 rounded-full border-2 border-[#0251B0]/50 intro-ring scale-50"></div>
-        <div class="absolute w-48 h-48 rounded-full border border-dashed border-[#D1FF42]/60 intro-ring-inner scale-50"></div>
+        <div class="absolute w-48 h-48 rounded-full border border-dashed border-[#3B82F6]/60 intro-ring-inner scale-50"></div>
 
         <div class="relative z-10 flex flex-col items-center text-center">
             <div class="w-12 h-12 bg-[#0251B0] rounded-2xl flex items-center justify-center shadow-lg shadow-[#0251B0]/30 mb-4">
@@ -346,7 +346,7 @@
             </h1>
             <p class="intro-sub text-[10px] font-mono tracking-[0.45em] uppercase text-neutral-300 mb-6">Elite Reproductive Excellence</p>
             <div class="w-48 h-1.5 bg-white/10 rounded-full overflow-hidden intro-bar-container shadow-inner">
-                <div class="h-full bg-gradient-to-r from-[#0251B0] via-violet-500 to-[#D1FF42] rounded-full w-0 intro-progress"></div>
+                <div class="h-full bg-gradient-to-r from-[#0251B0] via-violet-500 to-[#3B82F6] rounded-full w-0 intro-progress"></div>
             </div>
         </div>
     </div>
@@ -422,7 +422,7 @@
 
     <!-- ===== HEADER - NAV BAR ===== -->
 <header id="global-header" class="fixed top-0 w-full z-[100] px-4 py-4 md:px-8 transition-all duration-300">
-    <nav class="max-w-7xl mx-auto bg-white/80 dark:bg-[#111318]/80 backdrop-blur-2xl border border-neutral-200/80 dark:border-white/10 rounded-full px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4 shadow-[0_8px_32px_rgba(2,81,176,0.06)] dark:shadow-none transition-all duration-300 overflow-hidden">
+    <nav class="max-w-8xl mx-auto bg-white/80 dark:bg-[#111318]/80 backdrop-blur-2xl border border-neutral-200/80 dark:border-white/10 rounded-full px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4 shadow-[0_8px_32px_rgba(2,81,176,0.06)] dark:shadow-none transition-all duration-300 overflow-hidden">
         
         <!-- 1. Left Section: Brand Logo -->
         <div class="flex items-center gap-3 cursor-pointer group flex-shrink-0" onclick="router.navigate('home')">
@@ -442,6 +442,7 @@
         <div class="nav-desktop items-center gap-4 xl:gap-6 font-bold text-[10px] xl:text-[11px] uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 whitespace-nowrap mx-auto">
             <a href="#home" class="nav-link py-1" data-route="home" onclick="router.navigate('home')">Home 1</a>
             <a href="#home-2" class="nav-link py-1" data-route="home-2" onclick="router.navigate('home-2')">Home 2</a>
+            <a href="#about" class="nav-link py-1" data-route="about" onclick="router.navigate('about')">About</a>
             <a href="#treatments" class="nav-link py-1" data-route="treatments" onclick="router.navigate('treatments')">Treatments</a>
             <a href="#doctors" class="nav-link py-1" data-route="doctors" onclick="router.navigate('doctors')">Specialists</a>
             <a href="#pricing" class="nav-link py-1" data-route="pricing" onclick="router.navigate('pricing')">Pricing</a>
@@ -453,14 +454,16 @@
         <!-- 3. Right Section: Desktop Utilities (Theme, RTL Toggle, Auth Zone) -->
         <div class="nav-desktop items-center gap-2.5 flex-shrink-0">
             <button onclick="app.toggleTheme()" class="p-2.5 rounded-full bg-neutral-100 dark:bg-white/5 hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-700 dark:text-white transition-all active:scale-95" title="Toggle Theme">
-                <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-[#D1FF42]"></i>
+                <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-[#3B82F6]"></i>
                 <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-[#0251B0]"></i>
             </button>
             <button onclick="app.toggleDir()" id="dir-toggle-btn" class="px-3.5 py-2 text-[10px] font-black uppercase tracking-wider border border-neutral-200 dark:border-white/10 rounded-full hover:bg-neutral-100 dark:hover:bg-white/5 text-neutral-700 dark:text-neutral-300 transition-all flex items-center gap-1.5" title="Toggle Text Direction">
-                <span class="material-symbols-outlined text-base leading-none" id="dir-icon">format_textdirection_l_to_r</span>
+                
                 <span id="dir-label">LTR</span>
             </button>
-            <div id="auth-nav-zone" class="ml-1"></div>
+
+            <a href="#contact" class="bg-blue-800 text-white p-3 rounded-3xl font-bold" data-route="contact" onclick="router.navigate('contact')">Book Consultation</a>
+            <a href="#login" class="bg-gray-500 border border-color-white border-2 py-2.5 px-3  font-bold text-white rounded-2xl"> Login</a>
         </div>
 
         <!-- Mobile Trigger: Visible below 1150px -->
@@ -481,7 +484,7 @@
                     <span class="fallback-text">FC</span>
                 </div>
                 <span class="text-base sm:text-xl font-black tracking-tight uppercase text-white">
-                    First<span class="text-[#D1FF42]">Child</span>
+                    First<span class="text-[#3B82F6]">Child</span>
                 </span>
             </div>
             <button onclick="app.toggleMobileMenu()" class="p-2.5 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all">
@@ -490,28 +493,31 @@
         </div>
 
         <div class="flex flex-col items-center justify-center gap-4 sm:gap-6 my-auto py-8">
-            <a href="#home" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="home" onclick="app.toggleMobileMenu(); router.navigate('home')">Home 1</a>
-            <a href="#home-2" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="home-2" onclick="app.toggleMobileMenu(); router.navigate('home-2')">Home 2</a>
-            <a href="#treatments" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="treatments" onclick="app.toggleMobileMenu(); router.navigate('treatments')">Treatments</a>
-            <a href="#doctors" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="doctors" onclick="app.toggleMobileMenu(); router.navigate('doctors')">Specialists</a>
-            <a href="#pricing" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="pricing" onclick="app.toggleMobileMenu(); router.navigate('pricing')">Pricing</a>
-            <a href="#contact" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="contact" onclick="app.toggleMobileMenu(); router.navigate('contact')">Contact</a>
-            <a href="#stories" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="stories" onclick="app.toggleMobileMenu(); router.navigate('stories')">Stories</a>
-            <a href="#dashboard" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#D1FF42] transition-colors" data-route="dashboard" onclick="app.toggleMobileMenu(); router.navigate('dashboard')">Dashboard</a>
+            <a href="#home" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="home" onclick="app.toggleMobileMenu(); router.navigate('home')">Home 1</a>
+            <a href="#home-2" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="home-2" onclick="app.toggleMobileMenu(); router.navigate('home-2')">Home 2</a>
+            <a href="#about" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="about" onclick="app.toggleMobileMenu(); router.navigate('about')">About</a>
+            <a href="#treatments" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="treatments" onclick="app.toggleMobileMenu(); router.navigate('treatments')">Treatments</a>
+            <a href="#doctors" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="doctors" onclick="app.toggleMobileMenu(); router.navigate('doctors')">Specialists</a>
+            <a href="#pricing" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="pricing" onclick="app.toggleMobileMenu(); router.navigate('pricing')">Pricing</a>
+            <a href="#contact" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="contact" onclick="app.toggleMobileMenu(); router.navigate('contact')">Contact</a>
+            <a href="#stories" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="stories" onclick="app.toggleMobileMenu(); router.navigate('stories')">Stories</a>
+            <a href="#dashboard" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="dashboard" onclick="app.toggleMobileMenu(); router.navigate('dashboard')">Dashboard</a>
+            <a href="#contact" class="px-4 py-2  font-black uppercase tracking-wider border border-white/10 rounded-full text-neutral-300 bg-blue-800 hover:bg-white/5 transition-all flex items-center gap-1.5" data-route="contact" onclick="app.toggleMobileMenu(); router.navigate('contact')">Book Consultation</a>
+            <a href="#login" class="bg-gray-800 border border-2 py-2.5 px-3  font-bold text-white rounded-2xl"> Login</a>
             
-            <div id="mobile-auth-zone" class="w-full max-w-xs mt-4 flex justify-center"></div>
         </div>
 
         <div class="w-full space-y-6 pt-6 border-t border-white/10">
             <div class="flex justify-center items-center gap-4">
-                <button onclick="app.toggleDir()" class="px-4 py-2 text-[10px] font-black uppercase tracking-wider border border-white/10 rounded-full text-neutral-300 hover:bg-white/5 transition-all flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-base leading-none">format_textdirection_l_to_r</span>
+                <button onclick="app.toggleDir()" class="px-4 py-2 text-[10px] font-black uppercase tracking-wider border border-white/10 rounded-full text-neutral-300  hover:bg-white/5 transition-all flex items-center gap-1.5">
+                    
                     <span>RTL/LTR</span>
                 </button>
                 <button onclick="app.toggleTheme()" class="px-4 py-2 text-[10px] font-black uppercase tracking-wider border border-white/10 rounded-full text-neutral-300 hover:bg-white/5 transition-all flex items-center gap-1.5">
                     <i data-lucide="moon" class="w-3.5 h-3.5"></i>
                     <span>Theme</span>
                 </button>
+                
             </div>
         </div>
     </div>
@@ -576,7 +582,7 @@
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
             <div class="flex items-center gap-3 mb-6">
-                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center">
+                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center">
                     <i data-lucide="message-square-plus" class="w-6 h-6"></i>
                 </div>
                 <div>
@@ -609,7 +615,7 @@
                     <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Your Success Narrative</label>
                     <textarea rows="4" required placeholder="Share how your journey unfolded and your experience with our specialists..." class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white"></textarea>
                 </div>
-                <button type="submit" class="w-full py-4 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] rounded-full font-black text-xs uppercase tracking-widest shadow-xl hover:opacity-90 transition-all">
+                <button type="submit" class="w-full py-4 bg-[#0251B0] dark:bg-[#3B82F6] text-white rounded-full font-black text-xs uppercase tracking-widest shadow-xl hover:opacity-90 transition-all">
                     Submit Story For Review
                 </button>
             </form>
@@ -621,12 +627,12 @@
         <div class="max-w-7xl mx-auto space-y-16">
             <div class="p-8 md:p-12 rounded-4xl bg-gradient-to-r from-[#0251B0]/10 via-violet-600/5 to-transparent border border-neutral-200 dark:border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl dark:shadow-2xl">
                 <div class="space-y-2 text-center lg:text-left">
-                    <span class="text-[10px] font-mono tracking-[0.3em] uppercase text-[#0251B0] dark:text-[#D1FF42]">Stay Informed</span>
+                    <span class="text-[10px] font-mono tracking-[0.3em] uppercase text-[#0251B0] dark:text-[#3B82F6]">Stay Informed</span>
                     <h3 class="text-2xl md:text-3xl font-serif font-bold text-neutral-900 dark:text-white">Subscribe to our clinical breakthroughs & updates</h3>
                 </div>
                 <form onsubmit="event.preventDefault(); app.toast('Successfully subscribed to FirstChild updates!'); this.reset();" class="flex items-center gap-2 w-full lg:w-auto shrink-0">
-                    <input type="email" required placeholder="Enter your email address" class="px-5 py-4 rounded-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-white/20 text-xs outline-none focus:ring-2 focus:ring-[#0251B0] dark:focus:ring-[#D1FF42] text-neutral-900 dark:text-white w-full lg:w-72" />
-                    <button type="submit" class="px-8 py-4 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] rounded-full font-black text-xs uppercase tracking-widest shadow-xl hover:opacity-90 transition-all whitespace-nowrap">
+                    <input type="email" required placeholder="Enter your email address" class="px-5 py-4 rounded-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-white/20 text-xs outline-none focus:ring-2 focus:ring-[#0251B0] dark:focus:ring-[#3B82F6] text-neutral-900 dark:text-white w-full lg:w-72" />
+                    <button type="submit" class="px-8 py-4 bg-[#0251B0] dark:bg-[#3B82F6] text-white rounded-full font-black text-xs uppercase tracking-widest shadow-xl hover:opacity-90 transition-all whitespace-nowrap">
                         Subscribe
                     </button>
                 </form>
@@ -640,20 +646,20 @@
                                  onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-white font-black text-base\'>FC</span>';" />
                         </div>
                         <span class="text-xl font-black tracking-tight uppercase text-neutral-900 dark:text-white">
-                            First<span class="text-[#0251B0] dark:text-[#D1FF42]">Child</span>
+                            First<span class="text-[#0251B0] dark:text-[#3B82F6]">Child</span>
                         </span>
                     </div>
                     <p class="text-neutral-600 dark:text-neutral-400 text-xs leading-relaxed font-light">
                         Advanced reproductive science and compassionate clinical care. Architecting life through precision PGT screening and personalized protocols.
                     </p>
                     <div class="flex items-center gap-3 pt-2">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-neutral-200/60 dark:bg-white/5 hover:bg-[#0251B0]/10 dark:hover:bg-white/10 text-neutral-700 dark:text-neutral-300 hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-all flex items-center justify-center" title="Instagram">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-neutral-200/60 dark:bg-white/5 hover:bg-[#0251B0]/10 dark:hover:bg-white/10 text-neutral-700 dark:text-neutral-300 hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-all flex items-center justify-center" title="Instagram">
                             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                         </a>
-                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-neutral-200/60 dark:bg-white/5 hover:bg-[#0251B0]/10 dark:hover:bg-white/10 text-neutral-700 dark:text-neutral-300 hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-all flex items-center justify-center" title="X (Twitter)">
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-neutral-200/60 dark:bg-white/5 hover:bg-[#0251B0]/10 dark:hover:bg-white/10 text-neutral-700 dark:text-neutral-300 hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-all flex items-center justify-center" title="X (Twitter)">
                             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-neutral-200/60 dark:bg-white/5 hover:bg-[#0251B0]/10 dark:hover:bg-white/10 text-neutral-700 dark:text-neutral-300 hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-all flex items-center justify-center" title="Facebook">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-neutral-200/60 dark:bg-white/5 hover:bg-[#0251B0]/10 dark:hover:bg-white/10 text-neutral-700 dark:text-neutral-300 hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-all flex items-center justify-center" title="Facebook">
                             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </a>
                     </div>
@@ -665,36 +671,37 @@
                 </div>
 
                 <div class="lg:col-span-3 space-y-4">
-                    <h4 class="text-xs font-black uppercase tracking-[0.2em] text-[#0251B0] dark:text-[#D1FF42]">Directory</h4>
+                    <h4 class="text-xs font-black uppercase tracking-[0.2em] text-[#0251B0] dark:text-[#3B82F6]">Directory</h4>
                     <ul class="space-y-2.5 text-xs text-neutral-600 dark:text-neutral-300 font-medium">
-                        <li><a href="#home" onclick="router.navigate('home')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors">Home Hub</a></li>
-                        <li><a href="#treatments" onclick="router.navigate('treatments')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors">Treatments</a></li>
-                        <li><a href="#doctors" onclick="router.navigate('doctors')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors">Specialists</a></li>
-                        <li><a href="#pricing" onclick="router.navigate('pricing')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors">Pricing Matrix</a></li>
-                        <li><a href="#stories" onclick="router.navigate('stories')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors">Success Stories</a></li>
+                        <li><a href="#home" onclick="router.navigate('home')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Home Hub</a></li>
+                        <li><a href="#about" onclick="router.navigate('about')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">About Us</a></li>
+                        <li><a href="#treatments" onclick="router.navigate('treatments')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Treatments</a></li>
+                        <li><a href="#doctors" onclick="router.navigate('doctors')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Specialists</a></li>
+                        <li><a href="#pricing" onclick="router.navigate('pricing')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Pricing Matrix</a></li>
+                        <li><a href="#stories" onclick="router.navigate('stories')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Success Stories</a></li>
                     </ul>
                 </div>
 
                 <div class="lg:col-span-3 space-y-4">
-                    <h4 class="text-xs font-black uppercase tracking-[0.2em] text-[#0251B0] dark:text-[#D1FF42]">Protocols</h4>
+                    <h4 class="text-xs font-black uppercase tracking-[0.2em] text-[#0251B0] dark:text-[#3B82F6]">Protocols</h4>
                     <ul class="space-y-2.5 text-xs text-neutral-600 dark:text-neutral-300 font-medium">
-                        <li><button onclick="app.jumpToTreatment('ivf')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors text-left">IVF & Time-Lapse Embryology</button></li>
-                        <li><button onclick="app.jumpToTreatment('iui')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors text-left">IUI Timed Insemination</button></li>
-                        <li><button onclick="app.jumpToTreatment('icsi')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors text-left">ICSI Micro-Injection</button></li>
-                        <li><button onclick="app.jumpToTreatment('egg-freezing')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors text-left">Oocyte Vitrification</button></li>
-                        <li><button onclick="app.jumpToTreatment('pgt')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors text-left">PGT-A Genetic Screening</button></li>
+                        <li><button onclick="app.jumpToTreatment('ivf')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors text-left">IVF & Time-Lapse Embryology</button></li>
+                        <li><button onclick="app.jumpToTreatment('iui')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors text-left">IUI Timed Insemination</button></li>
+                        <li><button onclick="app.jumpToTreatment('icsi')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors text-left">ICSI Micro-Injection</button></li>
+                        <li><button onclick="app.jumpToTreatment('egg-freezing')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors text-left">Oocyte Vitrification</button></li>
+                        <li><button onclick="app.jumpToTreatment('pgt')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors text-left">PGT-A Genetic Screening</button></li>
                     </ul>
                 </div>
 
                 <div class="lg:col-span-3 space-y-4">
-                    <h4 class="text-xs font-black uppercase tracking-[0.2em] text-[#0251B0] dark:text-[#D1FF42]">Legal & Compliance</h4>
+                    <h4 class="text-xs font-black uppercase tracking-[0.2em] text-[#0251B0] dark:text-[#3B82F6]">Legal & Compliance</h4>
                     <ul class="space-y-2.5 text-xs text-neutral-600 dark:text-neutral-300 font-medium">
-                        <li><a href="#privacy" onclick="router.navigate('privacy')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors">Privacy Policy</a></li>
-                        <li><a href="#terms" onclick="router.navigate('terms')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors">Terms of Service</a></li>
-                        <li><a href="#contact" onclick="router.navigate('contact')" class="hover:text-[#0251B0] dark:hover:text-[#D1FF42] transition-colors">Patient Care Desk</a></li>
+                        <li><a href="#privacy" onclick="router.navigate('privacy')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Privacy Policy</a></li>
+                        <li><a href="#terms" onclick="router.navigate('terms')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Terms of Service</a></li>
+                        <li><a href="#contact" onclick="router.navigate('contact')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Patient Care Desk</a></li>
                     </ul>
                     <div class="pt-2 text-[11px] text-neutral-500 font-mono">
-                        <p>© 2026 FirstChild Fertility, Inc.</p>
+                        <p>&copy; 2026 FirstChild Fertility, Inc.</p>
                         <p>All rights reserved.</p>
                     </div>
                 </div>

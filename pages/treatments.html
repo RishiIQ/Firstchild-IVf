@@ -1,15 +1,17 @@
 <!-- ============================================================
      TREATMENTS PAGE - FirstChild Fertility
      Comprehensive guide with professional layout, high-contrast colors, 
-     and contextually accurate images (Zero Data Loss)
+     and contextually accurate images (Zero Data Loss & Explicit Dark Border Classes)
      ============================================================ -->
 
+
+
 <!-- ===== HERO SECTION ===== -->
-<section class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+<section class="max-w-7xl mx-auto px-6 py-16 lg:py-24 bg-[linear-gradient(to_right,var(--gradient-start),var(--gradient-end)),url('https://imgs.search.brave.com/unAEIpfmGiFKzVnLll3BiRleVmBao2FvBPCSPUFdQqE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIx/OTU0MzYyNy9waG90/by9uZWVkbGUtcHVu/Y3R1cmluZy1jZWxs/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz02WnVOMGNESFFM/MzN2Zm9PMGRCM2dO/YUVLV01KV3Jkd0xk/NTJpWk9vM2IwPQ')] rounded-xl bg-cover bg-center">
     <div class="grid lg:grid-cols-12 gap-12 items-center mb-8">
         <div class="lg:col-span-7 text-center lg:text-left reveal active">
-            <span class="inline-block px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-widest mb-4">Our Services</span>
-            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 tracking-tight">Advanced Fertility<br><span class="italic font-normal text-[#0251B0] dark:text-[#D1FF42]">Treatments</span></h1>
+            <span class="inline-block px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-widest mb-4">Our Services</span>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 tracking-tight">Advanced Fertility<br><span class="italic font-normal text-[#0251B0] dark:text-[#3B82F6]">Treatments</span></h1>
             <p class="text-neutral-600 dark:text-[#C7D1DD] max-w-2xl mx-auto lg:mx-0 text-base md:text-lg leading-relaxed">
                 World-leading reproductive science applied with bespoke precision. Each protocol is tailored to your unique biology, goals, and personal journey.
             </p>
@@ -19,7 +21,7 @@
                 <img src="https://thumbs.dreamstime.com/b/advanced-hospital-room-modern-technology-equipment-patient-care-monitoring-high-tech-features-medical-multiple-424965479.jpg" class="w-full h-full object-cover" alt="Advanced Fertility Clinic Science" />
                 <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-white">
-                    <p class="text-[10px] font-mono uppercase tracking-widest text-[#D1FF42]">State-of-the-Art Labs</p>
+                    <p class="text-[10px] font-mono tracking-widest uppercase text-[#3B82F6]">State-of-the-Art Labs</p>
                     <p class="text-xs font-bold">Embryology & Genetic Cleanrooms</p>
                 </div>
             </div>
@@ -29,14 +31,15 @@
 
 <!-- ===== IVF SECTION ===== -->
 <section id="ivf" class="max-w-6xl mx-auto px-6 py-8 scroll-mt-32">
-    <div class="adaptive-card p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-[#0251B0]">
+    <!-- Using explicit dark:border-l-[#3B82F6] technique -->
+    <div class=" p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-[#0251B0] dark:border-l-[#3B82F6]">
         <div class="flex flex-col md:flex-row justify-between md:items-center gap-6 mb-8">
             <div>
-                <span class="inline-block px-4 py-1 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-tighter mb-3">Most Advanced</span>
+                <span class="inline-block px-4 py-1 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-tighter mb-3">Most Advanced</span>
                 <h2 class="text-4xl md:text-5xl font-serif font-bold mb-2">IVF</h2>
                 <p class="text-neutral-500 dark:text-[#C7D1DD]">In-Vitro Fertilization — The gold standard in assisted reproductive technology.</p>
             </div>
-            <button onclick="app.openModal('consultation-modal')" class="bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest shadow-xl hover:opacity-90 transition-all shrink-0">
+            <button onclick="app.openModal('consultation-modal')" class="bg-[#0251B0] text-white px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest shadow-xl hover:opacity-90 transition-all shrink-0">
                 Book Consultation
             </button>
         </div>
@@ -46,7 +49,7 @@
             <img src="https://images.unsplash.com/photo-1733685373406-7ba0f1f9c906?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover" alt="IVF Embryology Lab" />
             <div class="absolute inset-0 bg-gradient-to-r from-neutral-950/80 via-neutral-950/30 to-transparent flex items-center p-8">
                 <div class="max-w-md text-white">
-                    <span class="text-[10px] font-mono tracking-widest uppercase text-[#D1FF42]">Flagship Protocol</span>
+                    <span class="text-[10px] font-mono tracking-widest uppercase text-[#3B82F6]">Flagship Protocol</span>
                     <h3 class="text-2xl font-serif font-bold mt-1">Precision Time-Lapse Embryology</h3>
                 </div>
             </div>
@@ -60,7 +63,7 @@
 
                 <div class="p-6 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 mb-6">
                     <p class="text-sm font-medium">
-                        <span class="font-black text-[#0251B0] dark:text-[#D1FF42]">Success Rate:</span> 
+                        <span class="font-black text-[#0251B0] dark:text-[#3B82F6]">Success Rate:</span> 
                         68% live birth rate per cycle for patients under 35 (2025 clinical data). 
                         <span class="text-neutral-400 text-xs">*Individual results may vary.</span>
                     </p>
@@ -69,28 +72,28 @@
                 <div class="grid sm:grid-cols-2 gap-4">
                     <div class="p-5 rounded-2xl bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200 dark:border-white/10">
                         <div class="flex items-center gap-3 mb-2">
-                            <div class="w-8 h-8 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center text-xs font-black">01</div>
+                            <div class="w-8 h-8 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center text-xs font-black">01</div>
                             <span class="font-bold text-sm">Stimulation</span>
                         </div>
                         <p class="text-xs text-neutral-500 dark:text-neutral-400">Customized hormone therapy for optimal follicle growth. Monitored with regular ultrasounds and blood tests.</p>
                     </div>
                     <div class="p-5 rounded-2xl bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200 dark:border-white/10">
                         <div class="flex items-center gap-3 mb-2">
-                            <div class="w-8 h-8 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center text-xs font-black">02</div>
+                            <div class="w-8 h-8 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center text-xs font-black">02</div>
                             <span class="font-bold text-sm">Retrieval</span>
                         </div>
                         <p class="text-xs text-neutral-500 dark:text-neutral-400">Painless minor procedure under expert sedation. Typically takes 20-30 minutes.</p>
                     </div>
                     <div class="p-5 rounded-2xl bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200 dark:border-white/10">
                         <div class="flex items-center gap-3 mb-2">
-                            <div class="w-8 h-8 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center text-xs font-black">03</div>
+                            <div class="w-8 h-8 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center text-xs font-black">03</div>
                             <span class="font-bold text-sm">Fertilization</span>
                         </div>
                         <p class="text-xs text-neutral-500 dark:text-neutral-400">Advanced embryology with ICSI support. Embryos are cultured in time-lapse incubators.</p>
                     </div>
                     <div class="p-5 rounded-2xl bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200 dark:border-white/10">
                         <div class="flex items-center gap-3 mb-2">
-                            <div class="w-8 h-8 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center text-xs font-black">04</div>
+                            <div class="w-8 h-8 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center text-xs font-black">04</div>
                             <span class="font-bold text-sm">Transfer</span>
                         </div>
                         <p class="text-xs text-neutral-500 dark:text-neutral-400">Ultrasound-guided embryo placement. A simple, painless procedure that takes just a few minutes.</p>
@@ -102,12 +105,12 @@
                 <div class="p-6 rounded-3xl bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200 dark:border-white/10">
                     <h4 class="font-bold text-sm mb-3">Who Is IVF For?</h4>
                     <ul class="space-y-2 text-sm text-neutral-600 dark:text-[#C7D1DD]">
-                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42] shrink-0 mt-0.5"></i> Blocked or damaged fallopian tubes</li>
-                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42] shrink-0 mt-0.5"></i> Male factor infertility</li>
-                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42] shrink-0 mt-0.5"></i> Unexplained infertility</li>
-                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42] shrink-0 mt-0.5"></i> Advanced maternal age</li>
-                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42] shrink-0 mt-0.5"></i> Genetic disorder carriers</li>
-                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42] shrink-0 mt-0.5"></i> Previous failed fertility treatments</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0 mt-0.5"></i> Blocked or damaged fallopian tubes</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0 mt-0.5"></i> Male factor infertility</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0 mt-0.5"></i> Unexplained infertility</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0 mt-0.5"></i> Advanced maternal age</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0 mt-0.5"></i> Genetic disorder carriers</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0 mt-0.5"></i> Previous failed fertility treatments</li>
                     </ul>
                 </div>
                 <div class="p-6 rounded-3xl bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200 dark:border-white/10">
@@ -128,7 +131,8 @@
 
 <!-- ===== IUI SECTION ===== -->
 <section id="iui" class="max-w-6xl mx-auto px-6 py-8 scroll-mt-32">
-    <div class="adaptive-card p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-teal-500">
+    <!-- Using explicit dark:border-l-teal-400 technique -->
+    <div class=" p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-teal-500 dark:border-l-teal-400">
         <div class="flex flex-col md:flex-row justify-between md:items-center gap-6 mb-8">
             <div>
                 <span class="inline-block px-4 py-1 bg-teal-500/10 text-teal-600 dark:text-teal-400 rounded-full text-[10px] font-black uppercase tracking-tighter mb-3">Less Invasive</span>
@@ -222,7 +226,8 @@
 
 <!-- ===== ICSI SECTION ===== -->
 <section id="icsi" class="max-w-6xl mx-auto px-6 py-8 scroll-mt-32">
-    <div class="adaptive-card p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-violet-500">
+    <!-- Using explicit dark:border-l-violet-400 technique -->
+    <div class=" p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-violet-500 dark:border-l-violet-400">
         <div class="flex flex-col md:flex-row justify-between md:items-center gap-6 mb-8">
             <div>
                 <span class="inline-block px-4 py-1 bg-violet-500/10 text-violet-600 dark:text-violet-400 rounded-full text-[10px] font-black uppercase tracking-tighter mb-3">Precision Micro-Injection</span>
@@ -317,7 +322,8 @@
 
 <!-- ===== EGG FREEZING SECTION ===== -->
 <section id="egg-freezing" class="max-w-6xl mx-auto px-6 py-8 scroll-mt-32">
-    <div class="adaptive-card p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-amber-500">
+    <!-- Using explicit dark:border-l-amber-400 technique -->
+    <div class=" p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-amber-500 dark:border-l-amber-400">
         <div class="flex flex-col md:flex-row justify-between md:items-center gap-6 mb-8">
             <div>
                 <span class="inline-block px-4 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-[10px] font-black uppercase tracking-tighter mb-3">Preserve Your Future</span>
@@ -412,7 +418,8 @@
 
 <!-- ===== PGT SCREENING SECTION ===== -->
 <section id="pgt" class="max-w-6xl mx-auto px-6 py-8 scroll-mt-32">
-    <div class="adaptive-card p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-rose-500">
+    <!-- Using explicit dark:border-l-rose-400 technique -->
+    <div class=" p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-rose-500 dark:border-l-rose-400">
         <div class="flex flex-col md:flex-row justify-between md:items-center gap-6 mb-8">
             <div>
                 <span class="inline-block px-4 py-1 bg-rose-500/10 text-rose-600 dark:text-rose-400 rounded-full text-[10px] font-black uppercase tracking-tighter mb-3">Genetic Screening</span>
@@ -505,7 +512,8 @@
 
 <!-- ===== DONOR PROGRAMS SECTION ===== -->
 <section id="donor" class="max-w-6xl mx-auto px-6 py-8 scroll-mt-32">
-    <div class="adaptive-card p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-blue-500">
+    <!-- Using explicit dark:border-l-blue-400 technique -->
+    <div class=" p-8 md:p-12 rounded-[40px] reveal border-l-8 border-l-blue-500 dark:border-l-blue-400">
         <div class="flex flex-col md:flex-row justify-between md:items-center gap-6 mb-8">
             <div>
                 <span class="inline-block px-4 py-1 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-full text-[10px] font-black uppercase tracking-tighter mb-3">Expanded Options</span>
@@ -600,12 +608,12 @@
 <!-- ===== TREATMENT COMPARISON TABLE ===== -->
 <section class="max-w-6xl mx-auto px-6 py-16">
     <div class="text-center mb-12 reveal">
-        <span class="inline-block px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-widest mb-4">Compare Options</span>
+        <span class="inline-block px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-widest mb-4">Compare Options</span>
         <h2 class="text-4xl font-serif font-bold mb-4">Treatment Comparison</h2>
         <p class="text-neutral-500 dark:text-[#C7D1DD] max-w-2xl mx-auto">A quick overview of our fertility treatments to help you understand your options.</p>
     </div>
 
-    <div class="overflow-x-auto reveal adaptive-card rounded-3xl p-2 shadow-xl border border-neutral-200 dark:border-white/10">
+    <div class="overflow-x-auto reveal  rounded-3xl p-2 shadow-xl border border-neutral-200 dark:border-white/10">
         <table class="w-full text-left rounded-2xl overflow-hidden">
             <thead class="bg-[#0251B0]/10 dark:bg-white/[0.05]">
                 <tr>
@@ -621,7 +629,7 @@
                     <td class="p-4 font-bold">IVF</td>
                     <td class="p-4 text-neutral-500">Moderate</td>
                     <td class="p-4 text-neutral-500">4-6 weeks</td>
-                    <td class="p-4"><span class="font-bold text-[#0251B0] dark:text-[#D1FF42]">68%</span> <span class="text-xs text-neutral-400">(under 35)</span></td>
+                    <td class="p-4"><span class="font-bold text-[#0251B0] dark:text-[#3B82F6]">68%</span> <span class="text-xs text-neutral-400">(under 35)</span></td>
                     <td class="p-4 text-neutral-500">Multiple infertility factors</td>
                 </tr>
                 <tr class="hover:bg-neutral-50 dark:hover:bg-white/[0.02] transition-colors">
@@ -659,26 +667,22 @@
 
 <!-- ===== CTA SECTION ===== -->
 <section class="max-w-7xl mx-auto px-6 py-16">
-    <div class="adaptive-card p-12 md:p-20 rounded-5xl text-center relative overflow-hidden shadow-2xl reveal border border-neutral-200 dark:border-white/10">
-        <div class="absolute inset-0 -z-10 opacity-15">
-            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover" alt="Clinic Interior" />
-        </div>
-
-        <span class="inline-block px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-widest mb-4">Start Your Journey</span>
+    <div class=" p-12 md:p-20 rounded-5xl text-center relative overflow-hidden shadow-2xl reveal border border-neutral-200 dark:border-white/10">
+        <span class="inline-block px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-widest mb-4">Start Your Journey</span>
         <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Not Sure Which Treatment<br>Is Right For You?</h2>
         <p class="text-neutral-600 dark:text-[#C7D1DD] max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
             Schedule a consultation with our specialists. We'll review your medical history, discuss your goals, and create a personalized treatment plan tailored to your unique needs.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-            <button onclick="app.openModal('consultation-modal')" class="px-12 py-5 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] rounded-full font-black text-sm uppercase tracking-widest shadow-2xl hover:opacity-90 transition-all">
+            <button onclick="app.openModal('consultation-modal')" class="px-12 py-5 bg-[#0251B0] text-white rounded-full font-black text-sm uppercase tracking-widest shadow-2xl hover:opacity-90 transition-all">
                 Book Consultation
             </button>
-            <button onclick="router.navigate('doctors')" class="px-12 py-5 adaptive-card rounded-full font-black text-sm uppercase tracking-widest hover:opacity-80 transition-all">
+            <button onclick="router.navigate('doctors')" class="px-12 py-5  rounded-full font-black text-sm uppercase tracking-widest hover:opacity-80 transition-all">
                 Meet Our Specialists
             </button>
         </div>
-        <p class="mt-8 text-xs text-neutral-400">
-            <i data-lucide="phone" class="inline w-4 h-4 mr-2 text-[#0251B0] dark:text-[#D1FF42]"></i> Speak with a care coordinator: +1 (888) 555-NOVA • Mon-Fri 8AM - 8PM EST
+        <p class="mt-8 text-sm text-neutral-500">
+            <i data-lucide="phone" class="inline w-4 h-4 mr-2 text-[#0251B0] dark:text-[#3B82F6]"></i> Speak with a care coordinator: +1 (888) 555-NOVA • Mon-Fri 8AM - 8PM EST
         </p>
     </div>
 </section>

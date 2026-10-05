@@ -1,24 +1,24 @@
 <!-- ============================================================
-     FIRSTCHILD FERTILITY - SaaS HOME 2 (Expanded Enterprise Suite)
+     FIRSTCHILD FERTILITY - SaaS HOME 2 (Expanded to 6 Sections with Images)
      ============================================================ -->
 
 <div class="space-y-24 pb-24 reveal active">
     
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-6 pt-16 lg:pt-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="max-w-7xl mx-auto px-6 pt-16 lg:pt-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[linear-gradient(to_right,var(--gradient-start),var(--gradient-end)),url('https://imgs.search.brave.com/ZGkG4qF0CfaHZtzhpQZwBApJC5ImFU7sz4iKitsISRs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDMv/MjY2LzkyNS9zbWFs/bC9zYWFzLXNvZnR3/YXJlLWFzLWEtc2Vy/dmljZS1idXNpbmVz/cy1jb25jZXB0LXdp/dGgtYmlnLXdvcmQt/ZnJlZS12ZWN0b3Iu/anBn')] rounded-xl bg-cover bg-center p-8">
         <div class="lg:col-span-7 space-y-8">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] text-xs font-black uppercase tracking-widest">
-                <span class="w-2 h-2 rounded-full bg-[#0251B0] dark:bg-[#D1FF42] animate-ping"></span>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] text-xs font-black uppercase tracking-widest">
+                <span class="w-2 h-2 rounded-full bg-[#0251B0] animate-ping"></span>
                 SaaS Cloud Suite v4.2 Enterprise
             </div>
             <h1 class="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.1]">
-                Scale Your <span class="text-[#0251B0] dark:text-[#D1FF42] italic">Analytics</span> With Zero Latency.
+                Scale Your <span class="text-[#0251B0] dark:text-[#3B82F6] italic">Analytics</span> With Zero Latency.
             </h1>
             <p class="text-base sm:text-lg text-neutral-600 dark:text-[#C7D1DD] font-light max-w-2xl leading-relaxed">
                 Automate your clinical pipeline tracking, real-time patient analytics, and secure multi-region synchronization through our enterprise-grade SaaS infrastructure.
             </p>
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-                <button onclick="app.openModal('consultation-modal')" class="px-8 py-4 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] rounded-full font-black text-xs uppercase tracking-widest shadow-2xl hover:scale-105 transition-all text-center">
+                <button onclick="app.openModal('consultation-modal')" class="px-8 py-4 bg-[#0251B0] text-white rounded-full font-black text-xs uppercase tracking-widest shadow-2xl hover:scale-105 transition-all text-center">
                     Start 14-Day Free Trial
                 </button>
                 <button onclick="router.navigate('treatments')" class="px-8 py-4 glass border border-neutral-200 dark:border-white/10 rounded-full font-black text-xs uppercase tracking-widest hover:bg-neutral-100 dark:hover:bg-white/5 transition-all text-center">
@@ -31,10 +31,9 @@
             </div>
         </div>
 
-        <!-- SaaS Dashboard Preview Card -->
         <div class="lg:col-span-5">
             <div class="adaptive-card p-6 sm:p-8 rounded-5xl space-y-6 shadow-2xl relative overflow-hidden">
-                <div class="absolute -right-12 -top-12 w-48 h-48 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -right-12 -top-12 w-48 h-48 bg-[#0251B0]/10 rounded-full blur-3xl pointer-events-none"></div>
                 <div class="flex justify-between items-center border-b border-neutral-200 dark:border-white/10 pb-4">
                     <div class="flex items-center gap-3">
                         <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -51,49 +50,72 @@
                         </div>
                         <span class="px-3 py-1 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold rounded-full">+28.4% this week</span>
                     </div>
-                    <!-- Visual Mock Graph Bars -->
                     <div class="h-32 flex items-end gap-2 pt-4 border-t border-neutral-100 dark:border-white/5">
-                        <div class="w-full bg-[#0251B0]/20 dark:bg-white/10 hover:bg-[#0251B0] dark:hover:bg-[#D1FF42] rounded-t-lg h-[40%] transition-all"></div>
-                        <div class="w-full bg-[#0251B0]/30 dark:bg-white/15 hover:bg-[#0251B0] dark:hover:bg-[#D1FF42] rounded-t-lg h-[65%] transition-all"></div>
-                        <div class="w-full bg-[#0251B0]/40 dark:bg-white/20 hover:bg-[#0251B0] dark:hover:bg-[#D1FF42] rounded-t-lg h-[50%] transition-all"></div>
-                        <div class="w-full bg-[#0251B0]/60 dark:bg-white/30 hover:bg-[#0251B0] dark:hover:bg-[#D1FF42] rounded-t-lg h-[85%] transition-all"></div>
-                        <div class="w-full bg-[#0251B0] dark:bg-[#D1FF42] rounded-t-lg h-[100%] transition-all shadow-lg"></div>
+                        <div class="w-full bg-[#0251B0]/20 hover:bg-[#0251B0] rounded-t-lg h-[40%] transition-all"></div>
+                        <div class="w-full bg-[#0251B0]/30 hover:bg-[#0251B0] rounded-t-lg h-[65%] transition-all"></div>
+                        <div class="w-full bg-[#0251B0]/40 hover:bg-[#0251B0] rounded-t-lg h-[50%] transition-all"></div>
+                        <div class="w-full bg-[#0251B0]/60 hover:bg-[#0251B0] rounded-t-lg h-[85%] transition-all"></div>
+                        <div class="w-full bg-[#0251B0] rounded-t-lg h-[100%] transition-all shadow-lg"></div>
                     </div>
                 </div>
                 <div class="p-4 rounded-2xl bg-neutral-50 dark:bg-white/5 flex items-center justify-between text-xs">
                     <span class="font-medium">Active Encryption Protocol</span>
-                    <span class="font-mono text-[#0251B0] dark:text-[#D1FF42] font-bold">AES-256 TLS 1.3</span>
+                    <span class="font-mono text-[#0251B0] dark:text-[#3B82F6] font-bold">AES-256 TLS 1.3</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Metrics Strip -->
+    <!-- SECTION 2: METRICS STRIP -->
     <section class="max-w-7xl mx-auto px-6">
         <div class="adaptive-card p-8 rounded-5xl grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-neutral-200 dark:divide-white/10">
             <div class="space-y-1 pt-4 md:pt-0">
-                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#D1FF42]">99.99%</h4>
+                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#3B82F6]">99.99%</h4>
                 <p class="text-xs uppercase tracking-widest text-neutral-500 font-bold">Guaranteed Uptime</p>
             </div>
             <div class="space-y-1 pt-4 md:pt-0">
-                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#D1FF42]">12ms</h4>
+                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#3B82F6]">12ms</h4>
                 <p class="text-xs uppercase tracking-widest text-neutral-500 font-bold">Global API Latency</p>
             </div>
             <div class="space-y-1 pt-4 md:pt-0">
-                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#D1FF42]">250k+</h4>
+                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#3B82F6]">250k+</h4>
                 <p class="text-xs uppercase tracking-widest text-neutral-500 font-bold">Active Daily Users</p>
             </div>
             <div class="space-y-1 pt-4 md:pt-0">
-                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#D1FF42]">ISO-5</h4>
+                <h4 class="text-3xl md:text-4xl font-serif font-bold text-[#0251B0] dark:text-[#3B82F6]">ISO-5</h4>
                 <p class="text-xs uppercase tracking-widest text-neutral-500 font-bold">Compliance Standard</p>
             </div>
         </div>
     </section>
 
-    <!-- Core Features Grid -->
+    <!-- SECTION 3: VISUAL ARCHITECTURE SHOWCASE (NEW IMAGE SECTION) -->
+    <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 relative rounded-5xl overflow-hidden shadow-2xl border border-neutral-200 dark:border-white/10">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover aspect-[4/3]" alt="Cloud Infrastructure Dashboard" />
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+                <span class="text-[10px] font-mono tracking-widest uppercase text-[#3B82F6]">Real-Time Monitoring</span>
+                <p class="text-lg font-serif font-bold">Multi-Region Failover Architecture</p>
+            </div>
+        </div>
+        <div class="lg:col-span-6 space-y-6">
+            <span class="px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Infrastructure</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900 dark:text-white">Uncompromising Security & Speed</h2>
+            <p class="text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
+                Our distributed server nodes ensure that patient medical histories, lab results, and real-time appointment syncs occur in milliseconds without bottlenecks or security vulnerability.
+            </p>
+            <ul class="space-y-3 text-xs font-semibold text-neutral-700 dark:text-neutral-300">
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6]"></i> Automated database sharding across 4 global regions</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6]"></i> Zero-knowledge encryption keys stored in hardware security modules</li>
+                <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6]"></i> Instant hot-standby failover protection</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CORE FEATURES GRID -->
     <section class="max-w-7xl mx-auto px-6 space-y-12">
         <div class="text-center space-y-4 max-w-2xl mx-auto">
-            <span class="px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+            <span class="px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                 Enterprise Modules
             </span>
             <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900 dark:text-white">
@@ -106,7 +128,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="adaptive-card p-8 rounded-5xl space-y-4 group hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center font-bold">
+                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center font-bold">
                     <i data-lucide="cpu" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Automated Pipelines</h3>
@@ -116,7 +138,7 @@
             </div>
 
             <div class="adaptive-card p-8 rounded-5xl space-y-4 group hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center font-bold">
+                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center font-bold">
                     <i data-lucide="lock" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Role-Based Access Control</h3>
@@ -126,7 +148,7 @@
             </div>
 
             <div class="adaptive-card p-8 rounded-5xl space-y-4 group hover:-translate-y-1">
-                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] flex items-center justify-center font-bold">
+                <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center font-bold">
                     <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Real-Time Telemetry</h3>
@@ -137,96 +159,111 @@
         </div>
     </section>
 
-    <!-- Pricing Tiers Matrix -->
-    <section class="max-w-7xl mx-auto px-6 space-y-12">
-        <div class="text-center space-y-4 max-w-2xl mx-auto">
-            <span class="px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
-                Transparent Pricing
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900 dark:text-white">
-                Plans Built for Teams of All Sizes
-            </h2>
-            <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD]">
-                Scale seamlessly from independent specialized clinics to multi-hospital health conglomerates.
-            </p>
-        </div>
+    <!-- ============================================================
+     PRICING TIERS MATRIX (Strict Baseline Button Alignment Fix)
+     ============================================================ -->
+<section class="max-w-7xl mx-auto px-6 space-y-12">
+    <!-- Aligned Heading Container -->
+    <div class="text-center space-y-4 max-w-2xl mx-auto">
+        <span class="inline-block px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+            Transparent Pricing
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900 dark:text-white">
+            Plans Built for Teams of All Sizes
+        </h2>
+        <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD]">
+            Scale seamlessly from independent specialized clinics to multi-hospital health conglomerates.
+        </p>
+    </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-            <!-- Tier 1: Starter -->
-            <div class="adaptive-card p-8 rounded-5xl flex flex-col justify-between space-y-8">
+    <!-- Cards Grid with items-stretch -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Tier 1: Starter -->
+        <div class="adaptive-card p-8 rounded-5xl flex flex-col justify-between h-full">
+            <div class="space-y-6">
                 <div class="space-y-4">
-                    <span class="text-xs font-mono text-[#0251B0] dark:text-[#D1FF42] font-bold uppercase tracking-widest">Starter Tier</span>
+                    <span class="text-xs font-mono text-[#0251B0] dark:text-[#3B82F6] font-bold uppercase tracking-widest">Starter Tier</span>
                     <h3 class="text-2xl font-serif font-bold">Practice Core</h3>
-                    <p class="text-xs text-neutral-500">Ideal for small clinics launching their first digital patient workflows.</p>
-                    <div class="pt-4 flex items-baseline gap-1">
+                    <p class="text-xs text-neutral-500 min-h-[32px]">Ideal for small clinics launching their first digital patient workflows.</p>
+                    <div class="pt-2 flex items-baseline gap-1">
                         <span class="text-4xl font-serif font-bold">$149</span>
                         <span class="text-xs text-neutral-400 font-mono">/ month</span>
                     </div>
                 </div>
-                <ul class="space-y-3 text-xs text-neutral-600 dark:text-[#C7D1DD]">
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Up to 500 Active Patient Profiles</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Standard HIPAA Data Encryption</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> 5 Staff Operator Seats</li>
-                    <li class="flex items-center gap-2 text-neutral-400"><i data-lucide="x" class="w-4 h-4 text-neutral-400"></i> Custom API Webhook Access</li>
+                <ul class="space-y-3 text-xs text-neutral-600 dark:text-[#C7D1DD] pt-2 border-t border-neutral-200 dark:border-white/10">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0"></i> Up to 500 Active Patient Profiles</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0"></i> Standard HIPAA Data Encryption</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0"></i> 5 Staff Operator Seats</li>
                 </ul>
+            </div>
+            <div class="pt-8">
                 <button onclick="document.getElementById('saas-contact-section').scrollIntoView({ behavior: 'smooth' })" class="w-full py-3.5 rounded-full border border-neutral-300 dark:border-white/20 text-xs font-bold uppercase tracking-widest hover:bg-neutral-100 dark:hover:bg-white/5 transition-all">
                     Initialize Team Workspace
                 </button>
             </div>
+        </div>
 
-            <!-- Tier 2: Professional (Highlighted) -->
-            <div class="adaptive-card p-8 rounded-5xl flex flex-col justify-between space-y-8 border-2 border-[#0251B0] dark:border-[#D1FF42] relative shadow-2xl bg-gradient-to-b from-[#0251B0]/5 to-transparent">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
-                    Most Popular
-                </div>
+        <!-- Tier 2: Professional (Highlighted) -->
+        <div class="adaptive-card p-8 pt-10 rounded-5xl flex flex-col justify-between h-full border-2 border-[#0251B0] relative shadow-2xl bg-gradient-to-b from-[#0251B0]/5 to-transparent">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#0251B0] text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
+                Most Popular
+            </div>
+            <div class="space-y-6">
                 <div class="space-y-4">
-                    <span class="text-xs font-mono text-[#0251B0] dark:text-[#D1FF42] font-bold uppercase tracking-widest">Growth Tier</span>
+                    <span class="text-xs font-mono text-[#0251B0] dark:text-[#3B82F6] font-bold uppercase tracking-widest">Growth Tier</span>
                     <h3 class="text-2xl font-serif font-bold">Enterprise Suite</h3>
-                    <p class="text-xs text-neutral-500">Advanced tools for scaling clinics requiring automated multi-region sync.</p>
-                    <div class="pt-4 flex items-baseline gap-1">
+                    <p class="text-xs text-neutral-500 min-h-[32px]">Advanced tools for scaling clinics requiring automated multi-region sync.</p>
+                    <div class="pt-2 flex items-baseline gap-1">
                         <span class="text-4xl font-serif font-bold">$399</span>
                         <span class="text-xs text-neutral-400 font-mono">/ month</span>
                     </div>
                 </div>
-                <ul class="space-y-3 text-xs text-neutral-600 dark:text-[#C7D1DD]">
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Unlimited Active Patient Profiles</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Advanced AES-256 + TLS 1.3 Security</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> 25 Staff Operator Seats</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Full REST & Webhook API Access</li>
+                <ul class="space-y-3 text-xs text-neutral-600 dark:text-[#C7D1DD] pt-2 border-t border-neutral-200 dark:border-white/10">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0"></i> Unlimited Active Patient Profiles</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0"></i> Advanced AES-256 + TLS 1.3 Security</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0"></i> 25 Staff Operator Seats</li>
                 </ul>
-                <button onclick="document.getElementById('saas-contact-section').scrollIntoView({ behavior: 'smooth' })" class="w-full py-3.5 rounded-full bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] text-xs font-black uppercase tracking-widest shadow-xl transition-all">
+            </div>
+            <div class="pt-8">
+                <button onclick="document.getElementById('saas-contact-section').scrollIntoView({ behavior: 'smooth' })" class="w-full py-3.5 rounded-full bg-[#0251B0] text-white text-xs font-black uppercase tracking-widest shadow-xl transition-all">
                     Connect With SaaS Team
                 </button>
             </div>
+        </div>
 
-            <!-- Tier 3: Custom Conglomerate -->
-            <div class="adaptive-card p-8 rounded-5xl flex flex-col justify-between space-y-8">
+        <!-- Tier 3: Custom Conglomerate -->
+        <div class="adaptive-card p-8 rounded-5xl flex flex-col justify-between h-full">
+            <div class="space-y-6">
                 <div class="space-y-4">
-                    <span class="text-xs font-mono text-[#0251B0] dark:text-[#D1FF42] font-bold uppercase tracking-widest">Conglomerate Tier</span>
+                    <span class="text-xs font-mono text-[#0251B0] dark:text-[#3B82F6] font-bold uppercase tracking-widest">Conglomerate Tier</span>
                     <h3 class="text-2xl font-serif font-bold">Custom Network</h3>
-                    <p class="text-xs text-neutral-500">Tailored multi-hospital cloud infrastructure with bespoke SLAs.</p>
-                    <div class="pt-4 flex items-baseline gap-1">
+                    <p class="text-xs text-neutral-500 min-h-[32px]">Tailored multi-hospital cloud infrastructure with bespoke SLAs.</p>
+                    <div class="pt-2 flex items-baseline gap-1">
                         <span class="text-4xl font-serif font-bold">Custom</span>
                     </div>
                 </div>
-                <ul class="space-y-3 text-xs text-neutral-600 dark:text-[#C7D1DD]">
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Dedicated ISO-5 Cleanroom DB Clusters</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> 24/7 Dedicated Infrastructure Engineer</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> Custom HIPAA Business Associate Agreement</li>
-                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#D1FF42]"></i> On-Premise Hybrid Deployment Options</li>
+                <ul class="space-y-3 text-xs text-neutral-600 dark:text-[#C7D1DD] pt-2 border-t border-neutral-200 dark:border-white/10">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0"></i> Dedicated ISO-5 Cleanroom DB Clusters</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0"></i> 24/7 Dedicated Infrastructure Engineer</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6] shrink-0"></i> Custom HIPAA Business Associate Agreement</li>
                 </ul>
+            </div>
+            <div class="pt-8">
                 <button onclick="document.getElementById('saas-contact-section').scrollIntoView({ behavior: 'smooth' })" class="w-full py-3.5 rounded-full border border-neutral-300 dark:border-white/20 text-xs font-bold uppercase tracking-widest hover:bg-neutral-100 dark:hover:bg-white/5 transition-all">
                     Request Enterprise Briefing
                 </button>
             </div>
         </div>
-    </section>
 
-    <!-- SaaS Team Communication & Submission Form Section -->
+    </div>
+</section>
+
+    <!-- SECTION 6: SAAS TEAM COLLABORATION & FAQ -->
     <section id="saas-contact-section" class="max-w-3xl mx-auto px-6">
         <div class="adaptive-card p-8 sm:p-12 rounded-5xl shadow-2xl relative">
             <div class="text-center space-y-3 mb-8">
-                <span class="px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                <span class="px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                     Direct Collaboration
                 </span>
                 <h2 class="text-2xl sm:text-3xl font-serif font-bold text-neutral-900 dark:text-white">
@@ -237,7 +274,6 @@
                 </p>
             </div>
 
-            <!-- Success Message Box (Hidden by default) -->
             <div id="saas-success-msg" class="hidden mb-6 p-6 rounded-3xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-center space-y-2">
                 <div class="w-10 h-10 mx-auto rounded-full bg-emerald-500/20 flex items-center justify-center">
                     <i data-lucide="check-circle" class="w-6 h-6"></i>
@@ -261,7 +297,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[10px] font-black uppercase tracking-widest mb-1.5 text-neutral-400">Selected Plan Tier</label>
-                        <select id="saas-tier" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs">
+                        <select id="saas-tier" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900  ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs">
                             <option>Practice Core ($149/mo)</option>
                             <option selected>Enterprise Growth Suite ($399/mo)</option>
                             <option>Custom Conglomerate Network</option>
@@ -278,58 +314,114 @@
                     <textarea id="saas-notes" rows="3" placeholder="Briefly specify your data migration timeline or custom webhook requirements..." class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs"></textarea>
                 </div>
 
-                <button type="submit" id="saas-submit-btn" class="w-full py-4 bg-[#0251B0] dark:bg-[#D1FF42] text-white dark:text-[#111318] rounded-full font-black text-xs uppercase tracking-widest shadow-xl hover:scale-[1.01] transition-all">
+                <button type="submit" id="saas-submit-btn" class="w-full py-4 bg-[#0251B0] text-white rounded-full font-black text-xs uppercase tracking-widest shadow-xl hover:scale-[1.01] transition-all">
                     Initialize Collaboration Request
                 </button>
             </form>
         </div>
     </section>
 
-    <!-- FAQ Section with Interactive Open/Close Accordion Feature -->
-    <section class="max-w-4xl mx-auto px-6 space-y-8">
-        <div class="text-center space-y-4">
-            <span class="px-4 py-1.5 bg-[#0251B0]/10 dark:bg-[#D1FF42]/10 text-[#0251B0] dark:text-[#D1FF42] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
-                Got Questions?
-            </span>
-            <h2 class="text-3xl font-serif font-bold text-neutral-900 dark:text-white">
-                Frequently Asked Questions
-            </h2>
-        </div>
-
-        <div class="space-y-4">
-            <!-- FAQ Item 1 -->
-            <div class="adaptive-card p-6 rounded-3xl cursor-pointer transition-all faq-item" onclick="app.toggleFaq(this)">
-                <div class="flex items-center justify-between font-bold text-sm text-neutral-900 dark:text-white">
-                    <span>How long does cloud migration take for existing medical records?</span>
-                    <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 transition-transform duration-300 faq-icon"></i>
-                </div>
-                <div class="faq-content hidden pt-3 text-xs text-neutral-600 dark:text-[#C7D1DD] leading-relaxed border-t border-neutral-200/60 dark:border-white/10 mt-3">
-                    Our compliance engineering team handles full database imports with zero downtime, typically finalizing secure transfers within 48 to 72 hours.
-                </div>
+    <!-- ===== SECTION 7: DEVELOPER API & WEBHOOKS (WITH IMAGE) ===== -->
+<section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-6 space-y-6">
+        <span class="px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Developer Toolkit</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900 dark:text-white">Robust RESTful APIs & Instant Webhooks</h2>
+        <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
+            Integrate FirstChild's clinical data pipeline directly into your existing electronic health record (EHR) software using our version-controlled API endpoints and real-time subscription hooks.
+        </p>
+        <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl adaptive-card">
+                <p class="font-mono font-bold text-sm text-[#0251B0] dark:text-[#3B82F6]">POST /v2/embryo-sync</p>
+                <p class="text-[10px] text-neutral-500 mt-1">Automatic lab telemetry transmission</p>
             </div>
-
-            <!-- FAQ Item 2 -->
-            <div class="adaptive-card p-6 rounded-3xl cursor-pointer transition-all faq-item" onclick="app.toggleFaq(this)">
-                <div class="flex items-center justify-between font-bold text-sm text-neutral-900 dark:text-white">
-                    <span>Are all client communication channels fully HIPAA compliant?</span>
-                    <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 transition-transform duration-300 faq-icon"></i>
-                </div>
-                <div class="faq-content hidden pt-3 text-xs text-neutral-600 dark:text-[#C7D1DD] leading-relaxed border-t border-neutral-200/60 dark:border-white/10 mt-3">
-                    Yes. Every portal message, telehealth stream, and lab report push is end-to-end encrypted with zero exposure to unverified third-party trackers.
-                </div>
-            </div>
-
-            <!-- FAQ Item 3 -->
-            <div class="adaptive-card p-6 rounded-3xl cursor-pointer transition-all faq-item" onclick="app.toggleFaq(this)">
-                <div class="flex items-center justify-between font-bold text-sm text-neutral-900 dark:text-white">
-                    <span>Can we test the platform before committing to an annual billing tier?</span>
-                    <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-400 transition-transform duration-300 faq-icon"></i>
-                </div>
-                <div class="faq-content hidden pt-3 text-xs text-neutral-600 dark:text-[#C7D1DD] leading-relaxed border-t border-neutral-200/60 dark:border-white/10 mt-3">
-                    Every new workspace starts with a fully unlocked 14-day trial with no credit card required upfront.
-                </div>
+            <div class="p-4 rounded-2xl adaptive-card">
+                <p class="font-mono font-bold text-sm text-[#0251B0] dark:text-[#3B82F6]">GET /v2/patient-audit</p>
+                <p class="text-[10px] text-neutral-500 mt-1">Instant HIPAA compliance logs</p>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="lg:col-span-6 relative rounded-5xl overflow-hidden shadow-2xl border border-neutral-200 dark:border-white/10">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover aspect-[16/10]" alt="Developer Code Interface" />
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-[10px] font-mono tracking-widest uppercase text-[#3B82F6]">API Documentation v4.2</span>
+            <p class="text-lg font-serif font-bold">Secure OAuth2 & Bearer Token Authentication</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SECTION 9: AUTOMATED WORKFLOW BUILDER ===== -->
+<section class="max-w-7xl mx-auto px-6 py-20 border-t border-neutral-200 dark:border-white/10">
+    <div class="text-center space-y-4 max-w-2xl mx-auto mb-16 reveal">
+        <span class="px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Operational Automation</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white">Custom Clinical Workflow Builder</h2>
+        <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD]">Drag-and-drop orchestration tools allowing medical directors to build custom patient onboarding and lab review sequences.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="adaptive-card p-8 rounded-5xl space-y-4 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center font-bold">
+                <i data-lucide="git-branch" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Conditional Triggers</h3>
+            <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
+                Automatically route lab results to specific specialists based on hormone threshold triggers and PGT markers.
+            </p>
+        </div>
+
+        <div class="adaptive-card p-8 rounded-5xl space-y-4 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center font-bold">
+                <i data-lucide="bell-ring" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">Smart Patient Alerts</h3>
+            <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
+                Push automated SMS and portal notifications for evening hormone injection timers with strict compliance tracking.
+            </p>
+        </div>
+
+        <div class="adaptive-card p-8 rounded-5xl space-y-4 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center font-bold">
+                <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-neutral-900 dark:text-white">SART & CDC Reporting</h3>
+            <p class="text-xs sm:text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
+                Generate compliant regulatory clinical audit reports and success metrics with a single click.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SECTION 10: GLOBAL INFRASTRUCTURE MAP (WITH IMAGE) ===== -->
+<section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-t border-neutral-200 dark:border-white/10">
+    <div class="lg:col-span-6 space-y-6">
+        <span class="px-4 py-1.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Global Edge Network</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900 dark:text-white">Low-Latency Data Synchronization Worldwide</h2>
+        <p class="text-sm text-neutral-600 dark:text-[#C7D1DD] leading-relaxed">
+            With edge data centers located across North America, Europe, and Asia-Pacific, international patients and partner clinics experience instantaneous data retrieval and secure portal synchronization.
+        </p>
+        <div class="grid grid-cols-3 gap-3 pt-2">
+            <div class="p-3 rounded-2xl adaptive-card text-center">
+                <p class="font-mono font-bold text-sm text-[#0251B0] dark:text-[#3B82F6]">US-East</p>
+                <p class="text-[9px] text-neutral-500">Primary Hub</p>
+            </div>
+            <div class="p-3 rounded-2xl adaptive-card text-center">
+                <p class="font-mono font-bold text-sm text-[#0251B0] dark:text-[#3B82F6]">EU-Central</p>
+                <p class="text-[9px] text-neutral-500">GDPR Secure</p>
+            </div>
+            <div class="p-3 rounded-2xl adaptive-card text-center">
+                <p class="font-mono font-bold text-sm text-[#0251B0] dark:text-[#3B82F6]">AP-South</p>
+                <p class="text-[9px] text-neutral-500">Fast Relay</p>
+            </div>
+        </div>
+    </div>
+    <div class="lg:col-span-6 relative rounded-5xl overflow-hidden shadow-2xl border border-neutral-200 dark:border-white/10">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover aspect-[4/3]" alt="Global Cloud Connectivity Network" />
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="text-[10px] font-mono tracking-widest uppercase text-[#3B82F6]">Edge Server Matrix</span>
+            <p class="text-lg font-serif font-bold">14 Edge Locations • 99.99% Guaranteed SLA</p>
+        </div>
+    </div>
+</section>
 
 </div>
