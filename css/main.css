@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== 10. LARGE DESKTOP (1100px - 1299px) ===== */
 @media screen and (min-width: 1100px) and (max-width: 1299px) {
-    html { font-size: 11px; }
+    html { font-size: 14px; }
     .nav-desktop { gap: 1.5rem; font-size: 10px; }
     .nav-toggle { display: none !important; }
 }
@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== 12. ULTRA WIDE (1400px+) ===== */
 @media screen and (min-width: 1400px) {
-    html { font-size: 11px; }
+    html { font-size: 14px; }
     .nav-desktop { gap: 2rem; font-size: 12px; }
     .nav-toggle { display: none !important; }
     .max-w-7xl { max-width: 80rem; }
