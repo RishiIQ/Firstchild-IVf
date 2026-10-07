@@ -5,7 +5,7 @@
 
 <section class="min-h-[80vh] flex items-center justify-center px-6 py-12 reveal active">
     <div class="max-w-4xl w-full">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="grid lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
             
             <!-- Left Column: IVF Cell Division & Embryo Graphic Metaphor -->
             <div class="relative flex items-center justify-center">
@@ -34,7 +34,7 @@
             </div>
 
             <!-- Right Column: Content & Navigation Paths -->
-            <div class="text-center lg:text-left space-y-6">
+            <div class="space-y-6 flex flex-col items-center lg:items-start">
                 
                 <!-- Status Badge -->
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] text-[10px] font-black uppercase tracking-widest border border-[#0251B0]/20 dark:border-[#3B82F6]/20">
@@ -47,7 +47,7 @@
                     <span class="text-[#0251B0] dark:text-[#3B82F6] italic">Divided</span> Off-Screen
                 </h1>
 
-                <p class="text-neutral-600 dark:text-[#C7D1DD] text-sm md:text-base leading-relaxed max-w-lg">
+                <p class="text-neutral-600 dark:text-[#C7D1DD] text-sm md:text-base leading-relaxed max-w-lg text-center lg:text-left">
                     The requested page coordinate could not be located in our clinical repository. Like an unexpected cell cycle variation, let's recalibrate and return to your primary treatment roadmap.
                 </p>
 
@@ -63,7 +63,7 @@
                 </div>
 
                 <!-- Quick Directory Shortcuts -->
-                <div class="pt-6 border-t border-neutral-200 dark:border-white/10 flex flex-wrap gap-6 text-xs font-semibold text-neutral-500 dark:text-neutral-400 justify-center lg:justify-start">
+                <div class="pt-6 border-t border-neutral-200 dark:border-white/10 flex flex-wrap gap-6 text-xs font-semibold text-neutral-500 dark:text-neutral-400 justify-center lg:justify-start w-full">
                     <a href="#home" onclick="router.navigate('home')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Home</a>
                     <a href="#treatments" onclick="router.navigate('treatments')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">IVF Hub</a>
                     <a href="#doctors" onclick="router.navigate('doctors')" class="hover:text-[#0251B0] dark:hover:text-[#3B82F6] transition-colors">Specialists</a>
@@ -74,7 +74,7 @@
 
         <!-- Bottom Clinical Reassurance Footer -->
         <div class="mt-16 pt-8 border-t border-neutral-200 dark:border-white/10 text-center">
-            <div class="inline-flex items-center gap-6 text-xs font-mono text-neutral-500 dark:text-neutral-400">
+            <div class="inline-flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-xs font-mono text-neutral-500 dark:text-neutral-400">
                 <span class="flex items-center gap-2">
                     <i data-lucide="shield-check" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6]"></i>
                     ISO-5 Secure Navigation Route

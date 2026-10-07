@@ -18,8 +18,8 @@
     
     --transition-base: 300ms cubic-bezier(0.22, 1, 0.36, 1);
 
-    --gradient-start: rgba(234, 224, 224, 0.541);
-    --gradient-end: rgba(255, 255, 255, 0.5);
+    --gradient-start: rgba(234, 224, 224, 0.683);
+    --gradient-end: rgba(255, 255, 255, 0.795);
 }
 
 *, *::before, *::after {

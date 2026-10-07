@@ -2,10 +2,10 @@
      DASHBOARD PAGE - FirstChild Fertility 
      ============================================================ -->
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 lg:py-12 space-y-8 reveal active">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 lg:py-12 space-y-8 reveal active text-center lg:text-left">
 
     <!-- TOP BAR: User Greeting & Quick Status Summary -->
-    <header class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 adaptive-card p-6 sm:p-8 rounded-4xl shadow-xl relative overflow-hidden">
+    <header class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 adaptive-card p-6 sm:p-8 rounded-4xl shadow-xl relative overflow-hidden text-left">
         <div class="absolute -right-12 -top-12 w-40 h-40 bg-[#0251B0]/10 dark:bg-[#3B82F6]/10 rounded-full blur-2xl pointer-events-none"></div>
         
         <div class="flex items-center gap-5">
@@ -13,8 +13,8 @@
                 <img 
                     id="profile-avatar"
                     src="https://images.unsplash.com/photo-1644860704769-c61c84be7836?q=80&w=687&auto=format&fit=crop" 
-                    alt="Patient Avatar" 
-                    class="w-full h-full object-cover rounded-2xl shadow-md border-2 border-[#0251B0] dark:border-[#3B82F6]" 
+                    alt="Patient Avatar"
+                    class="w-full h-full object-cover rounded-2xl shadow-md border-2 border-[#0251B0] dark:border-[#3B82F6]"
                 />
                 <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-white dark:border-[#111318]" title="Active"></div>
             </div>
@@ -62,16 +62,16 @@
     </nav>
 
     <!-- MAIN DYNAMIC CONTENT CONTAINER -->
-    <div id="dash-content" class="space-y-8">
+    <div id="dash-content" class="space-y-8 text-left">
         
         <!-- Default Main Overview Grid View -->
-        <div id="dash-main" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div id="dash-main" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start text-left">
             
             <!-- Left Main Stream (Col 8) -->
-            <div class="lg:col-span-8 space-y-8">
+            <div class="lg:col-span-8 space-y-8 text-left">
                 
                 <!-- Treatment Journey Progress Card -->
-                <div class="adaptive-card p-6 sm:p-8 rounded-4xl space-y-6 shadow-xl">
+                <div class="adaptive-card p-6 sm:p-8 rounded-4xl space-y-6 shadow-xl text-left">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pb-4 border-b border-neutral-200 dark:border-white/10">
                         <div>
                             <span class="text-[10px] font-mono text-[#0251B0] dark:text-[#3B82F6] font-bold uppercase tracking-widest">Active Protocol</span>
@@ -102,10 +102,10 @@
                 </div>
 
                 <!-- Two-Column Grid: Labs & Medication Status -->
-                <div class="grid sm:grid-cols-2 gap-6">
+                <div class="grid sm:grid-cols-2 gap-6 text-left">
                     
                     <!-- Labs Summary Widget with Working CTA -->
-                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg flex flex-col justify-between space-y-6">
+                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg flex flex-col justify-between space-y-6 text-left">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between pb-3 border-b border-neutral-200 dark:border-white/10">
                                 <h4 class="font-bold text-xs uppercase tracking-wider text-neutral-900 dark:text-white flex items-center gap-2">
@@ -134,7 +134,7 @@
                     </div>
 
                     <!-- Medication Schedule Summary Widget with Working CTA -->
-                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg flex flex-col justify-between space-y-6">
+                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg flex flex-col justify-between space-y-6 text-left">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between pb-3 border-b border-neutral-200 dark:border-white/10">
                                 <h4 class="font-bold text-xs uppercase tracking-wider text-neutral-900 dark:text-white flex items-center gap-2">
@@ -163,10 +163,10 @@
             </div>
 
             <!-- Right Sidebar Panel (Col 4): Appointments, Concierge & Financials -->
-            <div class="lg:col-span-4 space-y-6">
+            <div class="lg:col-span-4 space-y-6 text-left">
                 
                 <!-- Next Appointment Card with Working CTA -->
-                <div class="adaptive-card p-6 rounded-4xl shadow-xl space-y-4 border-l-4 border-l-[#0251B0]">
+                <div class="adaptive-card p-6 rounded-4xl shadow-xl space-y-4 border-l-4 border-l-[#0251B0] text-left">
                     <div class="flex items-center justify-between">
                         <span class="text-[10px] font-black uppercase tracking-widest text-neutral-400">Next Visit</span>
                         <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-600 text-[9px] font-black uppercase rounded-md">Confirmed</span>
@@ -182,20 +182,20 @@
                 </div>
 
                 <!-- Live Concierge Support Widget -->
-                <div class="rounded-4xl p-6 bg-[#111318] text-white border border-white/10 shadow-2xl relative overflow-hidden space-y-3">
+                <div class="rounded-4xl p-6 bg-[#111318] text-white border border-white/10 shadow-2xl relative overflow-hidden space-y-3 text-left">
                     <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-[#0251B0]/20 rounded-full blur-xl pointer-events-none"></div>
                     <div class="flex items-center justify-between">
                         <span class="text-[9px] font-black uppercase tracking-widest text-[#3B82F6]">Care Concierge</span>
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     </div>
                     <p class="text-xs font-bold">Your nurse advocate, Jane D., is online and ready.</p>
-                    <button onclick="app.startLiveChat()" class="w-full py-3 bg-[#3B82F6] text-white rounded-2xl font-black text-[11px] uppercase tracking-widest shadow-md hover:opacity-90 transition-all">
+                    <button onclick="app.startLiveChat()" class="w-full py-3 bg-[#3B82F6] text-white rounded-2xl font-black text-[11px] uppercase tracking-widest shadow-md hover:opacity-90 transition-all text-center">
                         <i data-lucide="message-circle" class="inline w-3.5 h-3.5 mr-1.5 align-middle"></i> Start Live Chat
                     </button>
                 </div>
 
                 <!-- Financial Brief Summary with Working CTA -->
-                <div class="adaptive-card p-6 rounded-4xl shadow-xl space-y-3">
+                <div class="adaptive-card p-6 rounded-4xl shadow-xl space-y-3 text-left">
                     <div class="flex items-center justify-between pb-2 border-b border-neutral-200 dark:border-white/10">
                         <span class="text-[10px] font-black uppercase tracking-widest text-neutral-400">Financial Ledger</span>
                         <a href="#dashboard" data-view="billing" onclick="document.querySelector('#dash-nav [data-view=\'billing\']').click(); return false;" class="dash-nav-item text-[10px] font-bold text-[#0251B0] dark:text-[#3B82F6] hover:underline">Details →</a>
@@ -232,7 +232,7 @@
      ============================================================ -->
 
 <script type="text/html" id="template-labs">
-    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8 text-left">
         <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
             <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center shrink-0">
                 <i data-lucide="microscope" class="w-6 h-6"></i>
@@ -244,28 +244,28 @@
         </div>
 
         <!-- Hormone Panel -->
-        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10 space-y-4">
+        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10 space-y-4 text-left">
             <h4 class="font-bold mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-neutral-900 dark:text-white">
                 <i data-lucide="activity" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6]"></i>
                 Hormone Panel (Day 9)
             </h4>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
-                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-left">
+                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5 text-left">
                     <span class="text-neutral-500 dark:text-neutral-400 text-xs">Estradiol (E2)</span>
                     <p class="font-black text-base mt-1 text-neutral-900 dark:text-white">1,240 pg/mL</p>
                     <span class="text-[9px] text-emerald-600 dark:text-emerald-400 font-black uppercase">↑ Rising</span>
                 </div>
-                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5">
+                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5 text-left">
                     <span class="text-neutral-500 dark:text-neutral-400 text-xs">LH Level</span>
                     <p class="font-black text-base mt-1 text-neutral-900 dark:text-white">4.8 mIU/mL</p>
                     <span class="text-[9px] text-[#0251B0] dark:text-[#3B82F6] font-black uppercase">→ Stable</span>
                 </div>
-                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5">
+                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5 text-left">
                     <span class="text-neutral-500 dark:text-neutral-400 text-xs">Progesterone</span>
                     <p class="font-black text-base mt-1 text-neutral-900 dark:text-white">0.8 ng/mL</p>
                     <span class="text-[9px] text-emerald-600 dark:text-emerald-400 font-black uppercase">✓ Optimal</span>
                 </div>
-                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5">
+                <div class="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-neutral-200 dark:border-white/5 text-left">
                     <span class="text-neutral-500 dark:text-neutral-400 text-xs">FSH Level</span>
                     <p class="font-black text-base mt-1 text-neutral-900 dark:text-white">6.2 mIU/mL</p>
                     <span class="text-[9px] text-emerald-600 dark:text-emerald-400 font-black uppercase">✓ Normal</span>
@@ -274,12 +274,12 @@
         </div>
 
         <!-- Genetic Screening -->
-        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10 text-left">
             <h4 class="font-bold mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-neutral-900 dark:text-white">
                 <i data-lucide="dna" class="w-4 h-4 text-violet-500"></i>
                 Genetic Screening (PGT-A)
             </h4>
-            <div class="flex items-center gap-4 p-4 bg-white dark:bg-white/[0.02] rounded-2xl border border-neutral-200 dark:border-white/5">
+            <div class="flex items-center gap-4 p-4 bg-white dark:bg-white/[0.02] rounded-2xl border border-neutral-200 dark:border-white/5 text-left">
                 <div class="w-12 h-12 rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
                     <i data-lucide="clock" class="w-6 h-6"></i>
                 </div>
@@ -291,7 +291,7 @@
         </div>
 
         <!-- AMH Reserve -->
-        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10 text-left">
             <h4 class="font-bold mb-4 flex items-center gap-2 text-sm uppercase tracking-wider text-neutral-900 dark:text-white">
                 <i data-lucide="heart-pulse" class="w-4 h-4 text-[#0251B0] dark:text-[#3B82F6]"></i>
                 AMH (Anti-Müllerian Hormone)
@@ -307,7 +307,7 @@
             </div>
         </div>
 
-        <div class="p-4 bg-[#0251B0]/10 dark:bg-white/5 rounded-3xl border border-[#0251B0]/20 dark:border-white/10">
+        <div class="p-4 bg-[#0251B0]/10 dark:bg-white/5 rounded-3xl border border-[#0251B0]/20 dark:border-white/10 text-left">
             <p class="text-xs text-neutral-800 dark:text-[#C7D1DD] leading-relaxed font-medium">
                 <span class="font-bold text-[#0251B0] dark:text-[#3B82F6]">📋 Note:</span> All lab results are reviewed by your specialist within 24 hours. You will receive a notification when new results are available.
             </p>
@@ -316,7 +316,7 @@
 </script>
 
 <script type="text/html" id="template-appointments">
-    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8 text-left">
         <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
             <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center shrink-0">
                 <i data-lucide="calendar" class="w-6 h-6"></i>
@@ -328,7 +328,7 @@
         </div>
 
         <!-- Upcoming List -->
-        <div class="space-y-4">
+        <div class="space-y-4 text-left">
             <div class="flex items-center justify-between p-5 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border-l-4 border-l-emerald-500 border border-neutral-200 dark:border-white/5">
                 <div class="space-y-1">
                     <p class="font-bold text-base text-neutral-900 dark:text-white">Ultrasound & Bloodwork</p>
@@ -358,7 +358,7 @@
         </div>
 
         <!-- Past Appointments -->
-        <div class="space-y-3 pt-4">
+        <div class="space-y-3 pt-4 text-left">
             <h4 class="font-bold text-sm uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Past Appointments</h4>
             <div class="space-y-2.5">
                 <div class="flex items-center justify-between p-4 bg-white dark:bg-white/[0.02] rounded-2xl border border-neutral-200 dark:border-white/5">
@@ -378,7 +378,7 @@
             </div>
         </div>
 
-        <div class="p-4 bg-[#0251B0]/10 dark:bg-white/5 rounded-3xl border border-[#0251B0]/20 dark:border-white/10">
+        <div class="p-4 bg-[#0251B0]/10 dark:bg-white/5 rounded-3xl border border-[#0251B0]/20 dark:border-white/10 text-left">
             <p class="text-xs text-neutral-800 dark:text-[#C7D1DD] font-medium">
                 <span class="font-bold text-[#0251B0] dark:text-[#3B82F6]">⏰ Reminder:</span> Please arrive 15 minutes early for all appointments. Bring your insurance card and photo ID.
             </p>
@@ -387,7 +387,7 @@
 </script>
 
 <script type="text/html" id="template-medications">
-    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8 text-left">
         <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
             <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center shrink-0">
                 <i data-lucide="pill" class="w-6 h-6"></i>
@@ -399,14 +399,14 @@
         </div>
 
         <!-- Today's Schedule -->
-        <div class="space-y-4">
+        <div class="space-y-4 text-left">
             <h4 class="font-bold text-sm uppercase tracking-wider flex items-center gap-2 text-neutral-900 dark:text-white">
                 <span class="w-2 h-2 rounded-full bg-[#0251B0] dark:bg-[#3B82F6] animate-pulse"></span>
                 Today's Schedule <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400 font-mono">(Oct 13, 2026)</span>
             </h4>
 
             <div class="space-y-3">
-                <div class="flex items-center gap-4 p-4 bg-emerald-500/10 rounded-3xl border border-emerald-500/20">
+                <div class="flex items-center gap-4 p-4 bg-emerald-500/10 rounded-3xl border border-emerald-500/20 text-left">
                     <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0">
                         <i data-lucide="check" class="w-5 h-5"></i>
                     </div>
@@ -418,7 +418,7 @@
                     <span class="px-3 py-1 bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-full text-[10px] font-black uppercase">Taken</span>
                 </div>
 
-                <div class="flex items-center gap-4 p-4 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+                <div class="flex items-center gap-4 p-4 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10 text-left">
                     <div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
                         <i data-lucide="clock" class="w-5 h-5"></i>
                     </div>
@@ -430,7 +430,7 @@
                     <span class="px-3 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full text-[10px] font-black uppercase">Upcoming</span>
                 </div>
 
-                <div class="flex items-center gap-4 p-4 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+                <div class="flex items-center gap-4 p-4 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10 text-left">
                     <div class="w-10 h-10 rounded-full bg-violet-500/10 text-violet-500 flex items-center justify-center shrink-0">
                         <i data-lucide="clock" class="w-5 h-5"></i>
                     </div>
@@ -445,7 +445,7 @@
         </div>
 
         <!-- Weekly Overview -->
-        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10">
+        <div class="p-6 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border border-neutral-200 dark:border-white/10 text-left">
             <h4 class="font-bold text-sm mb-4 uppercase tracking-wider text-neutral-900 dark:text-white">Weekly Overview</h4>
             <div class="grid md:grid-cols-7 sm:grid-cols-1 gap-2 text-center">
                 <div class="p-3 rounded-2xl bg-[#0251B0] text-white">
@@ -479,7 +479,7 @@
             </div>
         </div>
 
-        <div class="p-4 bg-amber-500/10 rounded-3xl border border-amber-500/20">
+        <div class="p-4 bg-amber-500/10 rounded-3xl border border-amber-500/20 text-left">
             <p class="text-xs text-neutral-800 dark:text-[#C7D1DD] font-medium">
                 <span class="font-bold text-amber-500">⚠️ Important:</span> Continue all medications as prescribed. Do not skip doses without consulting your care team.
             </p>
@@ -488,7 +488,7 @@
 </script>
 
 <script type="text/html" id="template-billing">
-    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8 text-left">
         <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
             <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center shrink-0">
                 <i data-lucide="credit-card" class="w-6 h-6"></i>
@@ -500,7 +500,7 @@
         </div>
 
         <!-- Summary Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div class="p-5 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 text-center">
                 <p class="text-[10px] text-neutral-500 dark:text-neutral-400 font-black uppercase tracking-wider">Total Billed</p>
                 <p class="text-xl font-serif font-bold text-[#0251B0] dark:text-[#3B82F6] mt-1">$9,470.00</p>
@@ -520,9 +520,9 @@
         </div>
 
         <!-- Invoices Table -->
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto text-left">
             <table class="w-full text-left">
-                <thead class="border-b border-neutral-200 dark:border-white/10">
+                <thead class="border-b border-neutral-200 dark:border-white/10 text-left">
                     <tr class="text-[10px] font-black uppercase text-neutral-500 dark:text-neutral-400">
                         <th class="pb-3">Invoice</th>
                         <th class="pb-3">Description</th>
@@ -558,8 +558,8 @@
         </div>
 
         <!-- Insurance info grid -->
-        <div class="grid md:grid-cols-2 gap-4 pt-2">
-            <div class="p-6 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 space-y-2">
+        <div class="grid md:grid-cols-2 gap-4 pt-2 text-left">
+            <div class="p-6 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 space-y-2 text-left">
                 <h5 class="font-bold text-sm uppercase tracking-wider text-neutral-900 dark:text-white">Insurance Coverage</h5>
                 <ul class="space-y-1 text-xs text-neutral-700 dark:text-[#C7D1DD]">
                     <li><span class="font-bold text-neutral-900 dark:text-white">Provider:</span> Aetna PPO</li>
@@ -568,7 +568,7 @@
                     <li><span class="font-bold text-neutral-900 dark:text-white">Deductible:</span> $2,000 (85% met)</li>
                 </ul>
             </div>
-            <div class="p-6 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 space-y-2">
+            <div class="p-6 rounded-3xl bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 space-y-2 text-left">
                 <h5 class="font-bold text-sm uppercase tracking-wider text-neutral-900 dark:text-white">Payment Options</h5>
                 <ul class="space-y-1 text-xs text-neutral-700 dark:text-[#C7D1DD]">
                     <li>✅ Credit / Debit Card</li>
@@ -582,7 +582,7 @@
 </script>
 
 <script type="text/html" id="template-messages">
-    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8">
+    <div class="adaptive-card p-8 md:p-10 rounded-5xl shadow-2xl space-y-8 text-left">
         <div class="flex items-center gap-3 pb-4 border-b border-neutral-200 dark:border-white/10">
             <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center shrink-0">
                 <i data-lucide="message-square" class="w-6 h-6"></i>
@@ -595,10 +595,10 @@
         </div>
 
         <!-- Thread List -->
-        <div class="space-y-4">
-            <div class="flex items-start gap-4 p-5 bg-[#0251B0]/5 dark:bg-white/[0.04] rounded-3xl border-l-4 border-l-[#0251B0] border border-neutral-200 dark:border-white/10">
+        <div class="space-y-4 text-left">
+            <div class="flex items-start gap-4 p-5 bg-[#0251B0]/5 dark:bg-white/[0.04] rounded-3xl border-l-4 border-l-[#0251B0] border border-neutral-200 dark:border-white/10 text-left">
                 <div class="w-10 h-10 rounded-full bg-[#0251B0] text-white flex items-center justify-center text-sm font-bold shrink-0 shadow-md">JD</div>
-                <div class="flex-1 space-y-1">
+                <div class="flex-1 space-y-1 text-left">
                     <div class="flex justify-between items-start">
                         <div>
                             <p class="font-bold text-sm text-neutral-900 dark:text-white">Jane Doe <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400">• Nurse Advocate</span></p>
@@ -611,9 +611,9 @@
                 </div>
             </div>
 
-            <div class="flex items-start gap-4 p-5 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border-l-4 border-l-amber-500 border border-neutral-200 dark:border-white/10">
+            <div class="flex items-start gap-4 p-5 bg-neutral-100 dark:bg-white/[0.03] rounded-3xl border-l-4 border-l-amber-500 border border-neutral-200 dark:border-white/10 text-left">
                 <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-600 flex items-center justify-center text-sm font-bold shrink-0">SC</div>
-                <div class="flex-1 space-y-1">
+                <div class="flex-1 space-y-1 text-left">
                     <div class="flex justify-between items-start">
                         <div>
                             <p class="font-bold text-sm text-neutral-900 dark:text-white">Dr. Sophia Chen <span class="text-xs font-normal text-neutral-500 dark:text-neutral-400">• Fertility Specialist</span></p>
@@ -628,7 +628,7 @@
         </div>
 
         <!-- Compose Box -->
-        <div class="pt-6 border-t border-neutral-200 dark:border-white/10 space-y-4">
+        <div class="pt-6 border-t border-neutral-200 dark:border-white/10 space-y-4 text-left">
             <h4 class="font-bold text-sm uppercase tracking-wider text-neutral-900 dark:text-white">Send a Secure Message</h4>
             <div class="flex flex-col sm:flex-row gap-3">
                 <select class="px-4 py-3 rounded-2xl bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 outline-none text-xs font-bold flex-1 text-neutral-900 dark:text-white">
@@ -647,6 +647,82 @@
         </div>
     </div>
 </script>
+
+<!-- ===== SECURE CONSULTATION MODAL WITH VALIDATION ===== -->
+<div id="consultation-modal" class="fixed inset-0 z-[150] bg-neutral-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="adaptive-card max-w-lg w-full p-8 rounded-5xl shadow-2xl relative text-left">
+        <button onclick="app.closeModal('consultation-modal')" class="absolute top-6 right-6 p-2 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-2xl bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] flex items-center justify-center">
+                <i data-lucide="calendar" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold font-serif text-neutral-900 dark:text-white">Schedule Consultation</h3>
+                <p class="text-xs text-neutral-500 font-medium">Connect securely with a FirstChild care coordinator.</p>
+            </div>
+        </div>
+        <form onsubmit="
+            event.preventDefault();
+            const nameInput = document.getElementById('dash-modal-name');
+            const emailInput = document.getElementById('dash-modal-email');
+            const phoneInput = document.getElementById('dash-modal-phone');
+
+            const nameRegex = /^[A-Za-zÀ-ÿ\s'-]{2,50}$/;
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const phoneRegex = /^\+?[0-9\s\-\(\)]{7,20}$/;
+
+            if (!nameRegex.test(nameInput.value.trim()) || /\d/.test(nameInput.value) || nameInput.value.trim().length < 3) {
+                app.toast('Please enter a valid full name (no numbers or single letters).');
+                nameInput.focus();
+                return;
+            }
+            if (!emailRegex.test(emailInput.value.trim()) || emailInput.value.trim().endsWith('@g') || !emailInput.value.includes('.')) {
+                app.toast('Please enter a valid email address (e.g., name@domain.com).');
+                emailInput.focus();
+                return;
+            }
+            if (!phoneRegex.test(phoneInput.value.trim()) || /[A-Za-z]/.test(phoneInput.value)) {
+                app.toast('Please enter a valid phone number without alphabetic characters.');
+                phoneInput.focus();
+                return;
+            }
+
+            app.closeModal('consultation-modal');
+            this.reset();
+            app.toast('Consultation request dispatched successfully!');
+        " class="space-y-4">
+            <div>
+                <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Full Name</label>
+                <input type="text" required id="dash-modal-name" placeholder="Sarah McAllister" minlength="2" maxlength="50" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s'-]/g, '')" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white" />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Email Address</label>
+                    <input type="email" required id="dash-modal-email" placeholder="sarah@mcallister.com" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white" />
+                </div>
+                <div>
+                    <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Phone Number</label>
+                    <input type="tel" required id="dash-modal-phone" placeholder="+1 (555) 019-2834" minlength="7" maxlength="20" oninput="this.value = this.value.replace(/[^0-9\+\s\-\(\)]/g, '')" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white" />
+                </div>
+            </div>
+            <div>
+                <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Preferred Treatment Pathway</label>
+                <select class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white">
+                    <option>Initial Consultation Booking</option>
+                    <option>IVF & PGT Treatment Protocols</option>
+                    <option>Cryopreservation & Egg Freezing</option>
+                    <option>Insurance & Billing Verification</option>
+                    <option>General Support</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full py-4 bg-[#0251B0] text-white rounded-full font-black text-xs uppercase tracking-widest shadow-xl hover:opacity-90 transition-all">
+                Submit Secure Consultation Request
+            </button>
+        </form>
+    </div>
+</div>
 
 <style>
     /* Active & Inactive State Styling for Horizontal Navigation Bar */
