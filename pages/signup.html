@@ -2,7 +2,7 @@
      SIGNUP PAGE - FirstChild Fertility
      ============================================================ -->
 
-<section class="max-w-md mx-auto px-6 py-12 md:py-20 reveal active">
+<section class="max-w-lg mx-auto px-6 reveal active">
     <div class="adaptive-card p-8 md:p-12 rounded-5xl shadow-3xl relative space-y-8">
         
         <div class="absolute top-6 right-6 flex items-center gap-2">
@@ -15,20 +15,19 @@
             </button>
         </div>
 
-        <!-- Brand - Always Visible -->
-<div class="flex items-center gap-2 sm:gap-3.5 cursor-pointer group flex-shrink-0" onclick="router.navigate('home')">
-    <div class="w-9 h-9 sm:w-11 sm:h-11 bg-[#0251B0] rounded-xl sm:rounded-2xl flex items-center justify-center shadow-md shadow-[#0251B0]/30 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-[#0251B0]/40">
-        <img src="./assets/images/brandlogo.png" 
-             alt="FirstChild Fertility Logo" 
-             class="w-6 h-6 sm:w-7 sm:h-7 object-contain"
-             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-white font-bold text-sm sm:text-base\'>FC</span>';" />
-    </div>
-    <!-- Brand Name - ALWAYS VISIBLE -->
-    <span class="text-base sm:text-xl font-black tracking-tight uppercase text-neutral-900 dark:text-white whitespace-nowrap">
-        First<span class="text-[#0251B0] dark:text-[#D1FF42]">Child</span>
-    </span>
-</div>
-
+<!-- Brand - Centered Alignment -->
+        <div class="flex flex-col items-center justify-center space-y-3 pt-2 cursor-pointer group" onclick="router.navigate('home')">
+            <div class="w-12 h-12 bg-[#0251B0] rounded-2xl flex items-center justify-center shadow-lg shadow-[#0251B0]/30 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-[#0251B0]/40">
+                <img src="./assets/images/brandlogo.png" 
+                     alt="FirstChild Fertility Logo" 
+                     class="w-7 h-7 object-contain"
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-white font-bold text-base\'>FC</span>';" />
+            </div>
+            <!-- Brand Name -->
+            <span class="text-xl font-black tracking-tight uppercase text-neutral-900 dark:text-white">
+                First<span class="text-[#0251B0] dark:text-[#3B82F6]">Child</span>
+            </span>
+        </div>
         <!-- Error Message -->
         <div id="signup-error" class="hidden bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 px-4 py-3 rounded-2xl text-xs font-medium flex items-center gap-2">
             <i data-lucide="alert-circle" class="w-4 h-4 shrink-0"></i>
@@ -42,11 +41,11 @@
         </div>
 
         <div class="text-center">
-            <div class="w-16 h-16 bg-[#0251B0]/10 rounded-3xl flex items-center justify-center text-[#0251B0] dark:text-[#D1FF42] mx-auto mb-4">
+            <div class="w-9 h-9 p-2 bg-[#0251B0]/10 rounded-3xl flex items-center justify-center text-[#0251B0] dark:text-[#D1FF42] mx-auto mb-4">
                 <i data-lucide="user-plus" class="w-8 h-8"></i>
             </div>
-            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-2">Create Account</h2>
-            <p class="text-neutral-500 dark:text-[#C7D1DD] text-sm">
+            <h2 class="text-xl font-serif font-bold mb-2">Create Account</h2>
+            <p class="text-neutral-500 dark:text-[#C7D1DD] text-xs">
                 Begin your journey with FirstChild Fertility today.
             </p>
         </div>

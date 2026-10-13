@@ -1,12 +1,12 @@
 <!-- ============================================================
-     DASHBOARD PAGE - FirstChild Fertility 
+     DASHBOARD PAGE - FirstChild Fertility (Redesigned Sidebar Layout with Verified Booking Modal)
      ============================================================ -->
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 lg:py-12 space-y-8 reveal active text-center lg:text-left">
+<div class="max-w-8xl mx-auto px-4 sm:px-6 py-6 lg:py-10 space-y-8 reveal active text-left">
 
-    <!-- TOP BAR: User Greeting & Quick Status Summary -->
-    <header class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 adaptive-card p-6 sm:p-8 rounded-4xl shadow-xl relative overflow-hidden text-left">
-        <div class="absolute -right-12 -top-12 w-40 h-40 bg-[#0251B0]/10 dark:bg-[#3B82F6]/10 rounded-full blur-2xl pointer-events-none"></div>
+    <!-- ===== TOP HEADER: Patient Telemetry & Quick Status ===== -->
+    <header class="adaptive-card p-6 sm:p-8 rounded-5xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden">
+        <div class="absolute -right-12 -top-12 w-48 h-48 bg-[#0251B0]/10 dark:bg-[#3B82F6]/10 rounded-full blur-3xl pointer-events-none"></div>
         
         <div class="flex items-center gap-5">
             <div class="relative w-16 h-16 sm:w-20 sm:h-20 shrink-0">
@@ -25,53 +25,75 @@
                 </div>
                 <p class="text-xs text-neutral-500 dark:text-[#C7D1DD]">Lead Specialist: <span class="font-semibold text-neutral-800 dark:text-white">Dr. Julianna Thorne</span></p>
                 <div class="flex items-center gap-2 pt-1">
-                    <span id="profile-cycle-badge" class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[9px] font-black uppercase tracking-wider border border-emerald-500/20">Active Stimulation Cycle</span>
-                    <span id="profile-verified-badge" class="px-2.5 py-0.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[9px] font-black uppercase tracking-wider border border-[#0251B0]/20">HIPAA Verified</span>
+                    <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 rounded-full text-[9px] font-black uppercase tracking-wider border border-emerald-500/20">Active Stimulation Cycle</span>
+                    <span class="px-2.5 py-0.5 bg-[#0251B0]/10 text-[#0251B0] dark:text-[#3B82F6] rounded-full text-[9px] font-black uppercase tracking-wider border border-[#0251B0]/20">HIPAA Verified</span>
                 </div>
             </div>
         </div>
 
         <div class="flex items-center gap-3 w-full md:w-auto justify-end">
-            <button onclick="app.openModal('consultation-modal')" class="flex-1 md:flex-none px-6 py-3.5 bg-[#0251B0] text-white rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg hover:scale-105 transition-all text-center">
+            <button onclick="app.openModal('consultation-modal')" class="px-6 py-3.5 bg-[#0251B0] text-white rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg hover:scale-105 transition-all text-center">
                 <i data-lucide="plus-circle" class="w-4 h-4 inline mr-1.5 align-middle"></i> Book Consultation
             </button>
         </div>
     </header>
 
-    <!-- NAVIGATION TABS HUB -->
-    <nav class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="dash-nav">
-        <a href="#dashboard" data-view="main" class="dash-nav-item active px-5 py-3 rounded-2xl font-bold text-xs flex items-center gap-2 shrink-0 transition-all shadow-sm">
-            <i data-lucide="layout-grid" class="w-4 h-4"></i> Overview
-        </a>
-        <a href="#dashboard" data-view="labs" class="dash-nav-item px-5 py-3 rounded-2xl font-bold text-xs flex items-center gap-2 shrink-0 transition-all shadow-sm">
-            <i data-lucide="microscope" class="w-4 h-4"></i> Lab Results
-        </a>
-        <a href="#dashboard" data-view="appointments" class="dash-nav-item px-5 py-3 rounded-2xl font-bold text-xs flex items-center gap-2 shrink-0 transition-all shadow-sm">
-            <i data-lucide="calendar" class="w-4 h-4"></i> Appointments
-        </a>
-        <a href="#dashboard" data-view="medications" class="dash-nav-item px-5 py-3 rounded-2xl font-bold text-xs flex items-center gap-2 shrink-0 transition-all shadow-sm">
-            <i data-lucide="pill" class="w-4 h-4"></i> Medications
-        </a>
-        <a href="#dashboard" data-view="billing" class="dash-nav-item px-5 py-3 rounded-2xl font-bold text-xs flex items-center gap-2 shrink-0 transition-all shadow-sm">
-            <i data-lucide="credit-card" class="w-4 h-4"></i> Billing & Finance
-        </a>
-        <a href="#dashboard" data-view="messages" class="dash-nav-item px-5 py-3 rounded-2xl font-bold text-xs flex items-center gap-2 shrink-0 transition-all shadow-sm">
-            <i data-lucide="message-square" class="w-4 h-4"></i> Messages
-            <span class="px-2 py-0.5 bg-[#0251B0] text-white text-[9px] font-black rounded-full">2</span>
-        </a>
-    </nav>
+    <!-- ===== MAIN PORTAL LAYOUT (Sidebar + Content Viewport) ===== -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-    <!-- MAIN DYNAMIC CONTENT CONTAINER -->
-    <div id="dash-content" class="space-y-8 text-left">
-        
-        <!-- Default Main Overview Grid View -->
-        <div id="dash-main" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start text-left">
+        <!-- ===== LEFT SIDEBAR NAVIGATION PANEL (Col 3) ===== -->
+        <aside class="lg:col-span-3 adaptive-card p-4 sm:p-6 rounded-5xl shadow-xl space-y-3 sticky top-28">
+            <div class="px-3 pb-2 border-b border-neutral-200 dark:border-white/10">
+                <span class="text-[10px] font-mono font-black uppercase tracking-[0.2em] text-neutral-400">Clinical Navigation</span>
+            </div>
             
-            <!-- Left Main Stream (Col 8) -->
-            <div class="lg:col-span-8 space-y-8 text-left">
+            <nav class="flex flex-col space-y-1.5" id="dash-nav">
+                <a href="#dashboard" data-view="main" class="dash-nav-item active px-4 py-3.5 rounded-2xl font-bold text-xs flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-3"><i data-lucide="layout-grid" class="w-4 h-4"></i> Overview</span>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+                </a>
+                <a href="#dashboard" data-view="labs" class="dash-nav-item px-4 py-3.5 rounded-2xl font-bold text-xs flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-3"><i data-lucide="microscope" class="w-4 h-4"></i> Lab Results</span>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+                </a>
+                <a href="#dashboard" data-view="appointments" class="dash-nav-item px-4 py-3.5 rounded-2xl font-bold text-xs flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-3"><i data-lucide="calendar" class="w-4 h-4"></i> Appointments</span>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+                </a>
+                <a href="#dashboard" data-view="medications" class="dash-nav-item px-4 py-3.5 rounded-2xl font-bold text-xs flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-3"><i data-lucide="pill" class="w-4 h-4"></i> Medications</span>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+                </a>
+                <a href="#dashboard" data-view="billing" class="dash-nav-item px-4 py-3.5 rounded-2xl font-bold text-xs flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-3"><i data-lucide="credit-card" class="w-4 h-4"></i> Billing & Finance</span>
+                    <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-60"></i>
+                </a>
+                <a href="#dashboard" data-view="messages" class="dash-nav-item px-4 py-3.5 rounded-2xl font-bold text-xs flex items-center justify-between transition-all">
+                    <span class="flex items-center gap-3"><i data-lucide="message-square" class="w-4 h-4"></i> Messages</span>
+                    <span class="px-2 py-0.5 bg-[#0251B0] text-white text-[9px] font-black rounded-full">2</span>
+                </a>
+            </nav>
+
+            <!-- Sidebar Emergency Support Card -->
+            <div class="pt-4 border-t border-neutral-200 dark:border-white/10">
+                <div class="p-4 rounded-3xl bg-[#0251B0]/10 dark:bg-white/[0.03] border border-[#0251B0]/20 dark:border-white/10 space-y-2">
+                    <div class="flex items-center gap-2 text-[#0251B0] dark:text-[#3B82F6] font-bold text-xs">
+                        <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> Emergency Line
+                    </div>
+                    <p class="text-[11px] text-neutral-600 dark:text-[#C7D1DD]">24/7 active cycle nurse support available.</p>
+                    <p class="text-xs font-mono font-bold">+1 (888) 555-FirstChild</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== RIGHT CONTENT VIEWPORT (Col 9) ===== -->
+        <div id="dash-content" class="lg:col-span-9 space-y-8">
+            
+            <!-- Default Main Overview Grid View -->
+            <div id="dash-main" class="space-y-8">
                 
                 <!-- Treatment Journey Progress Card -->
-                <div class="adaptive-card p-6 sm:p-8 rounded-4xl space-y-6 shadow-xl text-left">
+                <div class="adaptive-card p-6 sm:p-8 rounded-4xl space-y-6 shadow-xl">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pb-4 border-b border-neutral-200 dark:border-white/10">
                         <div>
                             <span class="text-[10px] font-mono text-[#0251B0] dark:text-[#3B82F6] font-bold uppercase tracking-widest">Active Protocol</span>
@@ -102,10 +124,10 @@
                 </div>
 
                 <!-- Two-Column Grid: Labs & Medication Status -->
-                <div class="grid sm:grid-cols-2 gap-6 text-left">
+                <div class="grid sm:grid-cols-2 gap-6">
                     
                     <!-- Labs Summary Widget with Working CTA -->
-                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg flex flex-col justify-between space-y-6 text-left">
+                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between pb-3 border-b border-neutral-200 dark:border-white/10">
                                 <h4 class="font-bold text-xs uppercase tracking-wider text-neutral-900 dark:text-white flex items-center gap-2">
@@ -134,7 +156,7 @@
                     </div>
 
                     <!-- Medication Schedule Summary Widget with Working CTA -->
-                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg flex flex-col justify-between space-y-6 text-left">
+                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between pb-3 border-b border-neutral-200 dark:border-white/10">
                                 <h4 class="font-bold text-xs uppercase tracking-wider text-neutral-900 dark:text-white flex items-center gap-2">
@@ -160,70 +182,55 @@
 
                 </div>
 
-            </div>
+                <!-- Secondary Grid: Appointments & Financial Ledger Summary -->
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <!-- Next Appointment Summary -->
+                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg space-y-4 border-l-4 border-l-[#0251B0]">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-neutral-400">Next Visit</span>
+                            <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-600 text-[9px] font-black uppercase rounded-md">Confirmed</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base text-neutral-900 dark:text-white">Ultrasound & Bloodwork</h4>
+                            <p class="text-xs text-neutral-500 dark:text-[#C7D1DD] mt-1 font-mono">Oct 14, 2026 • 10:30 AM</p>
+                            <p class="text-[11px] text-neutral-400 mt-0.5">FirstChild Main Clinic, Suite 400</p>
+                        </div>
+                        <a href="#dashboard" data-view="appointments" onclick="document.querySelector('#dash-nav [data-view=\'appointments\']').click(); return false;" class="dash-nav-item w-full py-2.5 bg-neutral-100 dark:bg-white/5 text-xs font-bold rounded-xl text-neutral-800 dark:text-white hover:bg-neutral-200 transition-all text-center block">
+                            View Appointment Calendar
+                        </a>
+                    </div>
 
-            <!-- Right Sidebar Panel (Col 4): Appointments, Concierge & Financials -->
-            <div class="lg:col-span-4 space-y-6 text-left">
-                
-                <!-- Next Appointment Card with Working CTA -->
-                <div class="adaptive-card p-6 rounded-4xl shadow-xl space-y-4 border-l-4 border-l-[#0251B0] text-left">
-                    <div class="flex items-center justify-between">
-                        <span class="text-[10px] font-black uppercase tracking-widest text-neutral-400">Next Visit</span>
-                        <span class="px-2.5 py-0.5 bg-emerald-500/10 text-emerald-600 text-[9px] font-black uppercase rounded-md">Confirmed</span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-base text-neutral-900 dark:text-white">Ultrasound & Bloodwork</h4>
-                        <p class="text-xs text-neutral-500 dark:text-[#C7D1DD] mt-1 font-mono">Oct 14, 2026 • 10:30 AM</p>
-                        <p class="text-[11px] text-neutral-400 mt-0.5">FirstChild Main Clinic, Suite 400</p>
-                    </div>
-                    <a href="#dashboard" data-view="appointments" onclick="document.querySelector('#dash-nav [data-view=\'appointments\']').click(); return false;" class="dash-nav-item w-full py-2.5 bg-neutral-100 dark:bg-white/5 text-xs font-bold rounded-xl text-neutral-800 dark:text-white hover:bg-neutral-200 transition-all text-center block">
-                        View Appointment Calendar
-                    </a>
-                </div>
-
-                <!-- Live Concierge Support Widget -->
-                <div class="rounded-4xl p-6 bg-[#111318] text-white border border-white/10 shadow-2xl relative overflow-hidden space-y-3 text-left">
-                    <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-[#0251B0]/20 rounded-full blur-xl pointer-events-none"></div>
-                    <div class="flex items-center justify-between">
-                        <span class="text-[9px] font-black uppercase tracking-widest text-[#3B82F6]">Care Concierge</span>
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    </div>
-                    <p class="text-xs font-bold">Your nurse advocate, Jane D., is online and ready.</p>
-                    <button onclick="app.startLiveChat()" class="w-full py-3 bg-[#3B82F6] text-white rounded-2xl font-black text-[11px] uppercase tracking-widest shadow-md hover:opacity-90 transition-all text-center">
-                        <i data-lucide="message-circle" class="inline w-3.5 h-3.5 mr-1.5 align-middle"></i> Start Live Chat
-                    </button>
-                </div>
-
-                <!-- Financial Brief Summary with Working CTA -->
-                <div class="adaptive-card p-6 rounded-4xl shadow-xl space-y-3 text-left">
-                    <div class="flex items-center justify-between pb-2 border-b border-neutral-200 dark:border-white/10">
-                        <span class="text-[10px] font-black uppercase tracking-widest text-neutral-400">Financial Ledger</span>
-                        <a href="#dashboard" data-view="billing" onclick="document.querySelector('#dash-nav [data-view=\'billing\']').click(); return false;" class="dash-nav-item text-[10px] font-bold text-[#0251B0] dark:text-[#3B82F6] hover:underline">Details →</a>
-                    </div>
-                    <div class="flex justify-between items-center text-xs pt-1">
-                        <span class="text-neutral-500">Total Billed:</span>
-                        <span class="font-mono font-bold">$9,470.00</span>
-                    </div>
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-neutral-500">Insurance Paid:</span>
-                        <span class="font-mono font-bold text-emerald-600">$6,629.00</span>
-                    </div>
-                    <div class="flex justify-between items-center text-xs pt-2 border-t border-neutral-100 dark:border-white/5 font-black">
-                        <span>Out-of-Pocket:</span>
-                        <span class="font-mono text-amber-600">$2,841.00</span>
+                    <!-- Financial Brief Summary -->
+                    <div class="adaptive-card p-6 sm:p-7 rounded-4xl shadow-lg space-y-3">
+                        <div class="flex items-center justify-between pb-2 border-b border-neutral-200 dark:border-white/10">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-neutral-400">Financial Ledger</span>
+                            <a href="#dashboard" data-view="billing" onclick="document.querySelector('#dash-nav [data-view=\'billing\']').click(); return false;" class="dash-nav-item text-[10px] font-bold text-[#0251B0] dark:text-[#3B82F6] hover:underline">Details →</a>
+                        </div>
+                        <div class="flex justify-between items-center text-xs pt-1">
+                            <span class="text-neutral-500">Total Billed:</span>
+                            <span class="font-mono font-bold">$9,470.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-neutral-500">Insurance Paid:</span>
+                            <span class="font-mono font-bold text-emerald-600">$6,629.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs pt-2 border-t border-neutral-100 dark:border-white/5 font-black">
+                            <span>Out-of-Pocket:</span>
+                            <span class="font-mono text-amber-600">$2,841.00</span>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
+            <!-- Dashboard Sub-Views -->
+            <div id="dash-labs" style="display: none;"></div>
+            <div id="dash-appointments" style="display: none;"></div>
+            <div id="dash-medications" style="display: none;"></div>
+            <div id="dash-billing" style="display: none;"></div>
+            <div id="dash-messages" style="display: none;"></div>
         </div>
 
-        <!-- Dashboard Sub-Views -->
-        <div id="dash-labs" style="display: none;"></div>
-        <div id="dash-appointments" style="display: none;"></div>
-        <div id="dash-medications" style="display: none;"></div>
-        <div id="dash-billing" style="display: none;"></div>
-        <div id="dash-messages" style="display: none;"></div>
     </div>
 </div>
 
@@ -648,7 +655,7 @@
     </div>
 </script>
 
-<!-- ===== SECURE CONSULTATION MODAL WITH VALIDATION ===== -->
+<!-- ===== SECURE CONSULTATION MODAL WITH PROFESSIONAL VALIDATION & WORKING HANDLER ===== -->
 <div id="consultation-modal" class="fixed inset-0 z-[150] bg-neutral-950/80 backdrop-blur-md hidden items-center justify-center p-4">
     <div class="adaptive-card max-w-lg w-full p-8 rounded-5xl shadow-2xl relative text-left">
         <button onclick="app.closeModal('consultation-modal')" class="absolute top-6 right-6 p-2 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors">
@@ -663,53 +670,53 @@
                 <p class="text-xs text-neutral-500 font-medium">Connect securely with a FirstChild care coordinator.</p>
             </div>
         </div>
-        <form onsubmit="
+        <form id="dash-pro-form" onsubmit="
             event.preventDefault();
-            const nameInput = document.getElementById('dash-modal-name');
-            const emailInput = document.getElementById('dash-modal-email');
-            const phoneInput = document.getElementById('dash-modal-phone');
+            const nameField = document.getElementById('dash-modal-name');
+            const emailField = document.getElementById('dash-modal-email');
+            const phoneField = document.getElementById('dash-modal-phone');
 
             const nameRegex = /^[A-Za-zÀ-ÿ\s'-]{2,50}$/;
             const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             const phoneRegex = /^\+?[0-9\s\-\(\)]{7,20}$/;
 
-            if (!nameRegex.test(nameInput.value.trim()) || /\d/.test(nameInput.value) || nameInput.value.trim().length < 3) {
+            if (!nameRegex.test(nameField.value.trim()) || /\d/.test(nameField.value) || nameField.value.trim().length < 3) {
                 app.toast('Please enter a valid full name (no numbers or single letters).');
-                nameInput.focus();
+                nameField.focus();
                 return;
             }
-            if (!emailRegex.test(emailInput.value.trim()) || emailInput.value.trim().endsWith('@g') || !emailInput.value.includes('.')) {
+            if (!emailRegex.test(emailField.value.trim()) || emailField.value.trim().endsWith('@g') || !emailField.value.includes('.')) {
                 app.toast('Please enter a valid email address (e.g., name@domain.com).');
-                emailInput.focus();
+                emailField.focus();
                 return;
             }
-            if (!phoneRegex.test(phoneInput.value.trim()) || /[A-Za-z]/.test(phoneInput.value)) {
+            if (!phoneRegex.test(phoneField.value.trim()) || /[A-Za-z]/.test(phoneField.value)) {
                 app.toast('Please enter a valid phone number without alphabetic characters.');
-                phoneInput.focus();
+                phoneField.focus();
                 return;
             }
 
             app.closeModal('consultation-modal');
             this.reset();
             app.toast('Consultation request dispatched successfully!');
-        " class="space-y-4">
+        " class="space-y-4" novalidate>
             <div>
                 <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Full Name</label>
-                <input type="text" required id="dash-modal-name" placeholder="Sarah McAllister" minlength="2" maxlength="50" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s'-]/g, '')" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white" />
+                <input type="text" required id="dash-modal-name" placeholder="Sarah McAllister" minlength="2" maxlength="50" oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s'-]/g, '')" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white transition-all" />
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                     <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Email Address</label>
-                    <input type="email" required id="dash-modal-email" placeholder="sarah@mcallister.com" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white" />
+                    <input type="email" required id="dash-modal-email" placeholder="sarah@mcallister.com" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white transition-all" />
                 </div>
                 <div>
                     <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Phone Number</label>
-                    <input type="tel" required id="dash-modal-phone" placeholder="+1 (555) 019-2834" minlength="7" maxlength="20" oninput="this.value = this.value.replace(/[^0-9\+\s\-\(\)]/g, '')" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white" />
+                    <input type="tel" required id="dash-modal-phone" placeholder="+1 (555) 019-2834" minlength="7" maxlength="20" oninput="this.value = this.value.replace(/[^0-9\+\s\-\(\)]/g, '')" class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white transition-all" />
                 </div>
             </div>
             <div>
                 <label class="block text-[10px] font-black uppercase tracking-widest mb-1 text-neutral-400">Preferred Treatment Pathway</label>
-                <select class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border-none ring-1 ring-neutral-200 dark:ring-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white">
+                <select class="w-full px-4 py-3 rounded-2xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 focus:ring-2 focus:ring-[#0251B0] outline-none text-xs text-neutral-900 dark:text-white">
                     <option>Initial Consultation Booking</option>
                     <option>IVF & PGT Treatment Protocols</option>
                     <option>Cryopreservation & Egg Freezing</option>
@@ -725,16 +732,14 @@
 </div>
 
 <style>
-    /* Active & Inactive State Styling for Horizontal Navigation Bar */
+    /* Professional Left Sidebar Navigation Active & Hover Styling */
     .dash-nav-item {
-        background-color: rgba(2, 81, 176, 0.04);
-        color: #111318;
-        border: 1px solid rgba(2, 81, 176, 0.1);
+        background-color: transparent;
+        color: #4b5563;
+        border: 1px solid transparent;
     }
     .dark .dash-nav-item {
-        background-color: rgba(255, 255, 255, 0.03);
-        color: #FFFFFF;
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #9ca3af;
     }
     
     .dash-nav-item i {
@@ -747,10 +752,12 @@
     }
 
     .dash-nav-item:hover {
-        background-color: rgba(2, 81, 176, 0.1) !important;
+        background-color: rgba(2, 81, 176, 0.06) !important;
+        color: #0251B0 !important;
     }
     .dark .dash-nav-item:hover {
-        background-color: rgba(255, 255, 255, 0.08) !important;
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        color: #3B82F6 !important;
     }
 
     .dash-nav-item.active {
@@ -768,7 +775,7 @@
     
     .dash-nav-item.active span,
     .dash-nav-item.active i {
-        color: inherit !important;
-        stroke: inherit !important;
+        color: #FFFFFF !important;
+        stroke: #FFFFFF !important;
     }
 </style>
