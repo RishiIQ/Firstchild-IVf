@@ -422,14 +422,14 @@
 
     <!-- ===== HEADER - NAV BAR ===== -->
 <header id="global-header" class="fixed top-0 w-full z-[100] px-4 py-4 md:px-8 transition-all duration-300">
-    <nav class="max-w-8xl mx-auto bg-white/80 dark:bg-[#111318]/80 backdrop-blur-2xl border border-neutral-200/80 dark:border-white/10 rounded-full px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4 shadow-[0_8px_32px_rgba(2,81,176,0.06)] dark:shadow-none transition-all duration-300 overflow-hidden">
-        
+    <nav class="max-w-8xl mx-auto bg-white/80 dark:bg-[#111318]/80 backdrop-blur-2xl border border-neutral-200/80 dark:border-white/10 rounded-full px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4 shadow-[0_8px_32px_rgba(2,81,176,0.06)] dark:shadow-none transition-all duration-300 overflow-visible">
+                 
         <!-- 1. Left Section: Brand Logo -->
         <div class="flex items-center gap-3 cursor-pointer group flex-shrink-0" onclick="router.navigate('home')">
             <div class="brand-logo-wrapper">
                 <img src="./assets/images/brandlogo.png" 
-                     alt="FirstChild Fertility Logo" 
-                     class="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                      alt="FirstChild Fertility Logo" 
+                      class="w-6 h-6 sm:w-7 sm:h-7 object-contain"
                      onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-text').style.display='block';" />
                 <span class="fallback-text">FC</span>
             </div>
@@ -438,10 +438,28 @@
             </span>
         </div>
 
-        <!-- 2. Center Section: Desktop Navigation Links -->
+        <!-- 2. Center Section: Desktop Navigation Links with Home Dropdown -->
         <div class="nav-desktop items-center gap-4 xl:gap-6 font-bold text-[10px] xl:text-[11px] uppercase tracking-[0.15em] text-neutral-600 dark:text-neutral-300 whitespace-nowrap mx-auto">
-            <a href="#home" class="nav-link py-1" data-route="home" onclick="router.navigate('home')">Home 1</a>
-            <a href="#home-2" class="nav-link py-1" data-route="home-2" onclick="router.navigate('home-2')">Home 2</a>
+            
+            <!-- Home Dropdown Menu -->
+            <div class="relative group py-1">
+                <button class="nav-link flex items-center gap-1 py-1 focus:outline-none" aria-expanded="false">
+                    <span>Home</span>
+                    <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180"></i>
+                </button>
+                <!-- Dropdown Panel -->
+                <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-44 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-50">
+                    <div class="adaptive-card p-2 rounded-2xl shadow-2xl border border-neutral-200 dark:border-white/10 bg-white/95 dark:bg-[#111318]/95 backdrop-blur-xl space-y-1">
+                        <a href="#home" class="block px-4 py-2.5 rounded-xl hover:bg-[#0251B0]/10 dark:hover:bg-white/10 text-neutral-800 dark:text-white font-bold transition-all" data-route="home" onclick="router.navigate('home')">
+                           Clinical
+                        </a>
+                        <a href="#home-2" class="block px-4 py-2.5 rounded-xl hover:bg-[#0251B0]/10 dark:hover:bg-white/10 text-neutral-800 dark:text-white font-bold transition-all" data-route="home-2" onclick="router.navigate('home-2')">
+                            SaaS Suite
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <a href="#about" class="nav-link py-1" data-route="about" onclick="router.navigate('about')">About</a>
             <a href="#treatments" class="nav-link py-1" data-route="treatments" onclick="router.navigate('treatments')">Treatments</a>
             <a href="#doctors" class="nav-link py-1" data-route="doctors" onclick="router.navigate('doctors')">Specialists</a>
@@ -458,12 +476,10 @@
                 <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-[#0251B0]"></i>
             </button>
             <button onclick="app.toggleDir()" id="dir-toggle-btn" class="px-3.5 py-2 text-[10px] font-black uppercase tracking-wider border border-neutral-200 dark:border-white/10 rounded-full hover:bg-neutral-100 dark:hover:bg-white/5 text-neutral-700 dark:text-neutral-300 transition-all flex items-center gap-1.5" title="Toggle Text Direction">
-                
                 <span id="dir-label">LTR</span>
             </button>
-
-            <a href="#contact" class="bg-blue-800 text-white p-3 rounded-3xl font-bold" data-route="contact" onclick="router.navigate('contact')">Book Consultation</a>
-            <a href="#login" class="bg-gray-500 border border-color-white border-2 py-2.5 px-3  font-bold text-white rounded-2xl"> Login</a>
+            <a href="#contact" class="bg-blue-800 text-white p-3 rounded-3xl font-bold text-xs" data-route="contact" onclick="router.navigate('contact')">Book Consultation</a>
+            <a href="#login" class="bg-gray-500 border border-color-white border-2 py-2.5 px-3 font-bold text-white rounded-2xl text-xs">Login</a>
         </div>
 
         <!-- Mobile Trigger: Visible below 1150px -->
@@ -493,8 +509,8 @@
         </div>
 
         <div class="flex flex-col items-center justify-center gap-4 sm:gap-6 my-auto py-8">
-            <a href="#home" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="home" onclick="app.toggleMobileMenu(); router.navigate('home')">Home 1</a>
-            <a href="#home-2" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="home-2" onclick="app.toggleMobileMenu(); router.navigate('home-2')">Home 2</a>
+            <a href="#home" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="home" onclick="app.toggleMobileMenu(); router.navigate('home')">Clinical</a>
+            <a href="#home-2" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="home-2" onclick="app.toggleMobileMenu(); router.navigate('home-2')">SaaS Suite</a>
             <a href="#about" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="about" onclick="app.toggleMobileMenu(); router.navigate('about')">About</a>
             <a href="#treatments" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="treatments" onclick="app.toggleMobileMenu(); router.navigate('treatments')">Treatments</a>
             <a href="#doctors" class="mobile-nav-link text-xl sm:text-2xl md:text-3xl font-serif text-white hover:text-[#3B82F6] transition-colors" data-route="doctors" onclick="app.toggleMobileMenu(); router.navigate('doctors')">Specialists</a>
