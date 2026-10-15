@@ -571,14 +571,16 @@ const router = {
 
     async handleRoute() {
         let path = window.location.hash.slice(1) || 'home';
-        const valid = ['home', 'home-2','about' ,'treatments', 'doctors', 'pricing', 'contact', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
+        const valid = ['home', 'home-2', 'about', 'treatments', 'doctors', 'pricing', 'contact', 'stories', 'login', 'signup', 'dashboard', 'privacy', 'terms', '404', 'coming-soon', 'maintenance'];
         if (!valid.includes(path)) path = '404';
 
         this.updateActiveNav(path);
 
-        const hide = ['login', 'signup', '404', 'coming-soon', 'maintenance'];
+        // Hide header and footer on dashboard, login, signup, 404, coming-soon, and maintenance pages
+        const hide = ['login', 'signup', 'dashboard', '404', 'coming-soon', 'maintenance'];
         const header = document.getElementById('global-header');
         const footer = document.querySelector('footer');
+        
         if (header) header.style.display = hide.includes(path) ? 'none' : 'block';
         if (footer) footer.style.display = hide.includes(path) ? 'none' : 'block';
 
